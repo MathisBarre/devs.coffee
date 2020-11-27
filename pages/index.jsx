@@ -19,7 +19,7 @@ export default function Index() {
       {/* <Concept/> */}
       <Events/>
       <DiscordList/>
-      <StudentMap/>
+      {/* <StudentMap/> */}
       {/* <MDX /> */}
     </div>
   );
