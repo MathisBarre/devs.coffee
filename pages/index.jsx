@@ -15,7 +15,7 @@ export default function Index() {
   )
 
   return (
-    <div className="mx-auto container px-4 max-w-7xl">
+    <div className="mx-auto px-4 max-w-7xl">
       {/* <Concept/> */}
       <Events/>
       <DiscordList/>
