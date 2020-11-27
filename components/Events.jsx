@@ -10,7 +10,7 @@ import Card from "./layout/Card";
 
 export default function Events() {
   return (
-    <section>
+    <section id="event">
       <Card
         title="Événements communautaires"
         description="Découvrez les prochains événements en présentiel ou en ligne organisés par la communauté !"
