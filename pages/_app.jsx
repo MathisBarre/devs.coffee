@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Header from "../components/layout/Header.jsx"
+import Footer from "../components/layout/Footer.jsx"
 
 import "tailwindcss/tailwind.css"
 import "../style/global.scss"
@@ -12,6 +13,7 @@ function App({ Component, pageProps }) {
       </Head>
       <Header/>
       <Component {...pageProps} />
+      {/* <Footer /> */}
     </>
   );
 }
