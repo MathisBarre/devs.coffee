@@ -1,7 +1,7 @@
+import { useState, useEffect } from "react"
 import Card from "./layout/Card"
 
 export default function DiscordList() {
-
   return (
     <section id="discord">
       <Card
@@ -28,6 +28,7 @@ export default function DiscordList() {
               description="Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent peu de salons. Environ 100 membres"
               href="https://discord.gg/f6BsPK9"
               img="https://cdn.discordapp.com/icons/766565028312383498/52036386762f324a65a35027d14464a9.webp?size=256"
+              api="https://discord.com/api/guilds/766565028312383498/widget.json"
             />
             <DiscordServer
               serverName="PrepWeb & Développeur web"
@@ -64,30 +65,60 @@ export default function DiscordList() {
   )
 }
 
-function DiscordServer({course, serverName, description, href, img}) {
+function DiscordServer({course, serverName, description, href, img, api}) {
+  const [discordData, setDiscordData] = useState(false)
+
+  useEffect(() => {
+    if (api) {
+      fetch(api)
+        .then(body => body.json())
+        .then(apiData => {setDiscordData(apiData)})
+    }    
+  }, [])
+
   return (
     <li>
       <a href={href} className="block hover:bg-gray-50">
-        <div className="px-4 py-4 flex items-center sm:px-6">
-        <img 
-          className="inline-block h-14 w-14 rounded-full mr-6"
-          src={img}
-          alt=""
-        />
-          <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
-            <div>
-              <div className="flex text-sm font-medium text-indigo-600 truncate">
-                <p>{serverName} </p>
-                <p className="ml-1 font-normal text-gray-500">
-                  ({course})
-                </p>
-              </div>
-              <div className="mt-2 flex">
-                <div className="flex items-center text-sm text-gray-500">
-                  <p>
-                    {description}
-                  </p>
-                </div>
+        <div className="px-4 py-4 sm:px-6 flex items-center justify-between">
+          <div className="w-full">
+            <div className="flex items-center">
+              <img 
+                className="inline-block h-14 w-14 rounded-full mr-6"
+                src={img}
+                alt=""
+              />
+              <div className="min-w-0 flex-1 flex flex-col items-start">
+                  <div className="flex text-sm font-medium truncate">
+                    <p className="font-semibold text-indigo-600">{serverName} </p>
+                    <p className="ml-1 font-normal text-gray-500">
+                      ({course})
+                    </p>
+                  </div>
+                  <div className="mt-2 flex">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <p>
+                        {description}
+                      </p>
+                    </div>
+                  </div>
+                  { (api && discordData) && <div className="bg-purple-500 h-9 flex items-center pl-3 pr-2 text-sm text-white rounded mt-2">
+                    <p>
+                      <strong>{discordData.presence_count} </strong>
+                      {(discordData.presence_count > 1) ? "membres actuellements connectés" : "membre actuellement connecté"}
+                    </p>
+                    <div className="flex items-center -space-x-1 relative z-0 overflow-hidden h-full ml-2 px-1">
+                      {discordData.members.map((member, index) => {
+                        return (
+                          <img
+                          key={index}
+                          className="relative z-30 inline-block h-5 w-5 rounded-full ring-2 ring-white"
+                          src={member.avatar_url}
+                          alt=""
+                          />
+                        )
+                      })}
+                    </div>
+                  </div>}
               </div>
             </div>
           </div>
