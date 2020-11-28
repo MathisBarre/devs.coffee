@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       spacing: {
         "144":"36rem"
+      },
+      minHeight: {
+        "9":"2.25rem"
       }
     },
   },

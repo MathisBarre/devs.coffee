@@ -101,24 +101,33 @@ function DiscordServer({course, serverName, description, href, img, api}) {
                       </p>
                     </div>
                   </div>
-                  { (api && discordData) && <div className="bg-purple-500 h-9 flex items-center pl-3 pr-2 text-sm text-white rounded mt-2">
-                    <p>
-                      <strong>{discordData.presence_count} </strong>
-                      {(discordData.presence_count > 1) ? "membres actuellements connectés" : "membre actuellement connecté"}
-                    </p>
-                    <div className="flex items-center -space-x-1 relative z-0 overflow-hidden h-full ml-2 px-1">
-                      {discordData.members.map((member, index) => {
-                        return (
-                          <img
-                          key={index}
-                          className="relative z-30 inline-block h-5 w-5 rounded-full ring-2 ring-white"
-                          src={member.avatar_url}
-                          alt=""
-                          />
-                        )
-                      })}
-                    </div>
-                  </div>}
+                  { 
+                    api && (
+                      (discordData)
+                      ? 
+                      <div className="bg-indigo-500 min-h-9 flex-wrap items-center pl-3 pr-2 text-sm text-white rounded mt-2 hidden md:flex">
+                        <p className="whitespace-nowrap mr-2">
+                          <strong>{discordData.presence_count} </strong>
+                          {/* <div className="w-1" /> */}
+                          {(discordData.presence_count > 1) ? "membres actuellements connectés" : "membre actuellement connecté"}
+                        </p>
+                        <div className="flex items-center -space-x-1 relative z-0 overflow-hidden h-full p-1">
+                          {discordData.members.map((member, index) => {
+                            return (
+                              <img
+                              key={index}
+                              className="relative z-30 inline-block h-5 w-5 rounded-full ring-2 ring-white"
+                              src={member.avatar_url}
+                              alt=""
+                              />
+                            )
+                          })}
+                        </div>
+                      </div> 
+                      :
+                      <div className="h-9 w-96 mt-2 bg-indigo-500 rounded animate-pulse hidden md:block" />
+                    )
+                  }
               </div>
             </div>
           </div>
