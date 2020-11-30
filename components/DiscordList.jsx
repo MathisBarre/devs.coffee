@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Image from "next/image"
 import Card from "./layout/Card";
 
 export default function DiscordList() {
@@ -141,12 +142,19 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
                 {discordData.members.map((member, index) => {
                   if (index < 60) {
                     return (
-                      <img
+                      <div
+                        className="relative z-30 inline-block h-5 w-5 min-w-5 rounded-full ring-2 ring-white"
                         key={index}
-                        className="relative z-30 inline-block h-5 w-5 rounded-full ring-2 ring-white"
-                        src={member.avatar_url}
-                        alt=""
-                      />
+                      >
+                        <Image
+                          className="rounded-full"
+                          src={member.avatar_url}
+                          alt=""
+                          // height="20"
+                          // width="20"
+                          layout="fill"
+                        />
+                      </div>
                     );
                   }
                 })}

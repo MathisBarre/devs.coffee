@@ -7,7 +7,10 @@ module.exports = {
         "144":"36rem"
       },
       minHeight: {
-        "9":"2.25rem"
+        "9":"2.25rem",
+      },
+      minWidth: {
+        "5":"1.25rem"
       }
     },
   },
