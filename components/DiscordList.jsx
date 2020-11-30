@@ -150,9 +150,9 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
                           className="rounded-full"
                           src={member.avatar_url}
                           alt=""
+                          layout="fill"
                           // height="20"
                           // width="20"
-                          layout="fill"
                         />
                       </div>
                     );
@@ -161,7 +161,7 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
               </div>
             </div>
           ) : (
-            <div className="h-9 w-full mt-2 bg-indigo-500 animate-pulse hidden md:block" />
+            <div className="h-9 w-full mt-2 bg-indigo-500 animate-pulse hidden md:block rounded-b-md" />
           ))}
       </a>
     </li>
