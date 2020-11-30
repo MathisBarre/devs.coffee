@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.discordServer:hover .discordMembers {
+  @apply bg-indigo-600
+}
