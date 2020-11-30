@@ -92,11 +92,22 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
         <div className="px-4 py-4 sm:px-6 flex items-center justify-between">
           <div className="flex flex-col justify-start items-start">
             <div className="flex items-center">
-              <img
-                className="inline-block h-14 w-14 rounded-full mr-6"
-                src={img}
-                alt=""
-              />
+              <div
+                className="inline-block h-14 w-14 mr-6"
+              >
+                <Image
+                  className="rounded-full"
+                  src={img}
+                  alt=""
+                  layout="fixed"
+                  height="56"
+                  width="56"
+                  sizes="56"
+                  quality="100"
+                  priority={true}
+                  loading="eager"
+                />
+              </div>
               <div className="min-w-0 flex-1 flex flex-col items-start">
                 <div className="flex text-sm font-medium truncate">
                   <p className="font-semibold text-indigo-600">{serverName} </p>
@@ -150,9 +161,9 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
                           className="rounded-full"
                           src={member.avatar_url}
                           alt=""
+                          layout="fixed"
                           height="20"
                           width="20"
-                          layout="fixed"
                           sizes="20px"
                           quality="100"
                           priority={false}
