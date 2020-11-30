@@ -161,7 +161,7 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
               </div>
             </div>
           ) : (
-            <div className="h-9 w-full mt-2 bg-indigo-500 animate-pulse hidden md:block rounded-b-md" />
+            <div className="h-9 w-full bg-indigo-500 animate-pulse hidden md:block rounded-b-md" />
           ))}
       </a>
     </li>
