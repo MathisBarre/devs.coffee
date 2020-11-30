@@ -63,10 +63,15 @@ function Event({ date, description, link, type }) {
   
   const formattedDate = dayjs(date).locale("fr").format("DD/MM/YY à HH:mm")
   const dateFromNow = capitalizeFirstLetter(dayjs(date).locale("fr").from(dayjs()))
+  const isEventFinished = dayjs().isAfter(date)
+
   return (
-    <li className={`${dayjs().isAfter(date) ? "line-through" : ""}`}>
-      <a href={link.href} className="block hover:bg-gray-50">
-        <div className="px-4 py-4 flex items-center sm:px-6">
+    <li className={`${isEventFinished ? "line-through cursor-not-allowed" : ""}`}>
+      <a
+        href={isEventFinished ? "#" : link.href} 
+        className={`block ${isEventFinished ? "line-through cursor-not-allowed" : "hover:bg-gray-50"}`}
+      >
+        <div className="py-4 flex items-center">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
               <div className="flex text-sm font-medium text-indigo-600 truncate">

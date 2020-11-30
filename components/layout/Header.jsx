@@ -26,7 +26,7 @@ export default function Header() {
               <div className="flex space-x-4">
                 <HeaderLink isDesktop={true} text="Événements" href="#events" active/>
                 <HeaderLink isDesktop={true} text="Discord" href="#discord"/>
-                <HeaderLink isDesktop={true} text="Carte" href="#map"/>
+                {/* <HeaderLink isDesktop={true} text="Carte" href="#map"/> */}
               </div>
             </nav>
           </div>
@@ -93,7 +93,7 @@ export default function Header() {
         <div className="px-2 pt-2 pb-3 space-y-1">
           <HeaderLink text="Événements" href="#events" active/>
           <HeaderLink text="Discord" href="#discord"/>
-          <HeaderLink text="Carte" href="#map"/>
+          {/* <HeaderLink text="Carte" href="#map"/> */}
         </div>
       </nav>
     </header>
