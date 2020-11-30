@@ -150,9 +150,12 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
                           className="rounded-full"
                           src={member.avatar_url}
                           alt=""
-                          layout="fill"
-                          // height="20"
-                          // width="20"
+                          height="20"
+                          width="20"
+                          layout="fixed"
+                          sizes="20px"
+                          quality="100"
+                          priority={false}
                         />
                       </div>
                     );
