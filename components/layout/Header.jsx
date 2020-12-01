@@ -24,8 +24,11 @@ export default function Header() {
             </div>
             <nav className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <HeaderLink isDesktop={true} text="Événements" href="#events" active/>
+                <HeaderLink isDesktop={true} text="Événements" href="#events"/>
                 <HeaderLink isDesktop={true} text="Discord" href="#discord"/>
+                <HeaderLink isDesktop={true} text="Carte" href="#" disabled />
+                <HeaderLink isDesktop={true} text="Ressources" href="#" disabled />
+                <HeaderLink isDesktop={true} text="Questions fréquentes" href="#" disabled />
                 {/* <HeaderLink isDesktop={true} text="Carte" href="#map"/> */}
               </div>
             </nav>
@@ -93,18 +96,24 @@ export default function Header() {
         <div className="px-2 pt-2 pb-3 space-y-1">
           <HeaderLink text="Événements" href="#events" active/>
           <HeaderLink text="Discord" href="#discord"/>
-          {/* <HeaderLink text="Carte" href="#map"/> */}
+          <HeaderLink text="Carte" href="#" disabled />
+          <HeaderLink text="Ressources" href="#" disabled />
+          <HeaderLink text="Questions fréquentes" href="#" disabled />
         </div>
       </nav>
     </header>
   );
 }
 
-function HeaderLink({text, href, active, isDesktop}) {
+function HeaderLink({text, href, active, isDesktop, disabled}) {
   return (
     <a
       href={href}
-      className={`${isDesktop ? "" : "block"} px-3 py-2 rounded-md text-sm font-semibold ${active ? "text-white bg-gray-900" : "text-gray-300 hover:text-white hover:bg-gray-700"}`}
+      className={`
+        ${isDesktop ? "" : "block"}
+        ${disabled ? "cursor-not-allowed text-gray-500" : "text-gray-300 hover:text-white hover:bg-gray-700"}
+        px-3 py-2 rounded-md text-sm font-semibold
+      `}
     >
       {text}
     </a>
