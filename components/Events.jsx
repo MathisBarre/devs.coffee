@@ -38,20 +38,28 @@ export default function Events() {
                 href: "https://discord.gg/f6BsPK9"
               }}
             /> */}
-            <Event
+            {/* <Event
               date="2020-11-30T17:30"
               type="LIVE"
               description="Apprentissage Javascript : La programmation orienté objet"
               link={{
                 href: "https://twitch.tv/mathisbarre_"
               }}
-            />
+            /> */}
             <Event
               date="2020-12-02T18:00"
               type="LIVE"
               description="Apprentissage Javascript avec Aurélien Vaast : les promises"
               link={{
                 href: "https://www.twitch.tv/trainingdev"
+              }}
+            />
+            <Event
+              date="2020-12-03T17:00"
+              type="LIVE"
+              description="Intégration en direct avec tailwindcss par Mathis Barré"
+              link={{
+                href: "https://www.twitch.tv/mathisbarre_"
               }}
             />
           </ul>
@@ -85,13 +93,13 @@ function Event({ date, description, link, type }) {
         <div className="py-4 flex items-center">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
-              <div className="flex text-sm font-medium text-indigo-600 truncate">
-                <p className="uppercase">
+              <div className="text-sm font-medium text-indigo-600">
+                <p className="uppercase inline">
                   [{type}]
                 </p>
-                <p className="ml-1 font-normal text-gray-500">
+                <h3 className="ml-1 font-normal text-gray-500 inline">
                   {description}
-                </p>
+                </h3>
               </div>
               <div className="mt-2 flex">
                 <div className="flex items-center text-sm text-gray-500">

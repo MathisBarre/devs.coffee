@@ -109,9 +109,9 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
                 />
               </div>
               <div className="min-w-0 flex-1 flex flex-col items-start">
-                <div className="flex text-sm font-medium truncate">
-                  <p className="font-semibold text-indigo-600">{serverName} </p>
-                  <p className="ml-1 font-normal text-gray-500">({course})</p>
+                <div className="text-sm font-medium">
+                  <h3 className="inline font-semibold text-indigo-600">{serverName}</h3>
+                  <p className="inline ml-1 font-normal text-gray-500">({course})</p>
                 </div>
                 <div className="mt-2 flex">
                   <div className="flex items-center text-sm text-gray-500">
