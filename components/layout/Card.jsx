@@ -1,7 +1,7 @@
 export default function Card({ title, description, button, withContentPadding=true, children }) {
   return (
       <div className="bg-white my-8">
-        <div className="bg-white py-5">
+        <div className="bg-white pt-5 pb-2">
           <div className="-ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap">
             <div className="ml-4 mt-4">
               <h2 className="text-lg leading-6 font-medium text-gray-900">

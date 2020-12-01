@@ -10,7 +10,7 @@ import Card from "./layout/Card";
 
 export default function Events() {
   return (
-    <section id="event">
+    <section id="events">
       <Card
         title="Événements communautaires"
         description="Découvrez les prochains événements en présentiel ou en ligne organisés par la communauté !"
@@ -21,13 +21,12 @@ export default function Events() {
         }}
       >
         <div className="bg-white overflow-hidden">
-          <ul className="divide-y divide-gray-200">
-            <Event
+          <ul>
+            {/* <Event
               date="2020-11-10T17:30"
               type="live"
               description="Introduction à Javascript : DOM, variable & fonction. Niveau débutant "
               link={{
-                text: "sur le discord de dev.cafe",
                 href: "https://discord.gg/f6BsPK9"
               }}
             />
@@ -36,17 +35,23 @@ export default function Events() {
               type="live"
               description="Introduction à Javascript : DOM, variable, fonction, ajax, fetch & callback. Niveau débutant "
               link={{
-                text: "sur le discord de dev.cafe",
                 href: "https://discord.gg/f6BsPK9"
               }}
-            />
+            /> */}
             <Event
               date="2020-11-30T17:30"
               type="LIVE"
               description="Apprentissage Javascript : La programmation orienté objet"
               link={{
-                text: "sur le discord de dev.cafe",
                 href: "https://twitch.tv/mathisbarre_"
+              }}
+            />
+            <Event
+              date="2020-12-02T18:00"
+              type="LIVE"
+              description="Apprentissage Javascript avec Aurélien Vaast : les promises"
+              link={{
+                href: "https://www.twitch.tv/trainingdev"
               }}
             />
           </ul>
@@ -64,12 +69,18 @@ function Event({ date, description, link, type }) {
   const formattedDate = dayjs(date).locale("fr").format("DD/MM/YY à HH:mm")
   const dateFromNow = capitalizeFirstLetter(dayjs(date).locale("fr").from(dayjs()))
   const isEventFinished = dayjs().isAfter(date)
+  console.log(isEventFinished)
 
   return (
-    <li className={`${isEventFinished ? "line-through cursor-not-allowed" : ""}`}>
+    <li
+      className={`
+        ${isEventFinished ? "line-through cursor-not-allowed" : "hover:bg-gray-50"}
+        my-4 border border-gray-200 rounded-md px-4
+      `}
+    >
       <a
         href={isEventFinished ? "#" : link.href} 
-        className={`block ${isEventFinished ? "line-through cursor-not-allowed" : "hover:bg-gray-50"}`}
+        className=""
       >
         <div className="py-4 flex items-center">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
