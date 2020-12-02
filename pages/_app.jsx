@@ -35,7 +35,6 @@ function App({ Component, pageProps }) {
 
   useEffect(() => {
     function handleRouteChange(url) {
-      console.log("a")
       instance.record({
         siteLocation: window.location.href,
         siteReferrer: document.referrer
