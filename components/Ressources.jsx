@@ -40,8 +40,14 @@ export default function Ressources() {
             href="https://learngitbranching.js.org/?locale=fr_FR"
           />
           <Ressource
+            title="Can I us ?"
+            description="Table de support par navigateur pour HTML, CSS Javascript et autre"
+            img="/images/caniuse.png"
+            href="https://caniuse.com/"
+          />
+          <Ressource
             title="Javascript.info"
-            description="How it's done now. From the basics to advanced topics with simple, but detailed explanations."
+            description="Tutoriels Javascript extrêmements bien expliqués pour les débutant mais très approfondis"
             img="/images/javascript-info.png"
             href="https://javascript.info/"
           />
@@ -50,6 +56,12 @@ export default function Ressources() {
             description="Un jeu passionnant de programmation et d'intelligence artificielle"
             img="/images/warrior-js.png"
             href="https://warrior.js.org/fr/"
+          />
+          <Ressource
+            title="freeCodeCamp"
+            description="Des parcours complets en HTML, CSS, Javascript, MongoDB, express etc...uniquement par l'exemple."
+            img="/images/freecodecamp.png"
+            href="https://www.freecodecamp.org/"
           />
         </div>
       </Card>
