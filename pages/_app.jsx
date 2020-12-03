@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from "next/head"
-import * as gtag from 'lib/gtag'
 import * as ackeeTracker from 'ackee-tracker'
 
 import Header from "components/layout/Header.jsx"
@@ -12,25 +11,14 @@ import "../style/global.scss"
 function App({ Component, pageProps }) {
   const router = useRouter()
 
-  // Google Analytics
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
-
   // Ackee Analytics
   const instance = ackeeTracker.create({
     server: 'https://analytics.mathisbarre.com',
     domainId: '30519f77-be90-4e93-93dd-d75d75fd627e'
   },{
-    detailed: false,
+    detailed: true,
     ignoreLocalhost: true,
-    ignoreOwnVisits: false
+    ignoreOwnVisits: true
   })
 
   useEffect(() => {
