@@ -1,7 +1,83 @@
+import { useEffect, useState } from "react"
 import Image from "next/image"
+import Select from 'react-select'
 import Card from "./layout/Card";
 
 export default function Ressources() {
+
+  const defaultRessources = [
+    {
+      title:"CSS Diner",
+      description:"Un jeu très amusant pour apprendre les sélecteurs CSS !",
+      img:"/images/css-diner.png",
+      href:"https://flukeout.github.io/",
+      tags: ["DevWeb P2", "DevWeb P3", "CSS"]
+    },
+    {
+      title:"Flexbox Froggy",
+      description:"Des couleurs, des grenouilles et des flexbox",
+      img:"/images/flexbox-froggy.jpg",
+      href:"https://flexboxfroggy.com/#fr",
+      tags: ["DevWeb P2", "DevWeb P3", "CSS"]
+    },
+    {
+      title:"Grid garden",
+      description:"Gérez votre jardin grâce aux grilles css !",
+      img:"/images/grid-garden.png",
+      href:"https://cssgridgarden.com/#fr",
+      tags: ["DevWeb P2", "DevWeb P3", "CSS"]
+    },
+    {
+      title:"Learn Git Branching",
+      description:"Une façon interactive de se familiariser avec Git et Github",
+      img:"/images/git-branching.png",
+      href:"https://learngitbranching.js.org/?locale=fr_FR",
+      tags: ["DevWeb P2", "DevWeb P3", "Versionning"]
+    },
+    {
+      title:"Can I us ?",
+      description:"Table de support par navigateur pour HTML, CSS Javascript et autre",
+      img:"/images/caniuse.png",
+      href:"https://caniuse.com/",
+      tags: ["DevWeb P2", "DevWeb P3", "Compatibilité navigateur"]
+    },
+    {
+      title:"Javascript.info",
+      description:"Tutoriels Javascript extrêmements bien expliqués pour les débutant mais très approfondis",
+      img:"/images/javascript-info.png",
+      href:"https://javascript.info/",
+      tags: ["DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
+    },
+    {
+      title:"WarriorJs",
+      description:"Un jeu passionnant de programmation et d'intelligence artificielle",
+      img:"/images/warrior-js.png",
+      href:"https://warrior.js.org/fr/",
+      tags: ["DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
+    },
+    {
+      title:"freeCodeCamp",
+      description:"Des parcours complets en HTML, CSS, Javascript, MongoDB, express etc...uniquement par l'exemple.",
+      img:"/images/freecodecamp.png",
+      href:"https://www.freecodecamp.org/learn/",
+      tags: [ "DevWeb P2","DevWeb P3","DevWeb P4","DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
+    },
+  ]
+
+  // Construit une liste avec tous les tags présent dans les ressources par défaut
+  const allTags = ["Toutes les ressources"].concat(defaultRessources.reduce((accumulator, currentValue) => {
+    return accumulator.concat(currentValue.tags.filter((item) => accumulator.indexOf(item) < 0)).sort()
+  }, []))
+
+  const [selectedTags, setSelectedTags] = useState(allTags)
+  const [filteredRessources, setFilteredRessources] = useState(defaultRessources)
+
+  // Re-filtre les ressources en fonction des tags sélectionnés
+  useEffect(() => {
+    setFilteredRessources(defaultRessources.filter(ressource => {
+      return selectedTags.includes("Toutes les ressources") || ressource.tags.some((tag) => selectedTags.includes(tag))
+    }))
+  }, [selectedTags])
 
   return (
     <section id="ressources">
@@ -14,55 +90,19 @@ export default function Ressources() {
             onClick: () => {window.location.href = "mailto:mathis.barre@live.fr"}
           }}
       >
+        <Select
+          options={allTags.map((tag) => (
+            {value:tag, label:tag}
+          ))}
+          isSearchable={true}
+          onChange={(change) => {
+            setSelectedTags(change.value)
+          }}
+        />
         <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4">
-          <Ressource
-            title="CSS Diner"
-            description="Un jeu très amusant pour apprendre les sélecteurs CSS !"
-            img="/images/css-diner.png"
-            href="https://flukeout.github.io/"
-          />
-          <Ressource
-            title="Flexbox Froggy"
-            description="Des couleurs, des grenouilles et des flexbox"
-            img="/images/flexbox-froggy.jpg"
-            href="https://flexboxfroggy.com/#fr"
-          />
-          <Ressource
-            title="Grid garden"
-            description="Gérez votre jardin grâce aux grilles css !"
-            img="/images/grid-garden.png"
-            href="https://cssgridgarden.com/#fr"
-          />
-          <Ressource
-            title="Learn Git Branching"
-            description="Une façon interactive de se familiariser avec Git et Github"
-            img="/images/git-branching.png"
-            href="https://learngitbranching.js.org/?locale=fr_FR"
-          />
-          <Ressource
-            title="Can I us ?"
-            description="Table de support par navigateur pour HTML, CSS Javascript et autre"
-            img="/images/caniuse.png"
-            href="https://caniuse.com/"
-          />
-          <Ressource
-            title="Javascript.info"
-            description="Tutoriels Javascript extrêmements bien expliqués pour les débutant mais très approfondis"
-            img="/images/javascript-info.png"
-            href="https://javascript.info/"
-          />
-          <Ressource
-            title="WarriorJs"
-            description="Un jeu passionnant de programmation et d'intelligence artificielle"
-            img="/images/warrior-js.png"
-            href="https://warrior.js.org/fr/"
-          />
-          <Ressource
-            title="freeCodeCamp"
-            description="Des parcours complets en HTML, CSS, Javascript, MongoDB, express etc...uniquement par l'exemple."
-            img="/images/freecodecamp.png"
-            href="https://www.freecodecamp.org/"
-          />
+          {filteredRessources.map((ressource, index) => (
+            <Ressource key={index} {...ressource} />
+          ))}
         </div>
       </Card>
     </section>
