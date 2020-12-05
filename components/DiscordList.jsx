@@ -35,7 +35,7 @@ export default function DiscordList() {
               api="https://discord.com/api/guilds/651031474966888458/widget.json"
             />
             <DiscordServer
-              serverName="dev.cafe"
+              serverName="devs.coffee"
               course="parcours développeur web"
               description="Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent peu de salons. Environ 100 membres"
               href="https://discord.gg/f6BsPK9"
