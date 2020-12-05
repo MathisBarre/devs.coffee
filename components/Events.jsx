@@ -83,13 +83,12 @@ function Event({ date, description, link, type }) {
   return (
     <li
       className={`
-        ${isEventFinished ? "line-through cursor-not-allowed" : "hover:bg-gray-50"}
-        my-4 border border-gray-200 rounded-md px-4
+        ${isEventFinished ? "line-through" : ""}
+        my-4 border border-gray-200 rounded-md px-4 hover:bg-gray-50
       `}
     >
       <a
-        href={isEventFinished ? "#" : link.href} 
-        className=""
+        href={link.href} 
       >
         <div className="py-4 flex items-center">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
