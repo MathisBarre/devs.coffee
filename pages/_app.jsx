@@ -40,8 +40,22 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>dev.cafe</title>
+        <title>devs.coffee</title>
+        <meta name="title" content="devs.coffee"/>
         <meta name="description" content="dev.cafe est un site qui a pour objectif d’augmenter l'expérience étudiant chez OpenClassrooms via des ressources additionnelles et une liste de questions fréquentes ainsi que d’améliorer les liens communautaires grâce à liste de discord, une carte des étudiants et un calendrier des rendez-vous à ne pas louper !"/>
+        <link rel="icon" href="favicon.svg"/>
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://dev-cafe.mathisbarre.com/"/>
+        <meta property="og:title" content="devs.coffee"/>
+        <meta property="og:description" content="dev.cafe est un site qui a pour objectif d’augmenter l'expérience étudiant chez OpenClassrooms via des ressources additionnelles et une liste de questions fréquentes ainsi que d’améliorer les liens communautaires grâce à liste de discord, une carte des étudiants et un calendrier des rendez-vous à ne pas louper !"/>
+        <meta property="og:image" content="/dev-cafe.png"/>
+
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="http</meta>s://dev-cafe.mathisbarre.com/"/>
+        <meta property="twitter:title" content="devs.coffee"/>
+        <meta property="twitter:description" content="dev.cafe est un site qui a pour objectif d’augmenter l'expérience étudiant chez OpenClassrooms via des ressources additionnelles et une liste de questions fréquentes ainsi que d’améliorer les liens communautaires grâce à liste de discord, une carte des étudiants et un calendrier des rendez-vous à ne pas louper !"/>
+        <meta property="twitter:image" content="/dev-cafe.png"/>
       </Head>
       <Header/>
       <Component {...pageProps} />
