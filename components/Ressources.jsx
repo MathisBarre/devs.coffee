@@ -42,6 +42,41 @@ export default function Ressources() {
       tags: ["DevWeb P2", "DevWeb P3", "Compatibilité navigateur"]
     },
     {
+      title:"Animista",
+      description:"Des animations CSS déjà toutes faites !",
+      img:"/images/animista.gif",
+      href:"https://animista.net",
+      tags: ["DevWeb P3", "CSS"]
+    },
+    {
+      title:"La base de Sass",
+      description:"Tout le fonctionnement de base de Sass, dans une page",
+      img:"/images/sass.png",
+      href:"https://sass-lang.com/guide",
+      tags: ["DevWeb P3", "CSS"]
+    },
+    {
+      title:"La checklist des développeurs web",
+      description:"Vérifiez que votre site est prêt à être mis en ligne grâce à cette checklist",
+      img:"/images/webdev-checklist.png",
+      href:"https://www.toptal.com/developers/webdevchecklist",
+      tags: ["DevWeb P4"]
+    },
+    {
+      title:"GTmetrix propulsé par Google Lighthouse",
+      description:"Calculez les performances de votre site internet.",
+      img:"/images/gtmetrix.png",
+      href:"https://gtmetrix.com/",
+      tags: ["DevWeb P4", "Performance"]
+    },
+    {
+      title:"Metatag.io",
+      description:"Visualisez facilement le résultats de vos balises SEO",
+      img:"/images/metatags.png",
+      href:"https://metatags.io/",
+      tags: ["DevWeb P4", "SEO"]
+    },
+    {
       title:"Javascript.info",
       description:"Tutoriels Javascript extrêmements bien expliqués pour les débutant mais très approfondis",
       img:"/images/javascript-info.png",
@@ -60,14 +95,20 @@ export default function Ressources() {
       description:"Des parcours complets en HTML, CSS, Javascript, MongoDB, express etc...uniquement par l'exemple.",
       img:"/images/freecodecamp.png",
       href:"https://www.freecodecamp.org/learn/",
-      tags: [ "DevWeb P2","DevWeb P3","DevWeb P4","DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
+      tags: ["Parcours complet"]
     },
   ]
 
   // Construit une liste avec tous les tags présent dans les ressources par défaut
-  const allTags = ["Toutes les ressources"].concat(defaultRessources.reduce((accumulator, currentValue) => {
-    return accumulator.concat(currentValue.tags.filter((item) => accumulator.indexOf(item) < 0)).sort()
-  }, []))
+  let allTags
+  allTags = defaultRessources.reduce((accumulator, currentValue) => {
+    return accumulator.concat(currentValue.tags.filter((item) => accumulator.indexOf(item) < 0))
+  }, [])
+  allTags = allTags.sort((a,b) => {
+    //! Code magique qui marche sans que je sache pourquoi ????
+    return String.fromCharCode(parseInt(a,16)) < String.fromCharCode(parseInt(b,16))
+  })
+  allTags = ["Toutes les ressources"].concat(allTags)
 
   const [selectedTags, setSelectedTags] = useState(allTags)
   const [filteredRessources, setFilteredRessources] = useState(defaultRessources)
@@ -112,14 +153,15 @@ export default function Ressources() {
 function Ressource({title, description, img, href}) {
   return (
       <a
-        className="border border-gray-200 rounded box-border"
+        className="border border-gray-200 rounded box-border hover:bg-gray-50"
         href={href}
       >
         <Image
-          className="rounded-t"
+          className="rounded-t border-b border-gray-200"
           src={img}
           height="1080"
           width="1920"
+          objectFit="cover"
         />
         <div className="pt-2 px-3 pb-3">
           <h3 className="font-semibold text-sm text-indigo-600 mb-1">{title}</h3>
