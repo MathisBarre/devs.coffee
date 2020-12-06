@@ -7,7 +7,7 @@ export default function DiscordList() {
     <section id="discord">
       <Card
         title="Serveurs discord"
-        description="Rejoignez un des serveurs discord communautaire OpenClassroom"
+        description="Rejoignez un des serveurs discord communautaires OpenClassroom"
         withContentPadding={false}
         button={{
           text: "Ajouter un serveur à la liste",
@@ -21,7 +21,7 @@ export default function DiscordList() {
             <DiscordServer
               serverName="Sans pris de tech"
               course="tous les parcours"
-              description="Serveur général regroupant toutes la communauté OpenClassrooms française. Si vous devez en rejoindre un, c'est celui là ! Environ 500 membre."
+              description="Serveur général regroupant toute la communauté OpenClassrooms française. Si vous devez en rejoindre un, c'est celui là !"
               href="https://discord.gg/u7dxx3K"
               img="https://cdn.discordapp.com/icons/595235640044552223/03b0f458149f0ee64a357186f8b36d4e.webp?size=256"
               api="https://discord.com/api/guilds/595235640044552223/widget.json"
@@ -37,7 +37,7 @@ export default function DiscordList() {
             <DiscordServer
               serverName="devs.coffee"
               course="parcours développeur web"
-              description="Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent peu de salons. Environ 100 membres"
+              description="Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent que peu de salons. Environ 100 membres"
               href="https://discord.gg/f6BsPK9"
               img="https://cdn.discordapp.com/icons/766565028312383498/52036386762f324a65a35027d14464a9.webp?size=256"
               api="https://discord.com/api/guilds/766565028312383498/widget.json"
@@ -45,14 +45,14 @@ export default function DiscordList() {
             <DiscordServer
               serverName="DA - Frontend"
               course="parcours développeur front-end / web"
-              description="Discussions, entraide et soutient autour du parcours développeur web / développeur web front-end et de ses projets. Environ 150 membres"
+              description="Discussions, entraide et soutien autour du parcours développeur web / développeur web front-end et de ses projets. Environ 150 membres"
               href="https://discord.gg/SKJVyew"
               img="https://cdn.discordapp.com/icons/569020625776017410/12d51a5f472cbf0e5b17371469975f3e.webp?size=256"
             />
             <DiscordServer
               serverName="OpenClassrooms web dev 2020/2021"
               course="parcours développeur web"
-              description="Discussions, entraide et soutient autour du parcours développeur web de la rentrée 2020/2021. Environ 150 membres"
+              description="Discussions, entraide et soutien autour du parcours développeur web de la rentrée 2020/2021. Environ 150 membres"
               href="https://discord.gg/f7eEDFF"
               img="https://cdn.discordapp.com/icons/694531835065270392/e2a52f66656c99382be4038aa04d8f04.webp?size=256"
             />

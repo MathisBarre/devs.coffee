@@ -35,7 +35,7 @@ export default function Ressources() {
       tags: ["DevWeb P2", "DevWeb P3", "Versionning"]
     },
     {
-      title:"Can I us ?",
+      title:"Can I use ?",
       description:"Table de support par navigateur pour HTML, CSS Javascript et autre",
       img:"/images/caniuse.png",
       href:"https://caniuse.com/",
@@ -78,7 +78,7 @@ export default function Ressources() {
     },
     {
       title:"Javascript.info",
-      description:"Tutoriels Javascript extrêmements bien expliqués pour les débutant mais très approfondis",
+      description:"Tutoriels Javascript extrêmement bien expliqués pour les débutants mais très approfondis",
       img:"/images/javascript-info.png",
       href:"https://javascript.info/",
       tags: ["DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
