@@ -35,6 +35,14 @@ export default function DiscordList() {
               api="https://discord.com/api/guilds/651031474966888458/widget.json"
             />
             <DiscordServer
+              serverName="DA - Frontend"
+              course="parcours développeur front-end / web"
+              description="Discussions, entraide et soutien autour du parcours développeur web / développeur web front-end et de ses projets."
+              href="https://discord.gg/SKJVyew"
+              img="https://cdn.discordapp.com/icons/569020625776017410/12d51a5f472cbf0e5b17371469975f3e.webp?size=256"
+              api="https://discord.com/api/guilds/569020625776017410/widget.json"
+            />
+            <DiscordServer
               serverName="devs.coffee"
               course="parcours développeur web"
               description="Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent que peu de salons."
@@ -49,14 +57,6 @@ export default function DiscordList() {
               href="https://discord.gg/v7KDuNXv"
               img="https://cdn.discordapp.com/icons/775791415275552768/1eb2534468e68e633ea2886035a5bb78.webp?size=256"
               api="https://discord.com/api/guilds/775791415275552768/widget.json"
-            />
-            <DiscordServer
-              serverName="DA - Frontend"
-              course="parcours développeur front-end / web"
-              description="Discussions, entraide et soutien autour du parcours développeur web / développeur web front-end et de ses projets."
-              href="https://discord.gg/SKJVyew"
-              img="https://cdn.discordapp.com/icons/569020625776017410/12d51a5f472cbf0e5b17371469975f3e.webp?size=256"
-              api="https://discord.com/api/guilds/569020625776017410/widget.json"
             />
             {/* <DiscordServer
               serverName="OpenClassrooms web dev 2020/2021"
