@@ -29,7 +29,7 @@ export default function DiscordList() {
             <DiscordServer
               serverName="PrepWeb & Développeur web"
               course="parcours développeur web"
-              description="Discussions & entraide parcours développeur web, ainsi que des channels de discussion post-formation (emplois, stacks, projets hors formation). Environ 250 membres"
+              description="Discussions & entraide parcours développeur web, ainsi que des channels de discussion post-formation (emplois, stacks, projets hors formation)."
               href="https://discord.gg/DPyyzrT"
               img="https://cdn.discordapp.com/icons/651031474966888458/1b2efcc2293cddb82b254022f6350d90.webp?size=256"
               api="https://discord.com/api/guilds/651031474966888458/widget.json"
@@ -37,24 +37,10 @@ export default function DiscordList() {
             <DiscordServer
               serverName="devs.coffee"
               course="parcours développeur web"
-              description="Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent que peu de salons. Environ 100 membres"
+              description="Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent que peu de salons."
               href="https://discord.gg/f6BsPK9"
               img="https://cdn.discordapp.com/icons/766565028312383498/52036386762f324a65a35027d14464a9.webp?size=256"
               api="https://discord.com/api/guilds/766565028312383498/widget.json"
-            />
-            <DiscordServer
-              serverName="DA - Frontend"
-              course="parcours développeur front-end / web"
-              description="Discussions, entraide et soutien autour du parcours développeur web / développeur web front-end et de ses projets. Environ 150 membres"
-              href="https://discord.gg/SKJVyew"
-              img="https://cdn.discordapp.com/icons/569020625776017410/12d51a5f472cbf0e5b17371469975f3e.webp?size=256"
-            />
-            <DiscordServer
-              serverName="OpenClassrooms web dev 2020/2021"
-              course="parcours développeur web"
-              description="Discussions, entraide et soutien autour du parcours développeur web de la rentrée 2020/2021. Environ 150 membres"
-              href="https://discord.gg/f7eEDFF"
-              img="https://cdn.discordapp.com/icons/694531835065270392/e2a52f66656c99382be4038aa04d8f04.webp?size=256"
             />
             <DiscordServer
               serverName="Pair Programming Dev"
@@ -62,7 +48,22 @@ export default function DiscordList() {
               description="Vous souhaitez faire du pair-programming ? Vous trouverez peut-être votre bonheur ici ! Environ 50 membres"
               href="https://discord.gg/v7KDuNXv"
               img="https://cdn.discordapp.com/icons/775791415275552768/1eb2534468e68e633ea2886035a5bb78.webp?size=256"
+              api="https://discord.com/api/guilds/775791415275552768/widget.json"
             />
+            <DiscordServer
+              serverName="DA - Frontend"
+              course="parcours développeur front-end / web"
+              description="Discussions, entraide et soutien autour du parcours développeur web / développeur web front-end et de ses projets."
+              href="https://discord.gg/SKJVyew"
+              img="https://cdn.discordapp.com/icons/569020625776017410/12d51a5f472cbf0e5b17371469975f3e.webp?size=256"
+            />
+            {/* <DiscordServer
+              serverName="OpenClassrooms web dev 2020/2021"
+              course="parcours développeur web"
+              description="Discussions, entraide et soutien autour du parcours développeur web de la rentrée 2020/2021. Environ 150 membres"
+              href="https://discord.gg/f7eEDFF"
+              img="https://cdn.discordapp.com/icons/694531835065270392/e2a52f66656c99382be4038aa04d8f04.webp?size=256"
+            /> */}
           </ul>
         </div>
       </Card>
