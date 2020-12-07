@@ -56,6 +56,7 @@ export default function DiscordList() {
               description="Discussions, entraide et soutien autour du parcours développeur web / développeur web front-end et de ses projets."
               href="https://discord.gg/SKJVyew"
               img="https://cdn.discordapp.com/icons/569020625776017410/12d51a5f472cbf0e5b17371469975f3e.webp?size=256"
+              api="https://discord.com/api/guilds/569020625776017410/widget.json"
             />
             {/* <DiscordServer
               serverName="OpenClassrooms web dev 2020/2021"
