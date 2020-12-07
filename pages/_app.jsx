@@ -16,7 +16,7 @@ function App({ Component, pageProps }) {
     server: 'https://analytics.mathisbarre.com',
     domainId: 'ffc71a4d-4120-468e-9820-5483e514699e'
   },{
-    detailed: false,
+    detailed: true,
     ignoreLocalhost: true,
     ignoreOwnVisits: false
   })
