@@ -88,7 +88,8 @@ function Event({ date, description, link, type }) {
       `}
     >
       <a
-        href={link.href} 
+        href={link.href}
+        target="_blank" rel="noopener noreferrer"
       >
         <div className="py-4 flex items-center">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">

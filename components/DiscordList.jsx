@@ -90,7 +90,7 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
 
   return (
     <li>
-      <a href={href} className="discordServer block hover:bg-gray-50 my-4 rounded-md border-gray-200 border">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="discordServer block hover:bg-gray-50 my-4 rounded-md border-gray-200 border">
         <div className="px-4 py-4 sm:px-6 flex items-center justify-between">
           <div className="flex flex-col justify-start items-start">
             <div className="flex items-center">

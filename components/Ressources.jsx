@@ -155,6 +155,7 @@ function Ressource({title, description, img, href}) {
       <a
         className="border border-gray-200 rounded box-border hover:bg-gray-50"
         href={href}
+        target="_blank" rel="noopener noreferrer"
       >
         <Image
           className="rounded-t border-b border-gray-200"
