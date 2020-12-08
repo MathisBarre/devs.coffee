@@ -23,10 +23,7 @@ function App({ Component, pageProps }) {
 
   useEffect(() => {
     function handleRouteChange(url) {
-      instance.record({
-        siteLocation: window.location.href,
-        siteReferrer: document.referrer
-      })
+      instance.record(ackeeTracker.attributes(true))
     }
 
     handleRouteChange("https://mathisbarre.com")
