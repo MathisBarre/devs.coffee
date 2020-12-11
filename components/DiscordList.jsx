@@ -16,7 +16,7 @@ export default function DiscordList() {
           },
         }}
       >
-        <div className="bg-white overflow-hidden">
+        <div className="bg-white  dark:bg-gray-900 overflow-hidden">
           <ul>
             <DiscordServer
               serverName="Sans pris de tech"
@@ -90,7 +90,7 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
 
   return (
     <li>
-      <a href={href} target="_blank" rel="noopener noreferrer" className="discordServer block hover:bg-gray-50 my-4 rounded-md border-gray-200 border">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="discordServer block hover:bg-gray-50  dark:hover:bg-gray-1000 my-4 rounded-md border-gray-200 dark:border-gray-1000 border">
         <div className="px-4 py-4 sm:px-6 flex items-center justify-between">
           <div className="flex flex-col justify-start items-start">
             <div className="flex items-center">
@@ -111,12 +111,12 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
                 />
               </div>
               <div className="min-w-0 flex-1 flex flex-col items-start">
-                <div className="text-sm font-medium">
-                  <h3 className="inline font-semibold text-indigo-600">{serverName}</h3>
-                  <p className="inline ml-1 font-normal text-gray-500">({course})</p>
+                <div className="text-md font-medium">
+                  <h3 className="inline font-semibold text-indigo-600 dark:text-indigo-500">{serverName}</h3>
+                  <p className="inline ml-1 font-normaltext-gray-500 dark:text-gray-300">({course})</p>
                 </div>
                 <div className="mt-2 flex">
-                  <div className="flex items-center text-sm text-gray-500">
+                  <div className="flex items-center text-md text-gray-500 dark:text-gray-300">
                     <p>{description}</p>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
         </div>
         {api &&
           (discordData.members ? (
-            <div className="discordMembers bg-indigo-600 min-h-9 flex items-center pl-3 pr-2 text-sm text-white rounded-b-md">
+            <div className="discordMembers bg-indigo-600 dark:bg-indigo-800 min-h-9 flex items-center pl-3 pr-2 text-sm text-white rounded-b-md">
               <p className="whitespace-nowrap mr-2 inline">
                 <strong>{discordData.presence_count} </strong>
                 {/* <div className="w-1" /> */}
@@ -156,7 +156,7 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
                   if (index < 60) {
                     return (
                       <div
-                        className="relative z-30 inline-block h-5 w-5 min-w-5 rounded-full ring-2 ring-white"
+                        className="relative z-30 inline-block h-5 w-5 min-w-5 rounded-full ring-2 ring-white dark:ring-black"
                         key={index}
                       >
                         <Image
@@ -177,7 +177,7 @@ function DiscordServer({ course, serverName, description, href, img, api }) {
               </div>
             </div>
           ) : (
-            <div className="h-9 w-full bg-indigo-500 animate-pulse hidden md:block rounded-b-md" />
+            <div className="h-9 w-full bg-indigo-500 dark:bg-indigo-700 animate-pulse hidden md:block rounded-b-md" />
           ))}
       </a>
     </li>

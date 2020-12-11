@@ -6,7 +6,8 @@ import * as ackeeTracker from 'ackee-tracker'
 import Header from "components/layout/Header.jsx"
 import Footer from "components/layout/Footer.jsx"
 
-import "../style/global.scss"
+import "tailwindcss/tailwind.css"
+import "../style/global.css"
 
 function App({ Component, pageProps }) {
   const router = useRouter()

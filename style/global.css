@@ -1,0 +1,33 @@
+.discordServer:hover .discordMembers {
+  @apply bg-indigo-700 dark:bg-indigo-900;
+}
+
+.react-select-container {
+  @apply  dark:bg-gray-900 dark:border-gray-1000;
+}
+
+.react-select__value-container {
+  @apply dark:bg-gray-900 dark:border-gray-1000 dark:text-white;
+}
+
+.react-select__indicator {
+  @apply dark:bg-gray-900;
+}
+
+.react-select__indicator-separator {
+  @apply dark:bg-gray-900;
+}
+
+.react-select__control {
+  @apply dark:bg-gray-1000 dark:border-gray-1000 !important;
+}
+
+.react-select__placeholder, .react-select__single-value {
+  @apply dark:text-white !important
+}
+
+@media (prefers-color-scheme: dark) {
+  .footerImg {
+    filter: invert(100%)
+  }
+}

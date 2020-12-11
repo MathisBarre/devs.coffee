@@ -67,7 +67,14 @@ export default function Ressources() {
       description:"Calculez les performances de votre site internet.",
       img:"/images/gtmetrix.png",
       href:"https://gtmetrix.com/",
-      tags: ["DevWeb P4", "Performance"]
+      tags: ["DevWeb P4", "Optimisation"]
+    },
+    {
+      title:"Squoosh",
+      description:"Optimiser vos images facilement.",
+      img:"/images/squoosh.png",
+      href:"https://squoosh.app/",
+      tags: ["DevWeb P4", "Optimisation"]
     },
     {
       title:"Metatag.io",
@@ -139,6 +146,8 @@ export default function Ressources() {
           onChange={(change) => {
             setSelectedTags(change.value)
           }}
+          className="react-select-container"
+          classNamePrefix="react-select"
         />
         <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4">
           {filteredRessources.map((ressource, index) => (
@@ -153,20 +162,20 @@ export default function Ressources() {
 function Ressource({title, description, img, href}) {
   return (
       <a
-        className="border border-gray-200 rounded box-border hover:bg-gray-50"
+        className="border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:hover:bg-gray-1000"
         href={href}
         target="_blank" rel="noopener noreferrer"
       >
         <Image
-          className="rounded-t border-b border-gray-200"
+          className="rounded-t border-b border-gray-200 dark:border-gray-1000"
           src={img}
           height="1080"
           width="1920"
           objectFit="cover"
         />
         <div className="pt-2 px-3 pb-3">
-          <h3 className="font-semibold text-sm text-indigo-600 mb-1">{title}</h3>
-          <p className="text-gray-500 text-xs">{description}</p>
+          <h3 className="font-semibold text-md text-indigo-600 dark:text-indigo-500 mb-1">{title}</h3>
+          <p className="text-gray-500 dark:text-gray-300 text-sm">{description}</p>
         </div>
       </a>
   )

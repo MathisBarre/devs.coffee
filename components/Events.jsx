@@ -21,7 +21,7 @@ export default function Events() {
           onClick: () => {window.location.href = "mailto:mathis.barre@live.fr"}
         }}
       >
-        <div className="bg-white overflow-hidden">
+        <div className="bg-white dark:bg-gray-900 overflow-hidden">
           <ul>
             {/* <Event
               date="2020-11-10T17:30"
@@ -47,7 +47,7 @@ export default function Events() {
                 href: "https://twitch.tv/mathisbarre_"
               }}
             /> */}
-            <Event
+            {/* <Event
               date="2020-12-02T18:00"
               type="LIVE"
               description="Apprentissage Javascript avec Aurélien Vaast : les promises"
@@ -59,6 +59,14 @@ export default function Events() {
               date="2020-12-03T17:00"
               type="LIVE"
               description="Intégration en direct avec tailwindcss par Mathis Barré"
+              link={{
+                href: "https://www.twitch.tv/mathisbarre_"
+              }}
+            /> */}
+            <Event
+              date="2020-12-11T18:00"
+              type="LIVE"
+              description="Code review de vos projets avec mathis barré !"
               link={{
                 href: "https://www.twitch.tv/mathisbarre_"
               }}
@@ -84,7 +92,7 @@ function Event({ date, description, link, type }) {
     <li
       className={`
         ${isEventFinished ? "line-through" : ""}
-        my-4 border border-gray-200 rounded-md px-4 hover:bg-gray-50
+        my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 hover:bg-gray-50 dark:hover:bg-gray-1000 dark:text-white
       `}
     >
       <a
@@ -94,16 +102,16 @@ function Event({ date, description, link, type }) {
         <div className="py-4 flex items-center">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
-              <div className="text-sm font-medium text-indigo-600">
+              <div className="text-md font-medium text-indigo-600 dark:text-indigo-500">
                 <p className="uppercase inline">
                   [{type}]
                 </p>
-                <h3 className="ml-1 font-normal text-gray-500 inline">
+                <h3 className="ml-1 font-normal text-gray-500 dark:text-gray-300 inline">
                   {description}
                 </h3>
               </div>
               <div className="mt-2 flex">
-                <div className="flex items-center text-sm text-gray-500">
+                <div className="flex items-center text-md text-gray-500 dark:text-gray-300">
                   {/* Heroicon name: calendar */}
                   <svg
                     className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
