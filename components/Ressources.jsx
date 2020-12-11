@@ -162,7 +162,7 @@ export default function Ressources() {
 function Ressource({title, description, img, href}) {
   return (
       <a
-        className="border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:hover:bg-gray-1000"
+        className="border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:bg-gray-1000 dark:hover:bg-gray-1100"
         href={href}
         target="_blank" rel="noopener noreferrer"
       >

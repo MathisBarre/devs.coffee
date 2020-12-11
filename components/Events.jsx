@@ -92,7 +92,7 @@ function Event({ date, description, link, type }) {
     <li
       className={`
         ${isEventFinished ? "line-through" : ""}
-        my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 hover:bg-gray-50 dark:hover:bg-gray-1000 dark:text-white
+        my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 dark:bg-gray-1000 hover:bg-gray-50 dark:hover:bg-gray-1100 dark:text-white
       `}
     >
       <a
