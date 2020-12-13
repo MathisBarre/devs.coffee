@@ -4,7 +4,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-1000">
+    <header className="bg-gray-800 dark:bg-gray-1000">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -42,7 +42,7 @@ export default function Header() {
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
               }}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-insest focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 dark:hover:bg-gray-1100 focus:outline-none focus:ring-2 focus:ring-insest focus:ring-white"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -119,7 +119,7 @@ function HeaderLink({ text, href, active, isDesktop, disabled }) {
         ${
           disabled
             ? "cursor-not-allowedtext-gray-500 dark:text-gray-300"
-            : "text-gray-300 hover:text-white hover:bg-gray-700"
+            : "text-gray-300 hover:text-white hover:bg-gray-700  dark:hover:bg-gray-1100" 
         }
         px-3 py-2 rounded-md text-sm font-semibold
       `}
