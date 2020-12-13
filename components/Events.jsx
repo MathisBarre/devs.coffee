@@ -1,4 +1,5 @@
 import { useState } from "react"
+import clsx from "clsx"
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -71,6 +72,14 @@ export default function Events() {
                 href: "https://www.twitch.tv/mathisbarre_"
               }}
             />
+            <Event
+              date="2020-12-13T20:00"
+              type="EVENTS TEST"
+              description="Ne pas prendre en compte cet événement"
+              link={{
+                href: "https://www.twitch.tv/mathisbarre_"
+              }}
+            />
           </ul>
         </div>
       </Card>
@@ -87,13 +96,9 @@ function Event({ date, description, link, type }) {
   const dateFromNow = capitalizeFirstLetter(dayjs(date).locale("fr").from(dayjs()))
   const [isEventFinished] = useState(dayjs().isAfter(date))
   console.log(`Is event finished ? : ${isEventFinished}`)
-
   return (
     <li
-      className={`
-        ${isEventFinished ? "line-through" : ""}
-        my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 dark:bg-gray-1000 hover:bg-gray-50 dark:hover:bg-gray-1100 dark:text-white
-      `}
+      className={clsx(`my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 dark:bg-gray-1000 hover:bg-gray-50 dark:hover:bg-gray-1100 dark:text-white`, isEventFinished && "line-through")}
     >
       <a
         href={link.href}
