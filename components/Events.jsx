@@ -72,14 +72,6 @@ export default function Events() {
                 href: "https://www.twitch.tv/mathisbarre_"
               }}
             />
-            <Event
-              date="2020-12-13T20:00"
-              type="EVENTS TEST"
-              description="Ne pas prendre en compte cet événement"
-              link={{
-                href: "https://www.twitch.tv/mathisbarre_"
-              }}
-            />
           </ul>
         </div>
       </Card>
