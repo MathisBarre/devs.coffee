@@ -1,18 +1,6 @@
 import Card from "./layout/Card";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-// import "leaflet/dist/images/marker-icon.png";
-// import "leaflet/dist/images/marker-icon-2x.png";
-
 export default function Map() {
-
-  const markers = [
-    {
-
-    }
-  ]
-
   return (
     <section id="map">
       <Card
@@ -24,22 +12,10 @@ export default function Map() {
         }}
         withContentPadding={false}
       >
-        <MapContainer
-          center={[46.807580, 2.622823]}
-          zoom={6}
-          scrollWheelZoom={false}
-          className="w-full max-w-full h-144"
-        >
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[46.807580, 2.622823]}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer>
+      <iframe 
+        src="https://www.google.com/maps/d/embed?mid=137K62Pc-8FSmvznlKPAap4USgP8Wz0ob" 
+        className="w-full max-w-full h-144 mt-4 rounded-md"
+      />
       </Card>
     </section>
   );
