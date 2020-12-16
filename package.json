@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier **/*"
+    "format": "prettier --write ./**/*.jsx"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.21",
