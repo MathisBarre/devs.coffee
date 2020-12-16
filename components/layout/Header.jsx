@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import HeaderLink from "./HeaderLink"
+import HeaderLink from './HeaderLink'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

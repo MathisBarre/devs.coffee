@@ -1,35 +1,41 @@
-import { useState, useEffect } from "react";
-import Image from "next/image"
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
-export default function DiscordServer({ course, name, description, href, img, api }) {
-  const [discordData, setDiscordData] = useState(false);
+export default function DiscordServer({
+  course,
+  name,
+  description,
+  href,
+  img,
+  api,
+}) {
+  const [discordData, setDiscordData] = useState(false)
 
   useEffect(() => {
     if (api) {
       fetch(api)
         .then((body) => body.json())
         .then((apiData) => {
-          setDiscordData(apiData);
+          setDiscordData(apiData)
         })
         .catch((error) => {
-          console.log(error);
-        });
+          console.log(error)
+        })
     }
-  }, []);
+  }, [])
 
   return (
     <li>
       <a
-        href={href} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="discordServer block  my-4 hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 rounded-md border-gray-200 dark:border-gray-1100 border">
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="discordServer block  my-4 hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 rounded-md border-gray-200 dark:border-gray-1100 border"
+      >
         <div className="px-4 py-4 sm:px-6 flex items-center justify-between">
           <div className="flex flex-col justify-start items-start">
             <div className="flex items-center">
-              <div
-                className="inline-block h-14 w-14 mr-6"
-              >
+              <div className="inline-block h-14 w-14 mr-6">
                 <Image
                   className="rounded-full"
                   src={img}
@@ -45,8 +51,12 @@ export default function DiscordServer({ course, name, description, href, img, ap
               </div>
               <div className="min-w-0 flex-1 flex flex-col items-start">
                 <div className="text-md font-medium">
-                  <h3 className="inline font-semibold text-indigo-600 dark:text-indigo-500">{name}</h3>
-                  <p className="inline ml-1 font-normaltext-gray-500 dark:text-gray-300">({course})</p>
+                  <h3 className="inline font-semibold text-indigo-600 dark:text-indigo-500">
+                    {name}
+                  </h3>
+                  <p className="inline ml-1 font-normaltext-gray-500 dark:text-gray-300">
+                    ({course})
+                  </p>
                 </div>
                 <div className="mt-2 flex">
                   <div className="flex items-center text-md text-gray-500 dark:text-gray-300">
@@ -81,8 +91,8 @@ export default function DiscordServer({ course, name, description, href, img, ap
                 <strong>{discordData.presence_count} </strong>
                 {/* <div className="w-1" /> */}
                 {discordData.presence_count > 1
-                  ? "membres actuellements connectés"
-                  : "membre actuellement connecté"}
+                  ? 'membres actuellements connectés'
+                  : 'membre actuellement connecté'}
               </p>
               <div className="hidden sm:inline-flex items-center -space-x-1 relative z-0 overflow-hidden h-full p-1">
                 {discordData.members.map((member, index) => {
@@ -104,7 +114,7 @@ export default function DiscordServer({ course, name, description, href, img, ap
                           priority={false}
                         />
                       </div>
-                    );
+                    )
                   }
                 })}
               </div>
@@ -114,5 +124,5 @@ export default function DiscordServer({ course, name, description, href, img, ap
           ))}
       </a>
     </li>
-  );
+  )
 }

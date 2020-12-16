@@ -18,19 +18,21 @@ export default function Events() {
       >
         <div className="bg-white dark:bg-gray-900 overflow-hidden">
           <ul>
-            {events.map(({ date, type, description, link, isCompleted }, index) => {
-              if (!isCompleted) {
-                return (
-                  <Event
-                    key={index}
-                    date={date}
-                    type={type}
-                    description={description}
-                    link={link}
-                  />
-                )
+            {events.map(
+              ({ date, type, description, link, isCompleted }, index) => {
+                if (!isCompleted) {
+                  return (
+                    <Event
+                      key={index}
+                      date={date}
+                      type={type}
+                      description={description}
+                      link={link}
+                    />
+                  )
+                }
               }
-            })}
+            )}
           </ul>
         </div>
       </Card>

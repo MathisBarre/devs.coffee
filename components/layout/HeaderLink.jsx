@@ -1,4 +1,10 @@
-export default function HeaderLink({ text, href, active, isDesktop, disabled }) {
+export default function HeaderLink({
+  text,
+  href,
+  active,
+  isDesktop,
+  disabled,
+}) {
   return (
     <a
       href={href}
