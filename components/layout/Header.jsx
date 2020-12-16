@@ -25,14 +25,13 @@ export default function Header() {
                   text="Ressources"
                   href="#ressources"
                 />
-                <HeaderLink isDesktop={true} text="Carte" href="#" disabled />
+                <HeaderLink isDesktop={true} text="Carte" href="#map" />
                 <HeaderLink
                   isDesktop={true}
                   text="Questions fréquentes"
                   href="#"
                   disabled
                 />
-                {/* <HeaderLink isDesktop={true} text="Carte" href="#map"/> */}
               </div>
             </nav>
           </div>
@@ -102,7 +101,7 @@ export default function Header() {
           <HeaderLink text="Événements" href="#events" active />
           <HeaderLink text="Discord" href="#discord" />
           <HeaderLink text="Ressources" href="#ressources" />
-          <HeaderLink text="Carte" href="#" disabled />
+          <HeaderLink text="Carte" href="#map" />
           <HeaderLink text="Questions fréquentes" href="#" disabled />
         </div>
       </nav>
@@ -118,7 +117,7 @@ function HeaderLink({ text, href, active, isDesktop, disabled }) {
         ${isDesktop ? "" : "block"}
         ${
           disabled
-            ? "cursor-not-allowedtext-gray-500 dark:text-gray-300"
+            ? "cursor-not-allowed text-gray-500"
             : "text-gray-300 hover:text-white hover:bg-gray-700  dark:hover:bg-gray-1100" 
         }
         px-3 py-2 rounded-md text-sm font-semibold
