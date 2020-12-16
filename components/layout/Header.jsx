@@ -4,7 +4,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 dark:bg-gray-1000">
+    <header className="bg-gray-800 dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -16,16 +16,16 @@ export default function Header() {
               />
               <h1 className="text-white font-bold text-2xl">devs.coffee</h1>
             </div>
-            <nav className="hidden sm:block sm:ml-6">
+            <nav className="hidden md:block sm:ml-6">
               <div className="flex space-x-4">
                 <HeaderLink isDesktop={true} text="Événements" href="#events" />
+                <HeaderLink isDesktop={true} text="Carte" href="#map" />
                 <HeaderLink isDesktop={true} text="Discord" href="#discord" />
                 <HeaderLink
                   isDesktop={true}
                   text="Ressources"
                   href="#ressources"
                 />
-                <HeaderLink isDesktop={true} text="Carte" href="#map" />
                 <HeaderLink
                   isDesktop={true}
                   text="Questions fréquentes"
@@ -35,7 +35,7 @@ export default function Header() {
               </div>
             </nav>
           </div>
-          <div className="-mr-2 flex sm:hidden">
+          <div className="-mr-2 flex md:hidden">
             {/* Mobile menu button */}
             <button
               onClick={() => {
@@ -96,12 +96,12 @@ export default function Header() {
 
         Menu open: "block", Menu closed: "hidden"
       */}
-      <nav className={`${isMenuOpen ? "block" : "hidden"} sm:hidden`}>
+      <nav className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           <HeaderLink text="Événements" href="#events" active />
+          <HeaderLink text="Carte" href="#map" />
           <HeaderLink text="Discord" href="#discord" />
           <HeaderLink text="Ressources" href="#ressources" />
-          <HeaderLink text="Carte" href="#map" />
           <HeaderLink text="Questions fréquentes" href="#" disabled />
         </div>
       </nav>

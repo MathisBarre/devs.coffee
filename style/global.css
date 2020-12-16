@@ -1,3 +1,7 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
 .discordServer:hover .discordMembers {
   @apply bg-indigo-700 dark:bg-indigo-900;
 }

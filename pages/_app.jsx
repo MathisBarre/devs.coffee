@@ -56,7 +56,9 @@ function App({ Component, pageProps }) {
         <meta property="twitter:image" content="https://devs.coffee/devs-coffee.png"/>
       </Head>
       <Header/>
-      <Component {...pageProps} />
+      <div className="pt-16">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
   );
