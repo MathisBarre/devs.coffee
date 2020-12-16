@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react'
+import HeaderLink from "./HeaderLink"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <header className="bg-gray-800 dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
@@ -39,7 +40,7 @@ export default function Header() {
             {/* Mobile menu button */}
             <button
               onClick={() => {
-                setIsMenuOpen(!isMenuOpen);
+                setIsMenuOpen(!isMenuOpen)
               }}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 dark:hover:bg-gray-1100 focus:outline-none focus:ring-2 focus:ring-insest focus:ring-white"
               aria-expanded="false"
@@ -48,11 +49,10 @@ export default function Header() {
               {/* Icon when menu is closed. */}
               {/*
                 Heroicon name: menu
-
                 Menu open: "hidden", Menu closed: "block"
               */}
               <svg
-                className={`${isMenuOpen ? "hidden" : "block"} block h-6 w-6`}
+                className={`${isMenuOpen ? 'hidden' : 'block'} block h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -67,13 +67,10 @@ export default function Header() {
                 />
               </svg>
               {/* Icon when menu is open. */}
-              {/*
-                Heroicon name: x
-
-                Menu open: "block", Menu closed: "hidden"
-              */}
+              {/* Heroicon name: x
+              Menu open: "block", Menu closed: "hidden" */}
               <svg
-                className={`${isMenuOpen ? "block" : "hidden"} h-6 w-6`}
+                className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -91,12 +88,9 @@ export default function Header() {
           </div>
         </div>
       </div>
-      {/*
-        Mobile menu, toggle classes based on menu state.
-
-        Menu open: "block", Menu closed: "hidden"
-      */}
-      <nav className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
+      {/* Mobile menu, toggle classes based on menu state.
+      Menu open: "block", Menu closed: "hidden" */}
+      <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           <HeaderLink text="Événements" href="#events" active />
           <HeaderLink text="Carte" href="#map" />
@@ -106,24 +100,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  );
-}
-
-function HeaderLink({ text, href, active, isDesktop, disabled }) {
-  return (
-    <a
-      href={href}
-      className={`
-        ${isDesktop ? "" : "block"}
-        ${
-          disabled
-            ? "cursor-not-allowed text-gray-500"
-            : "text-gray-300 hover:text-white hover:bg-gray-700  dark:hover:bg-gray-1100" 
-        }
-        px-3 py-2 rounded-md text-sm font-semibold
-      `}
-    >
-      {text}
-    </a>
-  );
+  )
 }

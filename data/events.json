@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2020-11-10T17:30",
+    "type": "live",
+    "description": "Introduction à Javascript : DOM, variable & fonction. Niveau débutant ",
+    "link": "https://discord.gg/f6BsPK9",
+    "isCompleted": true
+  },
+  {
+    "date": "2020-11-19T17:30",
+    "type": "live",
+    "description": "Introduction à Javascript : DOM, variable, fonction, ajax, fetch & callback. Niveau débutant ",
+    "link": "https://discord.gg/f6BsPK9",
+    "isCompleted": true
+  },
+  {
+    "date": "2020-11-30T17:30",
+    "type": "LIVE",
+    "description": "Apprentissage Javascript : La programmation orienté objet",
+    "link": "https://twitch.tv/mathisbarre_",
+    "isCompleted": true
+  },
+  {
+    "date": "2020-12-02T18:00",
+    "type": "LIVE",
+    "description": "Apprentissage Javascript avec Aurélien Vaast : les promises",
+    "link": "https://www.twitch.tv/trainingdev",
+    "isCompleted": true
+  },
+  {
+    "date": "2020-12-03T17:00",
+    "type": "LIVE",
+    "description": "Intégration en direct avec tailwindcss par Mathis Barré",
+    "link": "https://www.twitch.tv/mathisbarre_",
+    "isCompleted": true
+  },
+  {
+    "date": "2020-12-11T18:00",
+    "type": "LIVE",
+    "description": "Code review de vos projets avec mathis barré !",
+    "link": "https://www.twitch.tv/mathisbarre_",
+    "isCompleted": false
+  }
+]

@@ -7,7 +7,7 @@ export default function Card({ title, description, button, withContentPadding=tr
               <h2 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
                 {title}
               </h2>
-              {description && <p className="mt-1 text-smtext-gray-500 dark:text-gray-300 text-gray-500 dark:text-gray-300">
+              {description && <p className="mt-1 text-smtext-gray-500 text-gray-500 dark:text-gray-300">
                 {description}
               </p>}
             </div>

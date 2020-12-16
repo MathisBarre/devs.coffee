@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Sans pris de tech",
+    "course": "tous les parcours",
+    "description": "Serveur général regroupant toute la communauté OpenClassrooms française. Si vous devez en rejoindre un, c'est celui là !",
+    "href": "https://discord.gg/u7dxx3K",
+    "img": "https://cdn.discordapp.com/icons/595235640044552223/03b0f458149f0ee64a357186f8b36d4e.webp?size:256",
+    "api": "https://discord.com/api/guilds/595235640044552223/widget.json"
+  },
+  {
+    "name": "PrepWeb & Développeur web",
+    "course": "parcours développeur web",
+    "description": "Discussions & entraide parcours développeur web, ainsi que des channels de discussion post-formation (emplois, stacks, projets hors formation).",
+    "href": "https://discord.gg/DPyyzrT",
+    "img": "https://cdn.discordapp.com/icons/651031474966888458/1b2efcc2293cddb82b254022f6350d90.webp?size:256",
+    "api": "https://discord.com/api/guilds/651031474966888458/widget.json"
+  },
+  {
+    "name": "DA - Frontend",
+    "course": "parcours développeur front-end / web",
+    "description": "Discussions, entraide et soutien autour du parcours développeur web / développeur web front-end et de ses projets.",
+    "href": "https://discord.gg/SKJVyew",
+    "img": "https://cdn.discordapp.com/icons/569020625776017410/12d51a5f472cbf0e5b17371469975f3e.webp?size:256",
+    "api": "https://discord.com/api/guilds/569020625776017410/widget.json"
+  },
+  {
+    "name": "devs.coffee",
+    "course": "parcours développeur web",
+    "description": "Ici on aime parler, partager et aider. Nous aimons la simplicité et nous n'avons par conséquent que peu de salons.",
+    "href": "https://discord.gg/f6BsPK9",
+    "img": "https://cdn.discordapp.com/icons/766565028312383498/b87af8623d6835cc13db6eae8b5caaa5.webp?size=256",
+    "api": "https://discord.com/api/guilds/766565028312383498/widget.json"
+  },
+  {
+    "name": "Pair Programming Dev",
+    "course": "parcours de développements",
+    "description": "Vous souhaitez faire du pair-programming ? Vous trouverez peut-être votre bonheur ici ! Environ 50 membres",
+    "href": "https://discord.gg/v7KDuNXv",
+    "img": "https://cdn.discordapp.com/icons/775791415275552768/1eb2534468e68e633ea2886035a5bb78.webp?size:256",
+    "api": "https://discord.com/api/guilds/775791415275552768/widget.json"
+  }
+]
