@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Select from 'react-select'
+import ressourcesToTags from '../utils/main'
 import Card from './layout/Card'
 import Ressource from './Ressource'
 
@@ -7,38 +8,23 @@ import defaultRessources from '../data/ressources.json'
 
 export default function Ressources() {
   // Construit une liste avec tous les tags présent dans les ressources par défaut
-  let allTags
-  allTags = defaultRessources.reduce((accumulator, currentValue) => {
-    return accumulator.concat(
-      currentValue.tags.filter((item) => accumulator.indexOf(item) < 0)
-    )
-  }, [])
+  const allRessourcesTags = ressourcesToTags(defaultRessources)
 
-  allTags = allTags.sort((a, b) => {
-    //! Code magique qui marche sans que je sache pourquoi ????
-    return (
-      String.fromCharCode(parseInt(a, 16)) <
-      String.fromCharCode(parseInt(b, 16))
-    )
-  })
-
-  allTags = ['Toutes les ressources'].concat(allTags)
-
-  const [selectedTags, setSelectedTags] = useState(allTags)
+  const [selectedTags, setSelectedTags] = useState(allRessourcesTags)
   const [filteredRessources, setFilteredRessources] = useState(
     defaultRessources
   )
 
   // Re-filtre les ressources en fonction des tags sélectionnés
   useEffect(() => {
-    setFilteredRessources(
-      defaultRessources.filter((ressource) => {
-        return (
-          selectedTags.includes('Toutes les ressources') ||
-          ressource.tags.some((tag) => selectedTags.includes(tag))
-        )
-      })
-    )
+    const newFilteredRessources = defaultRessources.filter((ressource) => {
+      return (
+        selectedTags.includes('Toutes les ressources') ||
+        ressource.tags.some((tag) => selectedTags.includes(tag))
+      )
+    })
+
+    setFilteredRessources(newFilteredRessources)
   }, [selectedTags])
 
   return (
