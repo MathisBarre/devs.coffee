@@ -15,4 +15,6 @@ export function ressourcesToTags(defaultRessources) {
   })
 
   allTags = ['Toutes les ressources'].concat(allTags)
+
+  return allTags
 }

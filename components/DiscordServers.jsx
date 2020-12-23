@@ -18,8 +18,8 @@ export default function DiscordServers() {
       >
         <div className="bg-white  dark:bg-gray-900 overflow-hidden">
           <ul>
-            {discordServers.map((props) => {
-              return <DiscordServer {...props} />
+            {discordServers.map((props, index) => {
+              return <DiscordServer {...props} key={index} />
             })}
           </ul>
         </div>

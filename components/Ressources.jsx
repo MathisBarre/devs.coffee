@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Select from 'react-select'
-import ressourcesToTags from '../utils/main'
+import { ressourcesToTags } from '../utils/main'
 import Card from './layout/Card'
 import Ressource from './Ressource'
 
@@ -44,10 +44,11 @@ export default function Ressources() {
           className="react-select-container"
           classNamePrefix="react-select"
           isSearchable={true}
-          options={allTags.map((tag) => ({ value: tag, label: tag }))}
+          options={allRessourcesTags.map((tag) => ({ value: tag, label: tag }))}
           onChange={(change) => {
             setSelectedTags(change.value)
           }}
+          instanceId="a98sd79sd87c"
         />
         <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4">
           {filteredRessources.map((ressource, index) => (
