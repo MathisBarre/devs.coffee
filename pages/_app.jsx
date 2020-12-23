@@ -15,7 +15,7 @@ function App({ Component, pageProps }) {
   // Ackee Analytics
   const instance = ackeeTracker.create(
     {
-      server: 'https://analytics.mathisbarre.com',
+      server: 'https://manialytics.herokuapp.com/',
       domainId: 'ffc71a4d-4120-468e-9820-5483e514699e',
     },
     {
