@@ -18,7 +18,6 @@ export default function Event({ date, description, link, type }) {
     dayjs(date).locale('fr').from(dayjs())
   )
   const [isEventFinished] = useState(dayjs().isAfter(date))
-  console.log(`Is event finished ? : ${isEventFinished}`)
 
   return (
     <li
