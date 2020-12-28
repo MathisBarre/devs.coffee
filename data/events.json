@@ -65,7 +65,7 @@
   {
     "date": "2021-01-02T12:00",
     "type": "LIVE",
-    "description": "Introduction à javascript 6/7 : Condition & itération",
+    "description": "Introduction à javascript 6/7 : API et manipulation données navigateur",
     "link": "https://www.twitch.tv/trainingdev",
     "isCompleted": false
   },
