@@ -39,40 +39,47 @@
     "type": "LIVE",
     "description": "Introduction à javascript 2/7 : Condition & itération",
     "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": false
+    "isCompleted": true
   },
   {
     "date": "2020-12-30T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 3/7 : Fonctions et paramètres",
     "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": false
+    "isCompleted": true
   },
   {
     "date": "2020-12-31T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 4/7 : La manipulation du DOM",
     "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": false
+    "isCompleted": true
   },
   {
     "date": "2021-01-01T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 5/7 : Les événements",
     "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": false
+    "isCompleted": true
   },
   {
     "date": "2021-01-02T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 6/7 : API et manipulation données navigateur",
     "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": false
+    "isCompleted": true
   },
   {
     "date": "2021-01-03T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 7/7 : La POO avec les classes",
+    "link": "https://www.twitch.tv/trainingdev",
+    "isCompleted": true
+  },
+  {
+    "date": "2021-01-07T18:00",
+    "type": "LIVE",
+    "description": "Débugger avec les outils développeurs chrome",
     "link": "https://www.twitch.tv/trainingdev",
     "isCompleted": false
   }
