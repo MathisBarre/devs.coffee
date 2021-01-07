@@ -14,6 +14,7 @@ export default function Ressource({ title, description, img, href }) {
         height="1080"
         width="1920"
         objectFit="cover"
+        priority={true}
       />
       <div className="pt-2 px-3 pb-3">
         <h3 className="font-semibold text-md text-indigo-600 dark:text-indigo-500 mb-1">

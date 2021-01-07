@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import HeaderLink from './HeaderLink'
+import HeaderLink from '@components/layout/HeaderLink'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,6 +20,7 @@ export default function Header() {
             <nav className="hidden md:block sm:ml-6">
               <div className="flex space-x-4">
                 <HeaderLink isDesktop={true} text="Événements" href="#events" />
+                <HeaderLink isDesktop={true} text="Initiatives" href="#initiatives" />
                 <HeaderLink isDesktop={true} text="Carte" href="#map" />
                 <HeaderLink isDesktop={true} text="Discord" href="#discord" />
                 <HeaderLink
@@ -93,6 +94,7 @@ export default function Header() {
       <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           <HeaderLink text="Événements" href="#events" active />
+          <HeaderLink text="Initiatives" href="#initiatives" />
           <HeaderLink text="Carte" href="#map" />
           <HeaderLink text="Discord" href="#discord" />
           <HeaderLink text="Ressources" href="#ressources" />
