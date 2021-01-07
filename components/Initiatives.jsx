@@ -3,7 +3,6 @@ import Card from '@components/layout/Card'
 import Ressource from '@components/Ressource'
 
 export default function Events() {
-  console.log(initiatives)
   return (
     <section id="initiatives">
       <Card
