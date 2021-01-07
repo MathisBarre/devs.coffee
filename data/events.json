@@ -77,6 +77,13 @@
     "isCompleted": true
   },
   {
+    "date": "2021-01-07T14:00",
+    "type": "LIVE",
+    "description": "Code review de deux projets ohmyfood par mathis barré",
+    "link": "https://www.twitch.tv/mathisbarre_",
+    "isCompleted": false
+  },
+  {
     "date": "2021-01-07T18:00",
     "type": "LIVE",
     "description": "Débugger avec les outils développeurs chrome",
