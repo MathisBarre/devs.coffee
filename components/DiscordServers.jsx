@@ -1,5 +1,5 @@
-import Card from './layout/Card'
-import DiscordServer from './DiscordServer'
+import Card from '@components/layout/Card'
+import DiscordServer from '@components/DiscordServer'
 
 import discordServers from '../data/discordServers.json'
 

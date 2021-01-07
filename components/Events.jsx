@@ -1,6 +1,6 @@
-import Event from './Event'
+import Event from '@components/Event'
+import Card from '@components/layout/Card'
 import events from '../data/events.json'
-import Card from './layout/Card'
 
 export default function Events() {
   return (

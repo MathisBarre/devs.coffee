@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Select from 'react-select'
 import { ressourcesToTags } from '../utils/main'
-import Card from './layout/Card'
-import Ressource from './Ressource'
+import Card from '@components/layout/Card'
+import Ressource from '@components/Ressource'
 
 import defaultRessources from '../data/ressources.json'
 
@@ -50,7 +50,7 @@ export default function Ressources() {
           }}
           instanceId="a98sd79sd87c"
         />
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4">
+        <div className="my-grid">
           {filteredRessources.map((ressource, index) => (
             <Ressource key={index} {...ressource} />
           ))}

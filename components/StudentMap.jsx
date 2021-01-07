@@ -1,4 +1,4 @@
-import Card from './layout/Card'
+import Card from '@components/layout/Card'
 
 export default function Map() {
   return (
