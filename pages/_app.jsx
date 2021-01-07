@@ -38,24 +38,22 @@ function App({ Component, pageProps }) {
     }
   }, [router.events])
 
+  // SEO
+  const SEO_TITLE = 'devs.coffee'
+  const SEO_DESCRIPTION = 'devs.coffee est un site qui a pour objectif d’augmenter les liens communautaires et d’améliorer l\'expérience des étudiant chez OpenClassrooms. A l\'heure actuelle, vous pouvez y retrouver une liste des serveurs discord, une carte des étudiants, un calendrier des rendez-vous communautaires à ne pas louper et une liste de ressources additionnels !'
+
   return (
     <>
       <Head>
         <title>devs.coffee</title>
-        <meta name="title" content="devs.coffee" />
-        <meta
-          name="description"
-          content="devs.coffee est un site qui a pour objectif d’augmenter l'expérience étudiant chez OpenClassrooms via des ressources additionnelles et une liste de questions fréquentes ainsi que d’améliorer les liens communautaires grâce à liste de discord, une carte des étudiants et un calendrier des rendez-vous à ne pas louper !"
-        />
+        <meta name="title" content={SEO_TITLE} />
+        <meta name="description" content={SEO_DESCRIPTION} />
         <link rel="icon" href="favicon.svg" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://devs.coffee/" />
-        <meta property="og:title" content="devs.coffee" />
-        <meta
-          property="og:description"
-          content="devs.coffee est un site qui a pour objectif d’augmenter l'expérience étudiant chez OpenClassrooms via des ressources additionnelles et une liste de questions fréquentes ainsi que d’améliorer les liens communautaires grâce à liste de discord, une carte des étudiants et un calendrier des rendez-vous à ne pas louper !"
-        />
+        <meta property="og:title" content={SEO_TITLE} />
+        <meta property="og:description" content={SEO_DESCRIPTION} />
         <meta
           property="og:image"
           content="https://devs.coffee/devs-coffee.png"
@@ -63,11 +61,8 @@ function App({ Component, pageProps }) {
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://devs.coffee/" />
-        <meta property="twitter:title" content="devs.coffee" />
-        <meta
-          property="twitter:description"
-          content="devs.coffee est un site qui a pour objectif d’augmenter l'expérience étudiant chez OpenClassrooms via des ressources additionnelles et une liste de questions fréquentes ainsi que d’améliorer les liens communautaires grâce à liste de discord, une carte des étudiants et un calendrier des rendez-vous à ne pas louper !"
-        />
+        <meta property="twitter:title" content={SEO_TITLE} />
+        <meta property="twitter:description" content={SEO_DESCRIPTION} />
         <meta
           property="twitter:image"
           content="https://devs.coffee/devs-coffee.png"
