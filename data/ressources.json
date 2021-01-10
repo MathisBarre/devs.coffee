@@ -2,98 +2,98 @@
   {
     "title":"CSS Diner",
     "description":"Un jeu très amusant pour apprendre les sélecteurs CSS !",
-    "img":"/images/css-diner.png",
+    "img":"/images/ressources/css-diner.png",
     "href":"https://flukeout.github.io/",
     "tags": ["DevWeb P2", "DevWeb P3", "CSS"]
   },
   {
     "title":"Flexbox Froggy",
     "description":"Des couleurs, des grenouilles et des flexbox",
-    "img":"/images/flexbox-froggy.jpg",
+    "img":"/images/ressources/flexbox-froggy.jpg",
     "href":"https://flexboxfroggy.com/#fr",
     "tags": ["DevWeb P2", "DevWeb P3", "CSS"]
   },
   {
     "title":"Grid garden",
     "description":"Gérez votre jardin grâce aux grilles css !",
-    "img":"/images/grid-garden.png",
+    "img":"/images/ressources/grid-garden.png",
     "href":"https://cssgridgarden.com/#fr",
     "tags": ["DevWeb P2", "DevWeb P3", "CSS"]
   },
   {
     "title":"Learn Git Branching",
     "description":"Une façon interactive de se familiariser avec Git et Github",
-    "img":"/images/git-branching.png",
+    "img":"/images/ressources/git-branching.png",
     "href":"https://learngitbranching.js.org/?locale=fr_FR",
     "tags": ["DevWeb P2", "DevWeb P3", "Versionning"]
   },
   {
     "title":"Can I use ?",
     "description":"Table de support par navigateur pour HTML, CSS Javascript et autre",
-    "img":"/images/caniuse.png",
+    "img":"/images/ressources/caniuse.png",
     "href":"https://caniuse.com/",
     "tags": ["DevWeb P2", "DevWeb P3", "Compatibilité navigateur"]
   },
   {
     "title":"Animista",
     "description":"Des animations CSS déjà toutes faites !",
-    "img":"/images/animista.gif",
+    "img":"/images/ressources/animista.gif",
     "href":"https://animista.net",
     "tags": ["DevWeb P3", "CSS"]
   },
   {
     "title":"La base de Sass",
     "description":"Tout le fonctionnement de base de Sass, dans une page",
-    "img":"/images/sass.png",
+    "img":"/images/ressources/sass.png",
     "href":"https://sass-lang.com/guide",
     "tags": ["DevWeb P3", "CSS"]
   },
   {
     "title":"La checklist des développeurs web",
     "description":"Vérifiez que votre site est prêt à être mis en ligne grâce à cette checklist",
-    "img":"/images/webdev-checklist.png",
+    "img":"/images/ressources/webdev-checklist.png",
     "href":"https://www.toptal.com/developers/webdevchecklist",
     "tags": ["DevWeb P4"]
   },
   {
     "title":"GTmetrix propulsé par Google Lighthouse",
     "description":"Calculez les performances de votre site internet.",
-    "img":"/images/gtmetrix.png",
+    "img":"/images/ressources/gtmetrix.png",
     "href":"https://gtmetrix.com/",
     "tags": ["DevWeb P4", "Optimisation"]
   },
   {
     "title":"Squoosh",
     "description":"Optimiser vos images facilement.",
-    "img":"/images/squoosh.png",
+    "img":"/images/ressources/squoosh.png",
     "href":"https://squoosh.app/",
     "tags": ["DevWeb P4", "Optimisation"]
   },
   {
     "title":"Metatag.io",
     "description":"Visualisez facilement le résultats de vos balises SEO",
-    "img":"/images/metatags.png",
+    "img":"/images/ressources/metatags.png",
     "href":"https://metatags.io/",
     "tags": ["DevWeb P4", "SEO"]
   },
   {
     "title":"Javascript.info",
     "description":"Tutoriels Javascript extrêmement bien expliqués pour les débutants mais très approfondis",
-    "img":"/images/javascript-info.png",
+    "img":"/images/ressources/javascript-info.png",
     "href":"https://javascript.info/",
     "tags": ["DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
   },
   {
     "title":"WarriorJs",
     "description":"Un jeu passionnant de programmation et d'intelligence artificielle",
-    "img":"/images/warrior-js.png",
+    "img":"/images/ressources/warrior-js.png",
     "href":"https://warrior.js.org/fr/",
     "tags": ["DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
   },
   {
     "title":"freeCodeCamp",
     "description":"Des parcours complets en HTML, CSS, Javascript, MongoDB, express etc...uniquement par l'exemple.",
-    "img":"/images/freecodecamp.png",
+    "img":"/images/ressources/freecodecamp.png",
     "href":"https://www.freecodecamp.org/learn/",
     "tags": ["Parcours complet"]
   }
