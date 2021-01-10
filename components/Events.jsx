@@ -9,8 +9,6 @@ export default function Events() {
     return dayjs().isBefore(event.date)
   })
 
-  console.log(notFinishedEvents.length)
-
   return (
     <section id="events">
       <Card
@@ -43,7 +41,7 @@ export default function Events() {
                   }
                 }
               )
-              : <p className="text-black dark:text-white text-opacity-50 text-center py-10 my-4 dark:bg-gray-1000 rounded-md">Aucun événement programmé pour le moment</p>
+              : <p className="border border-gray-200 dark:border-gray-1000 text-black dark:text-white text-opacity-50 text-center py-10 my-4 dark:bg-gray-1000 rounded">Aucun événement programmé pour le moment</p>
             }
           </ul>
         </div>
