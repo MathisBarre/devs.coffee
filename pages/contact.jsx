@@ -19,6 +19,10 @@ export default function Contact() {
                   <img className="w-6 mr-2 -mb-0.5 pl-1" src="/images/twitch_glitch.svg" alt=""/>
                   <p className="flex items-center">mathisbarre_</p>
                 </a>
+                <a href="https://twitter.com/LeMathisBarre" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
+                  <img className="w-6 mr-2 -mb-0.5 pl-1" src="/images/twitter_bird.svg" alt=""/>
+                  <p className="flex items-center">LeMathisBarre</p>
+                </a>
                 <div className="my-card flex md:inline-flex dark:text-white pl-2 pr-3 py-2">
                   <img className="w-8 mr-2 -mb-1" src="/images/discord.svg" alt=""/>
                   <p className="flex items-center">Mania#6276</p>
@@ -41,7 +45,7 @@ export default function Contact() {
           />
           <label className="dark:text-white block mb-1" htmlFor="message">Votre message</label>
           <textarea 
-            className="w-full rounded mb-4 lg:flex-grow dark:bg-gray-1000 border dark:border-gray-1100 text-white"
+            className="w-full rounded mb-4 lg:flex-grow lg:flex-shrink dark:bg-gray-1000 border dark:border-gray-1100 text-white"
             type="text"
             name="message"
             id="message"
