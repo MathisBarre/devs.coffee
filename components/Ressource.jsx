@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Ressource({ title, description, img, href }) {
   return (
     <a
-      className="border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:bg-gray-1000 dark:hover:bg-gray-1100"
+      className="my-cardLink"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
