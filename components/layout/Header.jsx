@@ -9,14 +9,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center">
+            <a href="#" className="flex-shrink-0 flex items-center">
               <img
                 className="h-6 w-auto mr-3 mt-1"
                 src="/images/logo.svg"
                 alt="devs.coffee logo"
               />
               <h1 className="text-white font-bold text-2xl">devs.coffee</h1>
-            </div>
+            </a>
             <nav className="hidden md:block sm:ml-6">
               <div className="flex space-x-4">
                 <HeaderLink isDesktop={true} text="Événements" href="#events" />
