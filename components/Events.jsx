@@ -1,9 +1,16 @@
+import { useRouter } from 'next/router'
 import Event from '@components/Event'
 import Card from '@components/layout/Card'
 import events from '../data/events.json'
 import dayjs from 'dayjs'
 
 export default function Events() {
+
+  const router = useRouter()
+
+  function onBtnClick() {
+    router.push("contact")
+  }
 
   const notFinishedEvents = events.filter(event => {
     return dayjs().isBefore(event.date)
@@ -17,9 +24,7 @@ export default function Events() {
         withContentPadding={false}
         button={{
           text: 'Ajouter un événement',
-          onClick: () => {
-            window.location.href = 'mailto:mathis.barre@live.fr'
-          },
+          onClick: onBtnClick
         }}
       >
         <div className="bg-white dark:bg-gray-900 overflow-hidden">

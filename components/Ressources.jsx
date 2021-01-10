@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import Select from 'react-select'
 import { ressourcesToTags } from '../utils/main'
 import Card from '@components/layout/Card'
@@ -27,6 +28,12 @@ export default function Ressources() {
     setFilteredRessources(newFilteredRessources)
   }, [selectedTags])
 
+  const router = useRouter()
+
+  function onBtnClick() {
+    router.push("contact")
+  }
+
   return (
     <section id="ressources">
       <Card
@@ -35,9 +42,7 @@ export default function Ressources() {
         withContentPadding={false}
         button={{
           text: 'Ajouter une ressource',
-          onClick: () => {
-            window.location.href = 'mailto:mathis.barre@live.fr'
-          },
+          onClick: onBtnClick
         }}
       >
         <Select

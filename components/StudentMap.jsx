@@ -1,6 +1,13 @@
+import { useRouter } from 'next/router'
 import Card from '@components/layout/Card'
 
 export default function Map() {
+  const router = useRouter()
+
+  function onBtnClick() {
+    router.push("contact")
+  }
+  
   return (
     <section id="map">
       <Card
@@ -8,11 +15,7 @@ export default function Map() {
         description="Découvrez les étudiants qui travailllent à côté de chez vous !"
         button={{
           text: "S'ajouter à la carte",
-          onClick: () => {
-            {
-              window.location.href = 'mailto:mathis.barre@live.fr'
-            }
-          },
+          onClick: onBtnClick
         }}
         withContentPadding={false}
       >
