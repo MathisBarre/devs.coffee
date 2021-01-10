@@ -39,3 +39,10 @@ html, body {
 .my-grid {
   @apply grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4
 }
+
+.my-card {
+  @apply border border-gray-200 dark:border-gray-1000 rounded box-border dark:bg-gray-1000
+}
+.my-cardLink {
+  @apply border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:bg-gray-1000 dark:hover:bg-gray-1100
+}

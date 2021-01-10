@@ -43,7 +43,7 @@ function App({ Component, pageProps }) {
   const SEO_DESCRIPTION = 'devs.coffee est un site qui a pour objectif d’augmenter les liens communautaires et d’améliorer l\'expérience des étudiant chez OpenClassrooms. A l\'heure actuelle, vous pouvez y retrouver une liste des serveurs discord, une carte des étudiants, un calendrier des rendez-vous communautaires à ne pas louper et une liste de ressources additionnels !'
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>devs.coffee</title>
         <meta name="title" content={SEO_TITLE} />
@@ -69,11 +69,11 @@ function App({ Component, pageProps }) {
         />
       </Head>
       <Header />
-      <div className="pt-16">
+      <div className="pt-16 flex-grow">
         <Component {...pageProps} />
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
