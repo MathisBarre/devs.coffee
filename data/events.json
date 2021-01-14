@@ -89,5 +89,12 @@
     "description": "Débugger avec les outils développeurs chrome",
     "link": "https://www.twitch.tv/trainingdev",
     "isCompleted": false
+  },
+  {
+    "date": "2021-01-19T18:30",
+    "type": "TALK",
+    "description": "Migration JS vers TS sur du react",
+    "link": "https://www.meetup.com/fr-FR/NightClazz-By-ZenikaGrenoble/events/275628909/",
+    "isCompleted": false
   }
 ]
