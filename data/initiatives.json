@@ -6,6 +6,12 @@
     "href":"https://training-dev.fr"
   },
   {
+    "title":"Javascript Academy",
+    "description":"La chaine pour apprendre le JavaScript.",
+    "img":"/images/initiatives/js_academy.png",
+    "href":"https://training-dev.fr"
+  },
+  {
     "title":"Mathis Barré - YouTube",
     "description":"La chaine youtube officielle du créateur de devs.coffee !",
     "img":"/images/initiatives/mathisbarre_youtube.png",
