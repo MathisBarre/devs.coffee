@@ -11,16 +11,20 @@ export default function Contact() {
                 <p className="break-normal overflow-hidden">Je suis un étudiant en alternance avec OpenClassrooms portant le doux nom de Mathis Barré. Profitant de compétences acquise en autodidacte avant la formation, j'ai pris le temps de créé ce site afin d'aider les étudiants dans leur parcours.</p>
               </div>
               <div className="mt-4 flex flex-col md:flex-row flex-wrap lg:grid lg:grid-cols-2 gap-2">
-                <a href="https://www.youtube.com/channel/UCl3-1zqMl6YkRx0OQ3KwC_g" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
-                  <img className="w-6 mr-2 -mb-0.5 pl-1" src="/images/youtube_icon.svg" alt=""/>
+                <a target="blank_" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCl3-1zqMl6YkRx0OQ3KwC_g" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
+                  <img className="w-6 mr-2 -mb-0.5" src="/images/youtube_icon.svg" alt=""/>
                   <p className="flex items-center">Mathis Barré</p>
                 </a>
-                <a href="https://twitch.tv/mathisbarre_" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
-                  <img className="w-6 mr-2 -mb-0.5 pl-1" src="/images/twitch_glitch.svg" alt=""/>
+                <a target="blank_" rel="noopener noreferrer" href="https://twitch.tv/mathisbarre_" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
+                  <img className="w-6 mr-1 -mb-0.5 pr-1" src="/images/twitch_glitch.svg" alt=""/>
                   <p className="flex items-center">mathisbarre_</p>
                 </a>
-                <a href="https://twitter.com/LeMathisBarre" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
-                  <img className="w-6 mr-2 -mb-0.5 pl-1" src="/images/twitter_bird.svg" alt=""/>
+                <a target="blank_" rel="noopener noreferrer" href="https://www.linkedin.com/in/mathis-barre/" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
+                  <img className="w-6 h-6 mr-2" src="/images/linkedin_logo.png" alt=""/>
+                  <p className="flex items-center">mathis-barre</p>
+                </a>
+                <a target="blank_" rel="noopener noreferrer" href="https://twitter.com/LeMathisBarre" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
+                  <img className="w-6 mr-2 -mb-0.5" src="/images/twitter_bird.svg" alt=""/>
                   <p className="flex items-center">LeMathisBarre</p>
                 </a>
                 <div className="my-card flex md:inline-flex dark:text-white pl-2 pr-3 py-2">
