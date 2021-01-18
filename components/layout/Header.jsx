@@ -92,6 +92,8 @@ export default function Header() {
           <HeaderLink text="Carte" href="/#map" />
           <HeaderLink text="Discord" href="/#discord" />
           <HeaderLink text="Ressources" href="/#ressources" />
+          <HeaderLink text="Contact" href="/contact" />
+
         </div>
       </nav>
     </header>
