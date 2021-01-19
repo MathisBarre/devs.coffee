@@ -96,5 +96,12 @@
     "description": "Migration JS vers TS sur du react",
     "link": "https://www.meetup.com/fr-FR/NightClazz-By-ZenikaGrenoble/events/275628909/",
     "isCompleted": false
+  },
+  {
+    "date": "2021-01-19T18:30",
+    "type": "LIVE",
+    "description": "Les bases de Vue.js 3",
+    "link": "https://www.twitch.tv/trainingdev",
+    "isCompleted": false
   }
 ]
