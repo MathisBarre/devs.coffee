@@ -18,14 +18,23 @@ export default function Index({trainingDevEvents}) {
 
 export async function getStaticProps() {
   const oneDayInSeconds = 60 * 60 * 24
-  let traningDevEvents
 
-  try {
-    const httpsBodyResponse = await fetch("https://www.training-dev.fr/api/getListEvent")
-    traningDevEvents = await httpsBodyResponse.json()
-  } catch (error) {
-    console.log("Erreur durant la récupération des événements training-dev.fr")
-  }
+  const traningDevEvents = await fetch("https://www.training-dev.fr/api/getListEvent")
+    .then((response) => (response.json()))
+    .then((events) => {
+      return events
+        .filter((event) => { return event.category.toUpperCase() === "LIVE" })
+        .map((event) => {
+          return {
+            "date": event.date.date.replace(' ', 'T'),
+            "type": event.category.toUpperCase(),
+            "description": event.name + ". Animé par " + event.animator,
+            "link": "https://www.twitch.tv/trainingdev",
+            "isCompleted": false
+          }
+        })
+    }) 
+    .catch((error) => {console.log(error)})
 
   return {
     revalidate: oneDayInSeconds,

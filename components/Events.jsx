@@ -1,34 +1,20 @@
 import { useRouter } from 'next/router'
 import Event from '@components/Event'
 import Card from '@components/layout/Card'
-import events from '../data/events.json'
+import localEvents from '../data/events.json'
 import dayjs from 'dayjs'
 
 export default function Events({ trainingDevEvents }) {
 
-  const formattedTDE = trainingDevEvents
-    .filter((event) => { return event.category.toUpperCase() === "LIVE" })
-    .map((event) => {
-      return {
-        "date": event.date.date,
-        "type": event.category.toUpperCase(),
-        "description": event.name + " par " + event.animator,
-        "link": "https://www.twitch.tv/trainingdev",
-        "isCompleted": false
-      }
-    })
-
-  events = events.concat(formattedTDE)
-
   const router = useRouter()
-
+  
   function onBtnClick() {
     router.push("contact")
   }
 
-  const notFinishedEvents = events.filter(event => {
-    return dayjs().isBefore(event.date)
-  })
+  let events = localEvents
+    .concat(trainingDevEvents)
+    .filter(event => ( dayjs().isBefore(event.date) ))
 
   return (
     <section id="events">
@@ -44,8 +30,8 @@ export default function Events({ trainingDevEvents }) {
         <div className="bg-white dark:bg-gray-900 overflow-hidden">
           <ul>
             {
-            (notFinishedEvents.length !== 0)
-              ? notFinishedEvents.map(
+            (events.length !== 0)
+              ? events.map(
                 ({ date, type, description, link, isCompleted }, index) => {
                   if (!isCompleted) {
                     return (
