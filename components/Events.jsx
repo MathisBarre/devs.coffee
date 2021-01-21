@@ -4,7 +4,21 @@ import Card from '@components/layout/Card'
 import events from '../data/events.json'
 import dayjs from 'dayjs'
 
-export default function Events() {
+export default function Events({ trainingDevEvents }) {
+
+  const formattedTDE = trainingDevEvents
+    .filter((event) => { return event.category.toUpperCase() === "LIVE" })
+    .map((event) => {
+      return {
+        "date": event.date.date,
+        "type": event.category.toUpperCase(),
+        "description": event.name + " par " + event.animator,
+        "link": "https://www.twitch.tv/trainingdev",
+        "isCompleted": false
+      }
+    })
+
+  events = events.concat(formattedTDE)
 
   const router = useRouter()
 
