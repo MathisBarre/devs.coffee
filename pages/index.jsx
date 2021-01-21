@@ -16,7 +16,8 @@ export default function Index({trainingDevEvents}) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
+  const oneDayInSeconds = 60 * 60 * 24
   let traningDevEvents
 
   try {
@@ -27,6 +28,7 @@ export async function getStaticProps(context) {
   }
 
   return {
+    revalidate: oneDayInSeconds,
     props: {
       trainingDevEvents: traningDevEvents
     },
