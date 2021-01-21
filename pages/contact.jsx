@@ -20,7 +20,7 @@ export default function Contact() {
                   <p className="flex items-center">mathisbarre_</p>
                 </a>
                 <a target="blank_" rel="noopener noreferrer" href="https://www.linkedin.com/in/mathis-barre/" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
-                  <img className="w-6 h-6 mr-2" src="/images/linkedin_logo.png" alt=""/>
+                  <img className="w-6 h-6 mr-2" src="/images/linkedin.png" alt=""/>
                   <p className="flex items-center">mathis-barre</p>
                 </a>
                 <a target="blank_" rel="noopener noreferrer" href="https://twitter.com/LeMathisBarre" className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2">
