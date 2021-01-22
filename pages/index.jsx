@@ -37,7 +37,7 @@ export async function getStaticProps() {
     .catch((error) => {console.log(error)})
 
   return {
-    revalidate: oneDayInSeconds,
+    revalidate: (oneDayInSeconds / 4),
     props: {
       trainingDevEvents: traningDevEvents
     },
