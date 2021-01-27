@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import Event from '@components/Event'
-import Card from '@components/layout/Card'
+import Event from 'components/Event'
+import Card from 'components/layout/Card'
 import localEvents from '../data/events.json'
 import dayjs from 'dayjs'
 

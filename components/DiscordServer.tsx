@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { IdiscordGuildWidgetApi } from 'interfaces/DiscordGuildWidgetApiInterface'
 
 export default function DiscordServer({
   course,
@@ -7,13 +8,14 @@ export default function DiscordServer({
   description,
   href,
   img,
-  api,
+  api: apiUrl,
 }) {
-  const [discordData, setDiscordData] = useState(false)
+
+  const [discordData, setDiscordData] = useState<any>({})
 
   useEffect(() => {
-    if (api) {
-      fetch(api)
+    if (apiUrl) {
+      fetch(apiUrl)
         .then((body) => body.json())
         .then((apiData) => {
           setDiscordData(apiData)
@@ -68,7 +70,6 @@ export default function DiscordServer({
           </div>
 
           <div className="ml-5 flex-shrink-0">
-            {/* Heroicon name: chevron-right */}
             <svg
               className="h-5 w-5 text-gray-400"
               xmlns="http://www.w3.org/2000/svg"
@@ -84,12 +85,11 @@ export default function DiscordServer({
             </svg>
           </div>
         </div>
-        {api &&
+        {apiUrl &&
           (discordData.members ? (
             <div className="discordMembers bg-indigo-600 dark:bg-indigo-800 min-h-9 flex items-center pl-3 pr-2 text-sm text-white rounded-b-md">
               <p className="whitespace-nowrap mr-2 inline">
                 <strong>{discordData.presence_count} </strong>
-                {/* <div className="w-1" /> */}
                 {discordData.presence_count > 1
                   ? 'membres actuellements connectés'
                   : 'membre actuellement connecté'}

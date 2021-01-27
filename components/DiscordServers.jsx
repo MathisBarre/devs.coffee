@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import Card from '@components/layout/Card'
-import DiscordServer from '@components/DiscordServer'
+import Card from 'components/layout/Card'
+import DiscordServer from 'components/DiscordServer'
 import discordServers from '../data/discordServers.json'
 
 export default function DiscordServers() {

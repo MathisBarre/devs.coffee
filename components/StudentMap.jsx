@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import Card from '@components/layout/Card'
+import Card from 'components/layout/Card'
 
 export default function Map() {
   const router = useRouter()

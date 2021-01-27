@@ -1,8 +1,9 @@
-import DiscordServers from 'components/DiscordServers.jsx'
+import DiscordServers from 'components/DiscordServers'
 import Events from 'components/Events.jsx'
 import Ressources from 'components/Ressources.jsx'
 import StudentMap from 'components/StudentMap.jsx'
 import Initiatives from 'components/Initiatives.jsx'
+import { GetStaticProps } from 'next'
 
 export default function Index({trainingDevEvents}) {
   return (
@@ -16,7 +17,7 @@ export default function Index({trainingDevEvents}) {
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const oneDayInSeconds = 60 * 60 * 24
 
   const traningDevEvents = await fetch("https://www.training-dev.fr/api/getListEvent")

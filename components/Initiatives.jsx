@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
-import initiatives from '@data/initiatives.json'
-import Card from '@components/layout/Card'
-import Ressource from '@components/Ressource'
+import initiatives from 'data/initiatives.json'
+import Card from 'components/layout/Card'
+import Ressource from 'components/Ressource'
 
 export default function Events() {
   const router = useRouter()

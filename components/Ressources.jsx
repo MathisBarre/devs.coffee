@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Select from 'react-select'
 import { ressourcesToTags } from '../utils/main'
-import Card from '@components/layout/Card'
-import Ressource from '@components/Ressource'
+import Card from 'components/layout/Card'
+import Ressource from 'components/Ressource'
 
 import defaultRessources from '../data/ressources.json'
 

@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import * as ackeeTracker from 'ackee-tracker'
@@ -9,7 +10,8 @@ import Footer from 'components/layout/Footer.jsx'
 import 'tailwindcss/tailwind.css'
 import '../style/global.css'
 
-function App({ Component, pageProps }) {
+
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   // Ackee Analytics

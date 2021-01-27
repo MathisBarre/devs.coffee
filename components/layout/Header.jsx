@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { useState } from 'react'
-import HeaderLink from '@components/layout/HeaderLink'
+import HeaderLink from 'components/layout/HeaderLink'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
