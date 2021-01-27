@@ -1,12 +1,18 @@
 import Link from "next/link"
 
+interface IHeaderLink {
+  text: string;
+  href: string;
+  isDesktop?: boolean;
+  disabled?: boolean;
+}
+
 export default function HeaderLink({
   text,
   href,
-  active,
-  isDesktop,
-  disabled,
-}) {
+  isDesktop = true,
+  disabled = false
+}: IHeaderLink) {
   return (
     <Link
       href={href}
