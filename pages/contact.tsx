@@ -50,12 +50,11 @@ export default function Contact() {
           <label className="dark:text-white block mb-1" htmlFor="message">Votre message</label>
           <textarea 
             className="w-full rounded mb-4 lg:flex-grow lg:flex-shrink dark:bg-gray-1000 border dark:border-gray-1100 text-white"
-            type="text"
             name="message"
             id="message"
             placeholder="C'est ici qu'il faut mettre vos doux mots"
             required
-            rows="10"
+            rows={10}
           />
           <button 
             className="w-full bg-white rounded h-10 dark:bg-gray-1000 border border-gray-500 dark:border-gray-1100 dark:text-white"
