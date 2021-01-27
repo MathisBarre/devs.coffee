@@ -28,10 +28,9 @@ export default function Events({ trainingDevEvents }) {
         }}
       >
         <div className="bg-white dark:bg-gray-900 overflow-hidden">
-          <ul>
             {
             (events.length !== 0)
-              ? events.map(
+              ? <ul>{events.map(
                 ({ date, type, description, link, isCompleted }, index) => {
                   if (!isCompleted) {
                     return (
@@ -45,10 +44,9 @@ export default function Events({ trainingDevEvents }) {
                     )
                   }
                 }
-              )
+              )}</ul>
               : <p className="border border-gray-200 dark:border-gray-1000 text-black dark:text-white text-opacity-50 text-center py-10 my-4 dark:bg-gray-1000 rounded">Aucun événement programmé pour le moment</p>
             }
-          </ul>
         </div>
       </Card>
     </section>
