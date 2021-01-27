@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "format": "prettier --write ./**/*.jsx"
+    "start": "next start"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.21",
@@ -16,13 +15,11 @@
     "@tailwindcss/typography": "^0.3.1",
     "ackee-tracker": "^4.2.0",
     "autoprefixer": "^10.0.2",
-    "clsx": "^1.1.1",
     "dayjs": "^1.9.6",
     "next": "10.0.3",
     "postcss": "^8.1.9",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.2.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-select": "^3.1.1",

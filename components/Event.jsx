@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import clsx from 'clsx'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import relativeTime from 'dayjs/plugin/relativeTime'
@@ -21,10 +20,10 @@ export default function Event({ date, description, link, type }) {
 
   return (
     <li
-      className={clsx(
-        `my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 dark:bg-gray-1000 hover:bg-gray-50 dark:hover:bg-gray-1100 dark:text-white`,
-        isEventFinished && 'line-through'
-      )}
+      className={
+        `my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 dark:bg-gray-1000 
+      hover:bg-gray-50 dark:hover:bg-gray-1100 dark:text-white`
+      }
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="py-4 flex items-center">
