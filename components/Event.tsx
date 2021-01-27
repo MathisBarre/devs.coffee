@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import relativeTime from 'dayjs/plugin/relativeTime'
@@ -16,7 +15,6 @@ export default function Event({ date, description, link, type }) {
   const dateFromNow = capitalizeFirstLetter(
     dayjs(date).locale('fr').from(dayjs())
   )
-  const [isEventFinished] = useState(dayjs().isAfter(date))
 
   return (
     <li

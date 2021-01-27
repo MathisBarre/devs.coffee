@@ -11,7 +11,7 @@ export default function DiscordServer({
   api: apiUrl,
 }) {
 
-  const [discordData, setDiscordData] = useState<any>({})
+  const [discordData, setDiscordData] = useState<IdiscordGuildWidgetApi>()
 
   useEffect(() => {
     if (apiUrl) {
@@ -85,7 +85,7 @@ export default function DiscordServer({
             </svg>
           </div>
         </div>
-        {apiUrl &&
+        {(apiUrl && discordData) &&
           (discordData.members ? (
             <div className="discordMembers bg-indigo-600 dark:bg-indigo-800 min-h-9 flex items-center pl-3 pr-2 text-sm text-white rounded-b-md">
               <p className="whitespace-nowrap mr-2 inline">

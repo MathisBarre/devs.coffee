@@ -1,8 +1,8 @@
 import DiscordServers from 'components/DiscordServers'
-import Events from 'components/Events.jsx'
-import Ressources from 'components/Ressources.jsx'
-import StudentMap from 'components/StudentMap.jsx'
-import Initiatives from 'components/Initiatives.jsx'
+import Events from 'components/Events'
+import Ressources from 'components/Ressources'
+import StudentMap from 'components/StudentMap'
+import Initiatives from 'components/Initiatives'
 import { GetStaticProps } from 'next'
 
 export default function Index({trainingDevEvents}) {

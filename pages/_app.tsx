@@ -4,8 +4,8 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import * as ackeeTracker from 'ackee-tracker'
 
-import Header from 'components/layout/Header.jsx'
-import Footer from 'components/layout/Footer.jsx'
+import Header from 'components/layout/Header'
+import Footer from 'components/layout/Footer'
 
 import 'tailwindcss/tailwind.css'
 import '../style/global.css'
