@@ -1,6 +1,5 @@
 export function ressourcesToTags(defaultRessources) {
-  let allTags
-  allTags = defaultRessources.reduce((accumulator, currentValue) => {
+  let allTags = defaultRessources.reduce((accumulator, currentValue) => {
     return accumulator.concat(
       currentValue.tags.filter((item) => accumulator.indexOf(item) < 0)
     )
