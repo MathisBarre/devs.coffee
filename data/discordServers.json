@@ -30,13 +30,5 @@
     "href": "https://discord.gg/f6BsPK9",
     "img": "https://cdn.discordapp.com/icons/766565028312383498/b87af8623d6835cc13db6eae8b5caaa5.webp?size=256",
     "api": "https://discord.com/api/guilds/766565028312383498/widget.json"
-  },
-  {
-    "name": "Pair Programming Dev",
-    "course": "parcours de développements",
-    "description": "Vous souhaitez faire du pair-programming ? Vous trouverez peut-être votre bonheur ici ! Environ 50 membres",
-    "href": "https://discord.gg/v7KDuNXv",
-    "img": "https://cdn.discordapp.com/icons/775791415275552768/1eb2534468e68e633ea2886035a5bb78.webp?size:256",
-    "api": "https://discord.com/api/guilds/775791415275552768/widget.json"
   }
 ]
