@@ -1,19 +1,19 @@
-export function ressourcesToTags(defaultRessources) {
-  let allTags = defaultRessources.reduce((accumulator, currentValue) => {
-    return accumulator.concat(
-      currentValue.tags.filter((item) => accumulator.indexOf(item) < 0)
-    )
-  }, [])
+import Iressource from 'interfaces/Ressource'
 
-  allTags = allTags.sort((a, b) => {
-    //! Code magique qui marche sans que je sache pourquoi ????
-    return (
-      String.fromCharCode(parseInt(a, 16)) <
-      String.fromCharCode(parseInt(b, 16))
-    )
-  })
+export function ressourcesToTags(defaultRessources: Iressource[]) {
+  let allTags: string[] = defaultRessources.reduce(reducer, [])
 
   allTags = ['Toutes les ressources'].concat(allTags)
 
   return allTags
+}
+
+function reducer(accumulator: string[], currentValue: Iressource) {
+  const foo: string[] = currentValue.tags.filter((item: any) => {
+    const num: number = accumulator.indexOf(item)
+    return num < 0
+  })
+
+  const tagList = accumulator.concat(foo)
+  return tagList
 }

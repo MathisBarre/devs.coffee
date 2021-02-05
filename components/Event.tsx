@@ -2,12 +2,14 @@ import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
+import Ievent from 'interfaces/Event'
 
 dayjs.extend(customParseFormat)
 dayjs.extend(relativeTime)
 
-export default function Event({ date, description, link, type }) {
-  function capitalizeFirstLetter(string) {
+
+export default function Event({ date, description, link, type }: Ievent) {
+  function capitalizeFirstLetter(string: string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
 

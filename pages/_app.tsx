@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import * as ackeeTracker from 'ackee-tracker'
+// import * as ackeeTracker from 'ackee-tracker'
 
 import Header from 'components/layout/Header'
 import Footer from 'components/layout/Footer'
@@ -15,30 +15,27 @@ function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   // Ackee Analytics
-  const instance = ackeeTracker.create(
-    {
-      server: 'https://manialytics.herokuapp.com/',
-      domainId: 'ffc71a4d-4120-468e-9820-5483e514699e',
-    },
-    {
-      detailed: true,
-      ignoreLocalhost: true,
-      ignoreOwnVisits: false,
-    }
-  )
+  // const instance = ackeeTracker.create(
+  //   'https://manialytics.herokuapp.com/',
+  //   {
+  //     detailed: true,
+  //     ignoreLocalhost: true,
+  //     ignoreOwnVisits: false,
+  //   }
+  // )
 
-  useEffect(() => {
-    function handleRouteChange(url) {
-      instance.record(ackeeTracker.attributes(true))
-    }
+  // useEffect(() => {
+  //   function handleRouteChange(url: string) {
+  //     instance.record('ffc71a4d-4120-468e-9820-5483e514699e')
+  //   }
 
-    handleRouteChange('https://mathisbarre.com')
+  //   handleRouteChange('https://mathisbarre.com')
 
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+  //   router.events.on('routeChangeComplete', handleRouteChange)
+  //   return () => {
+  //     router.events.off('routeChangeComplete', handleRouteChange)
+  //   }
+  // }, [router.events])
 
   // SEO
   const SEO_TITLE = 'devs.coffee'

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Select from 'react-select'
 import { ressourcesToTags } from '../utils/main'
@@ -49,9 +49,9 @@ export default function Ressources() {
           className="react-select-container"
           classNamePrefix="react-select"
           isSearchable={true}
-          options={allRessourcesTags.map((tag) => ({ value: tag, label: tag }))}
+          options={allRessourcesTags.map((tag: string) => ({ value: tag, label: tag }))}
           onChange={(change) => {
-            setSelectedTags(change.value)
+            setSelectedTags(change?.value)
           }}
           instanceId="a98sd79sd87c"
         />

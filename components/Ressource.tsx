@@ -1,6 +1,13 @@
 import Image from 'next/image'
 
-export default function Ressource({ title, description, img, href }) {
+interface IressourceProps {
+  title: string
+  description: string
+  img: string
+  href: string
+}
+
+export default function Ressource({ title, description, img, href }: IressourceProps) {
   return (
     <a
       className="my-cardLink"

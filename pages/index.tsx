@@ -4,8 +4,13 @@ import Ressources from 'components/Ressources'
 import StudentMap from 'components/StudentMap'
 import Initiatives from 'components/Initiatives'
 import { GetStaticProps } from 'next'
+import Ievent from "interfaces/Event"
 
-export default function Index({trainingDevEvents}) {
+interface IindexProps {
+  trainingDevEvents: Ievent[]
+}
+
+export default function Index({ trainingDevEvents }: IindexProps) {
   return (
     <div className="mx-auto px-2 md:px-4 max-w-7xl">
       <Events trainingDevEvents={trainingDevEvents} />
@@ -17,15 +22,15 @@ export default function Index({trainingDevEvents}) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async () => {
   const oneDayInSeconds = 60 * 60 * 24
 
   const traningDevEvents = await fetch("https://www.training-dev.fr/api/getListEvent")
     .then((response) => (response.json()))
     .then((events) => {
       return events
-        .filter((event) => { return event.category.toUpperCase() === "LIVE" })
-        .map((event) => {
+        .filter((event: any) => { return event.category.toUpperCase() === "LIVE" })
+        .map((event: any) => {
           return {
             "date": event.date.date.replace(' ', 'T'),
             "type": event.category.toUpperCase(),
@@ -34,8 +39,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             "isCompleted": false
           }
         })
-    }) 
-    .catch((error) => {console.log(error)})
+    })
+    .catch((error) => { console.log(error) })
 
   return {
     revalidate: (oneDayInSeconds / 4),

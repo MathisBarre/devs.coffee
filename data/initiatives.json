@@ -1,26 +1,26 @@
 [
   {
-    "title":"training-dev.fr",
-    "description":"training-dev.fr est un site proposant des cours, tuto, lives et contenus pour apprendre le développement web.",
-    "img":"/images/initiatives/training-dev.png",
-    "href":"https://training-dev.fr"
+    "title": "training-dev.fr",
+    "description": "training-dev.fr est un site proposant des cours, tuto, lives et contenus pour apprendre le développement web.",
+    "img": "/images/initiatives/training-dev.png",
+    "href": "https://training-dev.fr"
   },
   {
-    "title":"Javascript Academy",
-    "description":"La chaine pour apprendre le JavaScript.",
-    "img":"/images/initiatives/js_academy.png",
-    "href":"https://www.youtube.com/channel/UCG6hmXTj8Lg1zTCx0N0c2kg"
+    "title": "Javascript Academy",
+    "description": "La chaine pour apprendre le JavaScript.",
+    "img": "/images/initiatives/js_academy.png",
+    "href": "https://www.youtube.com/channel/UCG6hmXTj8Lg1zTCx0N0c2kg"
   },
   {
-    "title":"Mathis Barré - YouTube",
-    "description":"La chaine youtube officielle du créateur de devs.coffee !",
-    "img":"/images/initiatives/mathisbarre_youtube.png",
-    "href":"https://www.youtube.com/channel/UCl3-1zqMl6YkRx0OQ3KwC_g"
+    "title": "Mathis Barré - YouTube",
+    "description": "La chaine youtube officielle du créateur de devs.coffee !",
+    "img": "/images/initiatives/mathisbarre_youtube.png",
+    "href": "https://www.youtube.com/channel/UCl3-1zqMl6YkRx0OQ3KwC_g"
   },
   {
-    "title":"Mathis Barré - Twitch",
-    "description":"La chaine twitch officielle du créateur de devs.coffee !",
-    "img":"/images/initiatives/mathisbarre_twitch.png",
-    "href":"https://twitch.tv/mathisbarre_"
+    "title": "Mathis Barré - Twitch",
+    "description": "La chaine twitch officielle du créateur de devs.coffee !",
+    "img": "/images/initiatives/mathisbarre_twitch.png",
+    "href": "https://twitch.tv/mathisbarre_"
   }
 ]
