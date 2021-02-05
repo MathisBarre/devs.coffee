@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Select from 'react-select'
 import { ressourcesToTags } from '../utils/main'
@@ -11,7 +11,7 @@ export default function Ressources() {
   // Construit une liste avec tous les tags présent dans les ressources par défaut
   const allRessourcesTags = ressourcesToTags(defaultRessources)
 
-  const [selectedTags, setSelectedTags] = useState(allRessourcesTags)
+  const [selectedTags, setSelectedTags] = useState<string[]>(allRessourcesTags)
   const [filteredRessources, setFilteredRessources] = useState(
     defaultRessources
   )
@@ -34,6 +34,10 @@ export default function Ressources() {
     router.push("contact")
   }
 
+  function onTagSelectedChange(change: any): void {
+    setSelectedTags(change?.value)
+  }
+
   return (
     <section id="ressources">
       <Card
@@ -50,9 +54,7 @@ export default function Ressources() {
           classNamePrefix="react-select"
           isSearchable={true}
           options={allRessourcesTags.map((tag: string) => ({ value: tag, label: tag }))}
-          onChange={(change) => {
-            setSelectedTags(change?.value)
-          }}
+          onChange={onTagSelectedChange}
           instanceId="a98sd79sd87c"
         />
         <div className="my-grid">
