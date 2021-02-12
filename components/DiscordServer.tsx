@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { IdiscordGuildWidgetApi } from "interfaces/DiscordGuildWidgetApiInterface";
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { IdiscordGuildWidgetApi } from 'interfaces/DiscordGuildWidgetApiInterface'
 
 interface IdiscordServerProps {
-  course: string;
-  name: string;
-  description: string;
-  href: string;
-  img: string;
-  api: string;
+  course: string
+  name: string
+  description: string
+  href: string
+  img: string
+  api: string
 }
 
 export default function DiscordServer({
@@ -17,22 +17,22 @@ export default function DiscordServer({
   description,
   href,
   img,
-  api: apiUrl,
+  api: apiUrl
 }: IdiscordServerProps) {
-  const [discordData, setDiscordData] = useState<IdiscordGuildWidgetApi>();
+  const [discordData, setDiscordData] = useState<IdiscordGuildWidgetApi>()
 
   useEffect(() => {
     if (apiUrl) {
       fetch(apiUrl)
         .then((body) => body.json())
         .then((apiData) => {
-          setDiscordData(apiData);
+          setDiscordData(apiData)
         })
         .catch((error) => {
-          console.log(error);
-        });
+          console.log(error)
+        })
     }
-  }, []);
+  }, [])
 
   return (
     <li>
@@ -95,16 +95,17 @@ export default function DiscordServer({
         </div>
         {apiUrl &&
           discordData &&
+          // eslint-disable-next-line multiline-ternary
           (discordData.members ? (
             <div className="discordMembers bg-indigo-600 dark:bg-indigo-800 min-h-9 flex items-center pl-3 pr-2 text-sm text-white rounded-b-md">
               <p className="whitespace-nowrap mr-2 inline">
                 <strong>{discordData.presence_count} </strong>
                 {discordData.presence_count > 1
-                  ? "membres actuellements connectés"
-                  : "membre actuellement connecté"}
+                  ? 'membres actuellements connectés'
+                  : 'membre actuellement connecté'}
               </p>
               <div className="hidden sm:inline-flex items-center -space-x-1 relative z-0 overflow-hidden h-full p-1">
-                {discordData.members.map((member, index) => {
+                {discordData.members.map((member: any, index) => {
                   if (index < 60) {
                     return (
                       <div
@@ -123,15 +124,17 @@ export default function DiscordServer({
                           priority={false}
                         />
                       </div>
-                    );
+                    )
                   }
+                  return ''
                 })}
               </div>
             </div>
           ) : (
-            <div className="h-9 w-full bg-indigo-500 dark:bg-indigo-700 animate-pulse hidden md:block rounded-b-md" />
-          ))}
+              <div className="h-9 w-full bg-indigo-500 dark:bg-indigo-700 animate-pulse hidden md:block rounded-b-md" />
+              // eslint-disable-next-line indent
+            ))}
       </a>
     </li>
-  );
+  )
 }

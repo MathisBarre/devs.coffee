@@ -4,11 +4,10 @@ import DiscordServer from 'components/DiscordServer'
 import discordServers from '../data/discordServers.json'
 
 export default function DiscordServers() {
-
   const router = useRouter()
 
   function onBtnClick() {
-    router.push("contact")
+    router.push('contact')
   }
 
   return (
