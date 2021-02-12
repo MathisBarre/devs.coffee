@@ -13,7 +13,7 @@
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
-    "ackee-tracker": "^5.0.1",
+    "ackee-tracker": "4.2",
     "autoprefixer": "^10.0.2",
     "dayjs": "^1.9.6",
     "next": "^10.0.6",
@@ -28,7 +28,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "@types/ackee-tracker": "^5.0.0",
+    "@types/ackee-tracker": "^4.0.0",
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
     "@types/react-select": "^4.0.12",
