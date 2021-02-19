@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link'
 import { useState } from 'react'
 import HeaderLink from 'components/layout/HeaderLink'
 
@@ -10,7 +10,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/#" >
+            <Link href="/#">
               <a className="flex-shrink-0 flex items-center">
                 <img
                   className="h-6 w-auto mr-3 mt-1"
@@ -26,7 +26,7 @@ export default function Header() {
                 <HeaderLink isDesktop={true} text="Initiatives" href="/#initiatives" />
                 <HeaderLink isDesktop={true} text="Carte" href="/#map" />
                 <HeaderLink isDesktop={true} text="Discord" href="/#discord" />
-                <HeaderLink isDesktop={true} text="Ressources" href="/#ressources"/>
+                <HeaderLink isDesktop={true} text="Ressources" href="/#ressources" />
                 <HeaderLink isDesktop={true} text="Contact" href="/contact" />
               </div>
             </nav>
@@ -87,13 +87,12 @@ export default function Header() {
       Menu open: "block", Menu closed: "hidden" */}
       <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <HeaderLink text="Événements" href="/#events" />
-          <HeaderLink text="Initiatives" href="/#initiatives" />
-          <HeaderLink text="Carte" href="/#map" />
-          <HeaderLink text="Discord" href="/#discord" />
-          <HeaderLink text="Ressources" href="/#ressources" />
-          <HeaderLink text="Contact" href="/contact" />
-
+          <HeaderLink isDesktop={false} text="Événements" href="/#events" />
+          <HeaderLink isDesktop={false} text="Initiatives" href="/#initiatives" />
+          <HeaderLink isDesktop={false} text="Carte" href="/#map" />
+          <HeaderLink isDesktop={false} text="Discord" href="/#discord" />
+          <HeaderLink isDesktop={false} text="Ressources" href="/#ressources" />
+          <HeaderLink isDesktop={false} text="Contact" href="/contact" />
         </div>
       </nav>
     </header>
