@@ -1,5 +1,10 @@
-html, body {
+html,
+body {
   scroll-behavior: smooth;
+}
+
+.my-wrapper {
+  @apply mx-auto px-2 md:px-4 max-w-7xl;
 }
 
 .discordServer:hover .discordMembers {
@@ -7,7 +12,7 @@ html, body {
 }
 
 .react-select-container {
-  @apply  dark:bg-gray-900 dark:border-gray-1000;
+  @apply dark:bg-gray-900 dark:border-gray-1000;
 }
 
 .react-select__value-container {
@@ -21,7 +26,8 @@ html, body {
   @apply dark:bg-gray-1100 !important;
 }
 
-.react-select__indicator, .react-select__indicator-separator {
+.react-select__indicator,
+.react-select__indicator-separator {
   @apply dark:bg-gray-1000;
 }
 
@@ -29,24 +35,25 @@ html, body {
   @apply dark:bg-gray-1000 dark:border-gray-1000 !important;
 }
 
-.react-select__placeholder, .react-select__single-value {
-  @apply dark:text-white !important
+.react-select__placeholder,
+.react-select__single-value {
+  @apply dark:text-white !important;
 }
 
 @media (prefers-color-scheme: dark) {
   .footerImg {
-    filter: invert(100%)
+    filter: invert(100%);
   }
 }
 
 .my-grid {
-  @apply grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4
+  @apply grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4;
 }
 
 .my-card {
-  @apply border border-gray-200 dark:border-gray-1000 rounded box-border dark:bg-gray-1000
+  @apply border border-gray-200 dark:border-gray-1000 rounded box-border dark:bg-gray-1000;
 }
 
 .my-cardLink {
-  @apply border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:bg-gray-1000 dark:hover:bg-gray-1100
+  @apply border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:bg-gray-1000 dark:hover:bg-gray-1100;
 }

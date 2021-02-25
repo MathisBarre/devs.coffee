@@ -1,6 +1,12 @@
 import { ReactNode } from 'react'
 
-interface IcardProps {
+export default function Card({
+  title,
+  description,
+  button,
+  withContentPadding = true,
+  children
+}: {
   title: string
   description: string
   button: {
@@ -9,15 +15,7 @@ interface IcardProps {
   }
   withContentPadding: boolean
   children: ReactNode
-}
-
-export default function Card({
-  title,
-  description,
-  button,
-  withContentPadding = true,
-  children
-}: IcardProps) {
+}) {
   return (
     <div className="bg-white dark:bg-gray-900  my-12">
       <div className="bg-white dark:bg-gray-900 pt-5 pb-2">
