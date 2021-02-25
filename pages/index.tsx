@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Index() {
   return (
     <div className="my-wrapper">
-      <div className="grid grid-cols-2 gap-4 mt-8">
+      <div className="grid lg:grid-cols-2 gap-4 mt-8">
         <Link href="communaute-openclassrooms">
           <a>
             <section className="text-white  rounded p-6 cursor-pointer relative overflow-hidden duration-75 bg-oc-500 hover:bg-oc-600">
@@ -13,7 +13,7 @@ export default function Index() {
                 Rejoindre
               </button>
               <img
-                className="absolute h-12 bottom-6 right-8"
+                className="absolute h-12 bottom-6 right-8 hidden sm:block"
                 src="/images/logo_openclassrooms.svg"
                 alt=""
               />
@@ -23,9 +23,7 @@ export default function Index() {
         <Link href="ressources">
           <a>
             <section className="text-white  rounded p-6 cursor-pointer relative overflow-hidden duration-75 bg-mypurple-500 hover:bg-mypurple-600">
-              <h2 className="text-xl font-bold">
-                Toutes les ressources pour votre apprentissage !
-              </h2>
+              <h2 className="text-xl font-bold">Les meilleurs ressources d'apprentissage !</h2>
               <p>HTML - CSS - Javascript - Node.js - MongoDB - MySQL</p>
               <button className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm rounded-md bg-white text-mypurple-500 font-extrabold hover:dark:bg-indigo-900 mt-2">
                 Ça m&apos;intéresse !
@@ -36,7 +34,7 @@ export default function Index() {
               /> */}
 
               <svg
-                className="absolute h-12 bottom-6 right-8"
+                className="absolute h-12 bottom-6 right-8 hidden sm:block"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
