@@ -22,11 +22,12 @@ export default function Header() {
             </Link>
             <nav className="hidden md:block sm:ml-6">
               <div className="flex space-x-4">
-                <HeaderLink isDesktop={true} text="Événements" href="/#events" />
-                <HeaderLink isDesktop={true} text="Initiatives" href="/#initiatives" />
-                <HeaderLink isDesktop={true} text="Carte" href="/#map" />
-                <HeaderLink isDesktop={true} text="Discord" href="/#discord" />
-                <HeaderLink isDesktop={true} text="Ressources" href="/#ressources" />
+                <HeaderLink
+                  isDesktop={true}
+                  text="Openclassrooms"
+                  href="/communaute-openclassrooms"
+                />
+                <HeaderLink isDesktop={true} text="Ressources" href="/ressources" />
                 <HeaderLink isDesktop={true} text="Contact" href="/contact" />
               </div>
             </nav>
