@@ -131,9 +131,9 @@ export default function DiscordServer({
               </div>
             </div>
           ) : (
-              <div className="h-9 w-full bg-indigo-500 dark:bg-indigo-700 animate-pulse hidden md:block rounded-b-md" />
-              // eslint-disable-next-line indent
-            ))}
+            <div className="h-9 w-full bg-indigo-500 dark:bg-indigo-700 animate-pulse hidden md:block rounded-b-md" />
+            // eslint-disable-next-line indent
+          ))}
       </a>
     </li>
   )

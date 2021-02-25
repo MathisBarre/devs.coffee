@@ -7,23 +7,18 @@ import Ievent from 'interfaces/Event'
 dayjs.extend(customParseFormat)
 dayjs.extend(relativeTime)
 
-
 export default function Event({ date, description, link, type }: Ievent) {
   function capitalizeFirstLetter(string: string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
 
   const formattedDate = dayjs(date).locale('fr').format('DD/MM/YY à HH:mm')
-  const dateFromNow = capitalizeFirstLetter(
-    dayjs(date).locale('fr').from(dayjs())
-  )
+  const dateFromNow = capitalizeFirstLetter(dayjs(date).locale('fr').from(dayjs()))
 
   return (
     <li
-      className={
-        `my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 dark:bg-gray-1000 
-      hover:bg-gray-50 dark:hover:bg-gray-1100 dark:text-white`
-      }
+      className={`my-4 border border-gray-200 dark:border-gray-1000 rounded-md px-4 dark:bg-gray-1000 
+      hover:bg-gray-50 dark:hover:bg-gray-1100 dark:text-white`}
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="py-4 flex items-center">

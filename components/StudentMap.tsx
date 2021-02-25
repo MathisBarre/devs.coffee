@@ -5,9 +5,9 @@ export default function Map() {
   const router = useRouter()
 
   function onBtnClick() {
-    router.push("contact")
+    router.push('contact')
   }
-  
+
   return (
     <section id="map">
       <Card

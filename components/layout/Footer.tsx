@@ -41,11 +41,7 @@ export default function Footer() {
           </a>
           <a href="https://vercel.com">
             {' '}
-            <img
-              className="footerImg inline h-4 mx-3 my-2"
-              src="/images/vercel.svg"
-              alt="vercel"
-            />
+            <img className="footerImg inline h-4 mx-3 my-2" src="/images/vercel.svg" alt="vercel" />
           </a>
         </div>
       </div>
