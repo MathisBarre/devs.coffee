@@ -7,7 +7,7 @@ export default function Index() {
         <Link href="communaute-openclassrooms">
           <a>
             <section className="text-white  rounded p-6 cursor-pointer relative overflow-hidden duration-75 bg-oc-500 hover:bg-oc-600">
-              <h2 className="text-xl font-bold">Rejoignez la communauté Openclassrooms</h2>
+              <h2 className="text-xl font-bold">Rejoignez la communauté OpenClassrooms</h2>
               <p>Événements - Discords - Carte - Initiatives</p>
               <button className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm rounded-md bg-white text-oc-600 font-extrabold hover:dark:bg-indigo-900 mt-2">
                 Rejoindre
@@ -23,7 +23,7 @@ export default function Index() {
         <Link href="ressources">
           <a>
             <section className="text-white  rounded p-6 cursor-pointer relative overflow-hidden duration-75 bg-mypurple-500 hover:bg-mypurple-600">
-              <h2 className="text-xl font-bold">Les meilleurs ressources d'apprentissage !</h2>
+              <h2 className="text-xl font-bold">Les meilleures ressources d'apprentissage !</h2>
               <p>HTML - CSS - Javascript - Node.js - MongoDB - MySQL</p>
               <button className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm rounded-md bg-white text-mypurple-500 font-extrabold hover:dark:bg-indigo-900 mt-2">
                 Ça m&apos;intéresse !
