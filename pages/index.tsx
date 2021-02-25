@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Index() {
   return (
     <div className="my-wrapper">
-      <div className="grid lg:grid-cols-2 gap-4 mt-8">
+      <div className="grid lg:grid-cols-2 gap-8 mt-8">
         <Link href="communaute-openclassrooms">
           <a>
             <section className="text-white  rounded p-6 cursor-pointer relative overflow-hidden duration-75 bg-oc-500 hover:bg-oc-600">
