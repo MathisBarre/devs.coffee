@@ -1,49 +1,193 @@
+import HomepageCard from 'components/HomepageCard'
 import Link from 'next/link'
 
 export default function Index() {
   return (
     <div className="my-wrapper">
       <div className="grid lg:grid-cols-2 gap-8 mt-8">
-        <Link href="communaute-openclassrooms">
-          <a>
-            <section className="text-white  rounded p-6 cursor-pointer relative overflow-hidden duration-75 bg-oc-500 hover:bg-oc-600">
-              <h2 className="text-xl font-bold">Rejoignez la communauté OpenClassrooms</h2>
-              <p>Événements - Discords - Carte - Initiatives</p>
-              <button className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm rounded-md bg-white text-oc-600 font-extrabold hover:dark:bg-indigo-900 mt-2">
-                Rejoindre
-              </button>
-              <img
-                className="absolute h-12 bottom-6 right-8 hidden sm:block"
-                src="/images/logo_openclassrooms.svg"
-                alt=""
-              />
-            </section>
-          </a>
-        </Link>
-        <Link href="ressources">
-          <a>
-            <section className="text-white  rounded p-6 cursor-pointer relative overflow-hidden duration-75 bg-mypurple-500 hover:bg-mypurple-600">
-              <h2 className="text-xl font-bold">Les meilleures ressources d'apprentissage !</h2>
-              <p>HTML - CSS - Javascript - Node.js - MongoDB - MySQL</p>
-              <button className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm rounded-md bg-white text-mypurple-500 font-extrabold hover:dark:bg-indigo-900 mt-2">
-                Ça m&apos;intéresse !
-              </button>
-              {/* <img
-                src="/images/logo_openclassrooms.svg"
-                alt=""
-              /> */}
-
-              <svg
-                className="absolute h-12 bottom-6 right-8 hidden sm:block"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-              </svg>
-            </section>
-          </a>
-        </Link>
+        <HomepageCard
+          href="communaute-openclassrooms"
+          title="Rejoignez la communauté OpenClassrooms"
+          description="Événements - Discords - Carte - Initiatives"
+          button={{
+            text: {
+              content: 'Rejoindre',
+              color: 'oc-500'
+            }
+          }}
+          bgColor="oc-500"
+          hoverColor="oc-600"
+          watermarkImageUrl="/images/logo_openclassrooms.svg"
+        />
+        <HomepageCard
+          href="ressources"
+          title="Des ressources triés sur le volet !"
+          description="HTML - CSS - Javascript - Node.js - MongoDB"
+          button={{
+            text: {
+              content: "Ça m'intéresse !",
+              color: 'mypurple-500'
+            }
+          }}
+          bgColor="mypurple-500"
+          hoverColor="mypurple-600"
+          watermarkImageUrl="/images/icons/academic-cap.svg"
+        />
+      </div>
+      <div className="grid gap-8 lg:grid-cols-3 lg:max-w-none w-full mt-8">
+        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <div className="flex-shrink-0">
+            <img
+              className="h-48 w-full object-cover"
+              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+              alt=""
+            />
+          </div>
+          <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+            <div className="flex-1">
+              <p className="text-sm font-medium text-indigo-600">
+                <a href="#" className="hover:underline">
+                  Article
+                </a>
+              </p>
+              <a href="#" className="block mt-2">
+                <p className="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                <p className="mt-3 text-base text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium
+                  praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
+                </p>
+              </a>
+            </div>
+            <div className="mt-6 flex items-center">
+              <div className="flex-shrink-0">
+                <a href="#">
+                  <span className="sr-only">Roel Aufderehar</span>
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm font-medium text-gray-900">
+                  <a href="#" className="hover:underline">
+                    Roel Aufderehar
+                  </a>
+                </p>
+                <div className="flex space-x-1 text-sm text-gray-500">
+                  <time dateTime="2020-03-16">Mar 16, 2020</time>
+                  <span aria-hidden="true">·</span>
+                  <span>6 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <div className="flex-shrink-0">
+            <img
+              className="h-48 w-full object-cover"
+              src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+              alt=""
+            />
+          </div>
+          <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+            <div className="flex-1">
+              <p className="text-sm font-medium text-indigo-600">
+                <a href="#" className="hover:underline">
+                  Video
+                </a>
+              </p>
+              <a href="#" className="block mt-2">
+                <p className="text-xl font-semibold text-gray-900">
+                  How to use search engine optimization to drive sales
+                </p>
+                <p className="mt-3 text-base text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores
+                  porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio
+                  animi., tempore temporibus quo laudantium.
+                </p>
+              </a>
+            </div>
+            <div className="mt-6 flex items-center">
+              <div className="flex-shrink-0">
+                <a href="#">
+                  <span className="sr-only">Brenna Goyette</span>
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm font-medium text-gray-900">
+                  <a href="#" className="hover:underline">
+                    Brenna Goyette
+                  </a>
+                </p>
+                <div className="flex space-x-1 text-sm text-gray-500">
+                  <time dateTime="2020-03-10">Mar 10, 2020</time>
+                  <span aria-hidden="true">·</span>
+                  <span>4 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <div className="flex-shrink-0">
+            <img
+              className="h-48 w-full object-cover"
+              src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+              alt=""
+            />
+          </div>
+          <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+            <div className="flex-1">
+              <p className="text-sm font-medium text-indigo-600">
+                <a href="#" className="hover:underline">
+                  Case Study
+                </a>
+              </p>
+              <a href="#" className="block mt-2">
+                <p className="text-xl font-semibold text-gray-900">
+                  Improve your customer experience
+                </p>
+                <p className="mt-3 text-base text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum
+                  voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque
+                  corporis perferendis hic.
+                </p>
+              </a>
+            </div>
+            <div className="mt-6 flex items-center">
+              <div className="flex-shrink-0">
+                <a href="#">
+                  <span className="sr-only">Daniela Metz</span>
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm font-medium text-gray-900">
+                  <a href="#" className="hover:underline">
+                    Daniela Metz
+                  </a>
+                </p>
+                <div className="flex space-x-1 text-sm text-gray-500">
+                  <time dateTime="2020-02-12">Feb 12, 2020</time>
+                  <span aria-hidden="true">·</span>
+                  <span>11 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
