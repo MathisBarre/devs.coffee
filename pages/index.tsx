@@ -13,11 +13,11 @@ export default function Index() {
             text: {
               content: 'Rejoindre',
               color: 'oc-500'
-            }
+            },
+            customClassNames: 'text-oc-500'
           }}
-          bgColor="oc-500"
-          hoverColor="oc-600"
           watermarkImageUrl="/images/logo_openclassrooms.svg"
+          customClassNames="bg-oc-500 hover:bg-oc-600"
         />
         <HomepageCard
           href="ressources"
@@ -27,11 +27,11 @@ export default function Index() {
             text: {
               content: "Ça m'intéresse !",
               color: 'mypurple-500'
-            }
+            },
+            customClassNames: 'text-mypurple-500'
           }}
-          bgColor="mypurple-500"
-          hoverColor="mypurple-600"
           watermarkImageUrl="/images/icons/academic-cap.svg"
+          customClassNames="bg-mypurple-500 hover:bg-mypurple-600"
         />
       </div>
       <div className="grid gap-8 lg:grid-cols-3 lg:max-w-none w-full mt-8">
