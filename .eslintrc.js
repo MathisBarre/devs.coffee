@@ -20,6 +20,7 @@ module.exports = {
 
     // Personnal preference(s)
     'space-before-function-paren': 'off',
+    'no-unused-vars': 'warn',
 
     // Prettier conflit resolver (I do not want to use the prettier config)
     'react/no-unescaped-entities': 'warn',
