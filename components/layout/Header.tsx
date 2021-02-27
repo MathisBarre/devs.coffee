@@ -1,9 +1,40 @@
+import { useState, MouseEventHandler, useEffect } from 'react'
 import Link from 'next/link'
-import { useState, MouseEventHandler } from 'react'
 import HeaderLink from 'components/layout/HeaderLink'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+
+  useEffect(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }, [])
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }, [theme])
+
+  function toggleTheme(): void {
+    console.log(theme)
+    if (theme === 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
+  }
 
   return (
     <header className="bg-gray-800 dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
@@ -31,6 +62,17 @@ export default function Header() {
                 <HeaderLink isDesktop={true} text="Contact" href="/contact" />
               </div>
             </nav>
+          </div>
+          <div>
+            <label id="switch" className="switch">
+              <input
+                type="checkbox"
+                onChange={toggleTheme}
+                checked={theme === 'light'}
+                id="slider"
+              />
+              <span className="slider round" />
+            </label>
           </div>
           <div className="-mr-2 flex md:hidden">
             <BtnToggleMobileMenu
