@@ -27,9 +27,7 @@ export default function PublicationCard({
             </a>
           </p>
           <a href="#" className="block mt-2">
-            <p className="text-xl font-semibold text-gray-900 dark:text-gray-100https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80">
-              {title}
-            </p>
+            <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">{title}</p>
             <p className="mt-3 text-base text-gray-500 dark:text-gray-400">{description}</p>
           </a>
         </div>
