@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="text-center mt-16 py-6 font-semibold bg-gray-100  dark:bg-gray-1000 text-md">
+    <footer className="text-center py-6 font-semibold bg-gray-100  dark:bg-gray-1000 text-md">
       <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-4">
         <p className="text-sm mb-2 lg:mb-0 dark:text-white">
           <a className="underline" href="https://mathisbarre.com">
