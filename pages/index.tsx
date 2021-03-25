@@ -3,8 +3,8 @@ import PublicationCard from 'components/PublicationCard'
 
 export default function Index() {
   return (
-    <div className="my-wrapper">
-      <div className="grid lg:grid-cols-2 gap-8 mt-8">
+    <div className="my-wrapper my-8">
+      <div className="grid lg:grid-cols-2 gap-8 mb-8">
         <HomepageCard
           href="communaute-openclassrooms"
           title="Rejoignez la communauté OpenClassrooms"

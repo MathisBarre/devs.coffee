@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
@@ -43,6 +43,41 @@ function App({ Component, pageProps }: AppProps) {
   const SEO_DESCRIPTION =
     "devs.coffee est un site qui a pour objectif d’augmenter les liens communautaires et d’améliorer l'expérience des étudiant chez OpenClassrooms. A l'heure actuelle, vous pouvez y retrouver une liste des serveurs discord, une carte des étudiants, un calendrier des rendez-vous communautaires à ne pas louper et une liste de ressources additionnels !"
 
+  // Theme
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+
+  useEffect(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }, [])
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }, [theme])
+
+  function toggleTheme(): void {
+    console.log(theme)
+    if (theme === 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
+  }
+
+  const ThemeContext = createContext(theme)
+
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
@@ -63,11 +98,11 @@ function App({ Component, pageProps }: AppProps) {
         <meta property="twitter:description" content={SEO_DESCRIPTION} />
         <meta property="twitter:image" content="https://devs.coffee/devs-coffee.png" />
       </Head>
-      <Header />
+      <Header toggleTheme={toggleTheme} theme={theme} />
       <div className="pt-16 flex-grow">
         <Component {...pageProps} />
       </div>
-      <Footer />
+      <Footer theme={theme} />
     </div>
   )
 }

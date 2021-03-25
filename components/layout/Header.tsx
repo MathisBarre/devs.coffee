@@ -1,40 +1,14 @@
-import { useState, MouseEventHandler, useEffect } from 'react'
+import { ChangeEventHandler, MouseEventHandler, useState } from 'react'
 import Link from 'next/link'
 import HeaderLink from 'components/layout/HeaderLink'
 
-export default function Header() {
+interface props {
+  toggleTheme: ChangeEventHandler<HTMLInputElement>
+  theme: 'light' | 'dark'
+}
+
+export default function Header({ toggleTheme, theme }: props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [theme, setTheme] = useState<'light' | 'dark'>('light')
-
-  useEffect(() => {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      setTheme('dark')
-    } else {
-      setTheme('light')
-    }
-  }, [])
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-    }
-  }, [theme])
-
-  function toggleTheme(): void {
-    console.log(theme)
-    if (theme === 'dark') {
-      setTheme('light')
-    } else {
-      setTheme('dark')
-    }
-  }
 
   return (
     <header className="bg-gray-800 dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
