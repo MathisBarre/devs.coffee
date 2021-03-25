@@ -1,5 +1,3 @@
-import { React, useEffect, useState } from 'react'
-
 export default function Footer({ theme }: { theme: 'light' | 'dark' }) {
   return (
     <footer className="text-center py-6 font-semibold bg-gray-100  dark:bg-gray-1000 text-md">

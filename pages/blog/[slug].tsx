@@ -8,7 +8,7 @@ import { postFilePaths, POSTS_PATH } from '../../utils/mdx.utils'
 export default function PostPage({ source }: { source: MdxRemote.Source }) {
   const content = hydrate(source)
   return (
-    <div className="relative py-16 bg-white overflow-hidden">
+    <div className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div className="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
           <svg
@@ -32,7 +32,7 @@ export default function PostPage({ source }: { source: MdxRemote.Source }) {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-200 dark:text-gray-700"
                   fill="currentColor"
                 />
               </pattern>
@@ -60,7 +60,7 @@ export default function PostPage({ source }: { source: MdxRemote.Source }) {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-200 dark:text-gray-700"
                   fill="currentColor"
                 />
               </pattern>
@@ -88,7 +88,7 @@ export default function PostPage({ source }: { source: MdxRemote.Source }) {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-200 dark:text-gray-700"
                   fill="currentColor"
                 />
               </pattern>
@@ -100,20 +100,20 @@ export default function PostPage({ source }: { source: MdxRemote.Source }) {
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto">
           <h1>
-            <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
+            <span className="block text-base text-center text-indigo-600 dark:text-indigo-500 font-semibold tracking-wide uppercase">
               Introducing
             </span>
-            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
               JavaScript for Beginners
             </span>
           </h1>
-          <p className="mt-8 text-xl text-gray-500 leading-8">
+          <p className="mt-8 text-xl text-gray-500 dark:text-gray-300 leading-8">
             Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi,
             nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at
             in viverra scelerisque eget. Eleifend egestas fringilla sapien.
           </p>
         </div>
-        <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">{content}</div>
+        <div className="mt-6 prose dark:prose-light prose-indigo prose-lg mx-auto">{content}</div>
       </div>
     </div>
   )
