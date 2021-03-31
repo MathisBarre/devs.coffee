@@ -13,7 +13,6 @@ interface props {
 
 export default function PostPage({ source, frontMatter }: props) {
   const content = hydrate(source)
-  console.log(frontMatter)
   return (
     <div className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
