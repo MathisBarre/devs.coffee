@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
@@ -68,15 +68,12 @@ function App({ Component, pageProps }: AppProps) {
   }, [theme])
 
   function toggleTheme(): void {
-    console.log(theme)
     if (theme === 'dark') {
       setTheme('light')
     } else {
       setTheme('dark')
     }
   }
-
-  const ThemeContext = createContext(theme)
 
   return (
     <div className="flex flex-col min-h-screen">
