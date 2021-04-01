@@ -102,5 +102,12 @@
     "description": "Les bases de Vue.js 3",
     "link": "https://www.twitch.tv/trainingdev",
     "isCompleted": false
+  },
+  {
+    "date": "2021-04-01T19:00",
+    "type": "Discord stage",
+    "description": "Discussions autour du parcours développeur web",
+    "link": "https://discord.com/channels/766565028312383498/766566127324233738/827102934574563349",
+    "isCompleted": false
   }
 ]
