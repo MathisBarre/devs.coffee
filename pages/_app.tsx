@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import * as ackeeTracker from 'ackee-tracker'
 
@@ -10,8 +11,18 @@ import Footer from 'components/layout/Footer'
 import 'tailwindcss/tailwind.css'
 import '../style/global.css'
 
+import 'nprogress/nprogress.css'
+
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
+
+  // Progress bar
+  const TopProgressBar = dynamic(
+    () => {
+      return import('components/TopProgressBar')
+    },
+    { ssr: false }
+  )
 
   // Ackee Analytics
   const instance = ackeeTracker.create(
@@ -96,6 +107,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta property="twitter:image" content="https://devs.coffee/devs-coffee.png" />
       </Head>
       <Header toggleTheme={toggleTheme} theme={theme} />
+      <TopProgressBar />
       <div className="pt-16 flex-grow">
         <Component {...pageProps} />
       </div>
