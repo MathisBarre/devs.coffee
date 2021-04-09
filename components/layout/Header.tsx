@@ -29,7 +29,7 @@ export default function Header({ toggleTheme, theme }: props) {
               <div className="flex space-x-4">
                 <HeaderLink
                   isDesktop={true}
-                  text="Openclassrooms"
+                  text="OpenClassrooms"
                   href="/communaute-openclassrooms"
                 />
                 <HeaderLink isDesktop={true} text="Ressources" href="/ressources" />
@@ -99,8 +99,8 @@ function MobileMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
   return (
     <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
       <div className="px-2 pt-2 pb-3 space-y-1">
-        <HeaderLink isDesktop={false} text="Openclassrooms" href="/communaute-openclassrooms" />
-        <HeaderLink isDesktop={false} text="Ressources" href="/ressources" />
+        <HeaderLink isDesktop={false} text="OpenClassrooms" href="/communaute-openclassrooms" />
+        <HeaderLink isDesktop={false} text="Ressources complémentaires" href="/ressources" />
         <HeaderLink isDesktop={false} text="Contact" href="/contact" />
       </div>
     </nav>

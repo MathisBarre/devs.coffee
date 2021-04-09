@@ -12,10 +12,10 @@ interface IindexProps {
 export default function OpenclassroomsCommunity({ trainingDevEvents }: IindexProps) {
   return (
     <div className="my-wrapper">
-      <Events trainingDevEvents={trainingDevEvents} />
-      <Initiatives />
-      <StudentMap />
       <DiscordServers />
+      <StudentMap />
+      {/* <Events trainingDevEvents={trainingDevEvents} /> */}
+      <Initiatives />
     </div>
   )
 }
