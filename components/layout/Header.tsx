@@ -11,12 +11,12 @@ export default function Header({ toggleTheme, theme }: props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-800 dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
+    <header className="bg-white shadow dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center h-full">
             <Link href="/">
-              <a className="flex-shrink-0 flex items-center">
+              <a className="flex-shrink-0 flex items-center bg-gray-800 h-full px-6">
                 <img
                   className="h-6 w-auto mr-3 mt-1"
                   src="/images/logo.svg"
