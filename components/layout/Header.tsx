@@ -27,11 +27,7 @@ export default function Header({ toggleTheme, theme }: props) {
             </Link>
             <nav className="hidden md:block sm:ml-6">
               <div className="flex space-x-4">
-                <HeaderLink
-                  isDesktop={true}
-                  text="OpenClassrooms"
-                  href="/communaute-openclassrooms"
-                />
+                <HeaderLink isDesktop={true} text="OpenClassrooms" href="/communaute-openclassrooms" />
                 <HeaderLink isDesktop={true} text="Ressources" href="/ressources" />
                 <HeaderLink isDesktop={true} text="Contact" href="/contact" />
               </div>

@@ -6,7 +6,7 @@ export default function Index() {
     <div className="my-wrapper my-8">
       <div className="grid lg:grid-cols-2 gap-8 mb-8">
         <HomepageCard
-          href="communaute-openclassrooms"
+          href="/communaute-openclassrooms"
           title="Rejoignez la communauté OpenClassrooms"
           description="Événements - Discords - Carte - Initiatives"
           button={{
@@ -20,7 +20,7 @@ export default function Index() {
           customClassNames="bg-oc-500 hover:bg-oc-600"
         />
         <HomepageCard
-          href="ressources"
+          href="/ressources"
           title="Des ressources triés sur le volet !"
           description="HTML - CSS - Javascript - Node.js - MongoDB"
           button={{
