@@ -1,0 +1,88 @@
+---
+title: Javascript localStorage démistifié
+description: Nous vous êtes vous jamais demandé comment stocker des données localement et facilement ? C'est que ne nous allons voir ici en apprenant à manipuler l'api localStorage
+type: Introduction
+author: Mathis Barré
+---
+
+## Prérequis
+
+- Connaître les bases de Javascript (fonctions, variables, ...)
+- Connaître les objets Javascript et le JSON
+- Savoir ce qu'est qu'une API d'un navigateur
+
+## Concept
+
+Le localstorage est une **fonctionnalité** des navigateurs permettant de **stocker et récupérer une chaîne de caractère,** sur un navigateur avec Javascript. A la différence d'une simple variable, l'information est persistante entre les pages d'un même site et entre les différentes visites d'un utilisateur.
+
+Utilisée avec `JSON.stringify()`, cette fonctionnalité peut aussi permettre de stocker des informations plus complexes comme des objets ou des listes. C'est ce que nous verrons dans la deuxième partie de cet article.
+
+LocalStorage peut par exemple servir à stocker :
+
+- Un thème (clair, sombre, etc...) d'un utilisateur
+- Un panier d'un site e-commerce
+- Un token d'autorisation (avec un JSON Web Token par exemple)
+
+## Comment l'utiliser ?
+
+En pratique, si on prend le premier exemple (stockage du thème de l'utilisateur), on peut sauvegarder le choix de l'utilisateur de cette manière :
+
+```jsx
+localStorage.setItem('theme', 'black')
+```
+
+La méthode `setItem()` de l'objet localstorage prend le nom de la valeur en premier argument ("theme") , et la valeur ("black") en deuxième argument.
+
+En gros, l'équivalent avec une variable traditionnelle serait : `const theme = 'dark'`
+
+La valeur peut évidemment être une variable qui contiendrai elle même une chaîne de caractère, c'est d'ailleurs le cas la plupart du temps.
+
+La clé sera ensuite utile pour récupérer la chaîne de caractère grâce à la methode `getItem` :
+
+```jsx
+var theme = localStorage.getItem('theme')
+```
+
+La variable `theme` contient donc maintenant la chaine de caractère "_black_"
+
+Pour supprimer le stockage, il suffit maintenant de faire :
+
+```jsx
+localStorage.removeItem('theme')
+```
+
+## Stocker des listes, des objets ou du json
+
+En javascript, on peut facilement **transformer du JSON en chaine de caractère** de cette manière :
+
+```jsx
+var membreConnecteJson = {
+  nom: 'Dupont',
+  prenom: 'Sebastien'
+}
+
+var membreConnecteString = JSON.stringify(membreConnecteJson)
+```
+
+`membreConnecteString` est maintenant un chaine de caractère, elle est donc stockable avec localStorage.
+
+De plus le **JSON étant un objet javascript valide** (d'oû le nom, JSON = Javascript Object Notation), `membreConnecte` peut être un objet javascript. Et ça marche même avec une liste ( en javascript, une liste est juste un objet spécial ) !
+
+On peut donc stocker le membre connecté de la même manière que précédement mais en passant la variable précédement créée en deuxième argument :
+
+```jsx
+localStorage.setItem('membreConnecte', membreConnecteString)
+```
+
+Ensuite, on peut récupérer le membre connecté ( sur une autre page par exemple ) en chaine de caractère. Et le retransformer en json, objet ou liste avec la méthode `JSON.parse()`
+
+```jsx
+var membreConnecteString = localStorage.getItem('membreConnecte')
+var membreConnecteObject = JSON.parse(membreConnectString)
+```
+
+## Pour aller plus loin
+
+- [Documentation MDN](https://developer.mozilla.org/fr/docs/Web/API/Storage/LocalStorage)
+- [Tableau de compatibilité en fonction des navigateurs](https://caniuse.com/?search=localstorage)
+- [Tutoriel détaillé en Anglais sur localStorage et sessionStorage](https://javascript.info/localstorage)

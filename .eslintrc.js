@@ -15,7 +15,15 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    // Next.js particularitie(s)
     'react/react-in-jsx-scope': 'off',
-    'space-before-function-paren': 'off'
+
+    // Personnal preference(s)
+    'space-before-function-paren': 'off',
+    'no-unused-vars': 'warn',
+
+    // Prettier conflit resolver (I do not want to use the prettier config)
+    'react/no-unescaped-entities': 'warn',
+    'multiline-ternary': 'off'
   }
 }

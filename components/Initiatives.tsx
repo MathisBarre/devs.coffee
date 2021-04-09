@@ -7,7 +7,7 @@ export default function Events() {
   const router = useRouter()
 
   function onBtnClick() {
-    router.push("contact")
+    router.push('contact')
   }
 
   return (
@@ -21,11 +21,11 @@ export default function Events() {
           onClick: onBtnClick
         }}
       >
-      <div className="my-grid">
-        {initiatives.map((initiative, index) => (
-          <Ressource key={index} {...initiative} />
-        ))}
-      </div>
+        <div className="my-grid">
+          {initiatives.map((initiative, index) => (
+            <Ressource key={index} {...initiative} />
+          ))}
+        </div>
       </Card>
     </section>
   )

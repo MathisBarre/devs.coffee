@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="container mx-auto pt-16 grid lg:grid-cols-12 lg:gap-8 box-border px-4">
+      <div className="container mx-auto py-16 grid lg:grid-cols-12 lg:gap-8 box-border px-4">
         <section className="flex flex-col items-center lg:col-span-4  lg:p-0 mb-16">
           <h2 className="dark:text-white text-2xl font-bold w-full mb-4 lg:mb-0">Qui suis-je ?</h2>
           <div className="flex flex-col md:flex-row lg:flex-col">
@@ -15,8 +15,7 @@ export default function Contact() {
                 <p className="break-normal overflow-hidden">
                   Je suis un étudiant en alternance avec OpenClassrooms portant le doux nom de
                   Mathis Barré. Profitant de compétences acquise en autodidacte avant la formation,
-                  j&aposai pris le temps de créé ce site afin d&aposaider les étudiants dans leur
-                  parcours.
+                  j'ai pris le temps de créé ce site afin d'aider les étudiants dans leur parcours.
                 </p>
               </div>
               <div className="mt-4 flex flex-col md:flex-row flex-wrap lg:grid lg:grid-cols-2 gap-2">

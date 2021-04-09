@@ -1,55 +1,74 @@
-import DiscordServers from 'components/DiscordServers'
-import Events from 'components/Events'
-import Ressources from 'components/Ressources'
-import StudentMap from 'components/StudentMap'
-import Initiatives from 'components/Initiatives'
-import { GetStaticProps } from 'next'
-import Ievent from 'interfaces/Event'
+import HomepageCard from 'components/HomepageCard'
+import PublicationCard from 'components/PublicationCard'
 
-interface IindexProps {
-  trainingDevEvents: Ievent[]
-}
-
-export default function Index({ trainingDevEvents }: IindexProps) {
+export default function Index() {
   return (
-    <div className="mx-auto px-2 md:px-4 max-w-7xl">
-      <Events trainingDevEvents={trainingDevEvents} />
-      <Initiatives />
-      <StudentMap />
-      <DiscordServers />
-      <Ressources />
+    <div className="my-wrapper my-8">
+      <div className="grid lg:grid-cols-2 gap-8 mb-8">
+        <HomepageCard
+          href="communaute-openclassrooms"
+          title="Rejoignez la communauté OpenClassrooms"
+          description="Événements - Discords - Carte - Initiatives"
+          button={{
+            text: {
+              content: 'Rejoindre',
+              color: 'oc-500'
+            },
+            customClassNames: 'text-oc-500'
+          }}
+          watermarkImageUrl="/images/logo_openclassrooms.svg"
+          customClassNames="bg-oc-500 hover:bg-oc-600"
+        />
+        <HomepageCard
+          href="ressources"
+          title="Des ressources triés sur le volet !"
+          description="HTML - CSS - Javascript - Node.js - MongoDB"
+          button={{
+            text: {
+              content: "Ça m'intéresse !",
+              color: 'mypurple-500'
+            },
+            customClassNames: 'text-mypurple-500'
+          }}
+          watermarkImageUrl="/images/icons/academic-cap.svg"
+          customClassNames="bg-mypurple-500 hover:bg-mypurple-600"
+        />
+      </div>
+      <div className="grid gap-8 lg:grid-cols-3 lg:max-w-none w-full mt-8">
+        <PublicationCard
+          image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+          type="Article"
+          title="Boost yout conversation rate"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum."
+          author={{
+            name: 'Roel Aufderehar',
+            profilePictureUrl:
+              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+          }}
+        />
+        <PublicationCard
+          image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+          type="Article"
+          title="Boost yout conversation rate"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum."
+          author={{
+            name: 'Roel Aufderehar',
+            profilePictureUrl:
+              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+          }}
+        />
+        <PublicationCard
+          image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+          type="Article"
+          title="Boost yout conversation rate"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum."
+          author={{
+            name: 'Roel Aufderehar',
+            profilePictureUrl:
+              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+          }}
+        />
+      </div>
     </div>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const oneDayInSeconds = 60 * 60 * 24
-
-  const traningDevEvents = await fetch('https://www.training-dev.fr/api/getListEvent')
-    .then((response) => response.json())
-    .then((events) => {
-      return events
-        .filter((event: any) => {
-          return event.category.toUpperCase() === 'LIVE'
-        })
-        .map((event: any) => {
-          return {
-            date: event.date.date.replace(' ', 'T'),
-            type: event.category.toUpperCase(),
-            description: event.name + '. Animé par ' + event.animator,
-            link: 'https://www.twitch.tv/trainingdev',
-            isCompleted: false
-          }
-        })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-
-  return {
-    revalidate: oneDayInSeconds / 4,
-    props: {
-      trainingDevEvents: traningDevEvents
-    }
-  }
 }

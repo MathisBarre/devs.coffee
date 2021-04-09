@@ -1,10 +1,10 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 interface IHeaderLink {
-  text: string;
-  href: string;
-  isDesktop?: boolean;
-  disabled?: boolean;
+  text: string
+  href: string
+  isDesktop?: boolean
+  disabled?: boolean
 }
 
 export default function HeaderLink({
@@ -14,9 +14,7 @@ export default function HeaderLink({
   disabled = false
 }: IHeaderLink) {
   return (
-    <Link
-      href={href}
-    >
+    <Link href={href}>
       <a
         className={`
           ${isDesktop ? '' : 'block'}

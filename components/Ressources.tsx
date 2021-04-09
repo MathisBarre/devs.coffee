@@ -12,9 +12,7 @@ export default function Ressources() {
   const allRessourcesTags = ressourcesToTags(defaultRessources)
 
   const [selectedTags, setSelectedTags] = useState<string[]>(allRessourcesTags)
-  const [filteredRessources, setFilteredRessources] = useState(
-    defaultRessources
-  )
+  const [filteredRessources, setFilteredRessources] = useState(defaultRessources)
 
   // Re-filtre les ressources en fonction des tags sélectionnés
   useEffect(() => {
@@ -31,7 +29,7 @@ export default function Ressources() {
   const router = useRouter()
 
   function onBtnClick() {
-    router.push("contact")
+    router.push('contact')
   }
 
   function onTagSelectedChange(change: any): void {
