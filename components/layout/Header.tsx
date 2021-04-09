@@ -11,12 +11,12 @@ export default function Header({ toggleTheme, theme }: props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-800 dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
+    <header className="bg-white shadow dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center h-full">
             <Link href="/">
-              <a className="flex-shrink-0 flex items-center">
+              <a className="flex-shrink-0 flex items-center bg-gray-800 h-full px-6">
                 <img
                   className="h-6 w-auto mr-3 mt-1"
                   src="/images/logo.svg"
@@ -27,11 +27,7 @@ export default function Header({ toggleTheme, theme }: props) {
             </Link>
             <nav className="hidden md:block sm:ml-6">
               <div className="flex space-x-4">
-                <HeaderLink
-                  isDesktop={true}
-                  text="Openclassrooms"
-                  href="/communaute-openclassrooms"
-                />
+                <HeaderLink isDesktop={true} text="OpenClassrooms" href="/communaute-openclassrooms" />
                 <HeaderLink isDesktop={true} text="Ressources" href="/ressources" />
                 <HeaderLink isDesktop={true} text="Contact" href="/contact" />
               </div>
@@ -99,8 +95,8 @@ function MobileMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
   return (
     <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
       <div className="px-2 pt-2 pb-3 space-y-1">
-        <HeaderLink isDesktop={false} text="Openclassrooms" href="/communaute-openclassrooms" />
-        <HeaderLink isDesktop={false} text="Ressources" href="/ressources" />
+        <HeaderLink isDesktop={false} text="OpenClassrooms" href="/communaute-openclassrooms" />
+        <HeaderLink isDesktop={false} text="Ressources complémentaires" href="/ressources" />
         <HeaderLink isDesktop={false} text="Contact" href="/contact" />
       </div>
     </nav>

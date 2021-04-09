@@ -6,7 +6,7 @@ export default function Index() {
     <div className="my-wrapper my-8">
       <div className="grid lg:grid-cols-2 gap-8 mb-8">
         <HomepageCard
-          href="communaute-openclassrooms"
+          href="/communaute-openclassrooms"
           title="Rejoignez la communauté OpenClassrooms"
           description="Événements - Discords - Carte - Initiatives"
           button={{
@@ -20,7 +20,7 @@ export default function Index() {
           customClassNames="bg-oc-500 hover:bg-oc-600"
         />
         <HomepageCard
-          href="ressources"
+          href="/ressources"
           title="Des ressources triés sur le volet !"
           description="HTML - CSS - Javascript - Node.js - MongoDB"
           button={{
@@ -38,36 +38,18 @@ export default function Index() {
         <PublicationCard
           image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
           type="Article"
-          title="Boost yout conversation rate"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum."
+          title="JavaScript localeStorage démistifié"
+          description="Nous vous êtes vous jamais demandé comment stocker des données localement et facilement ? C'est que ne nous allons voir ici en apprenant à manipuler l'api localStorage !"
           author={{
-            name: 'Roel Aufderehar',
+            name: 'Mathis Barré',
             profilePictureUrl:
-              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+              '/images/profil.jpg'
           }}
+          href="/blog/javascript-localstorage-demistifie"
+          date="Ven 5 Avril 2021"
         />
-        <PublicationCard
-          image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-          type="Article"
-          title="Boost yout conversation rate"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum."
-          author={{
-            name: 'Roel Aufderehar',
-            profilePictureUrl:
-              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-          }}
-        />
-        <PublicationCard
-          image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-          type="Article"
-          title="Boost yout conversation rate"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum."
-          author={{
-            name: 'Roel Aufderehar',
-            profilePictureUrl:
-              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-          }}
-        />
+        <PublicationCard fake />
+        <PublicationCard fake />
       </div>
     </div>
   )

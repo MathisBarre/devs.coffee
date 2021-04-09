@@ -65,7 +65,7 @@ export default function DiscordServer({
                     {name}
                   </h3>
                   <p className="inline ml-1 font-normaltext-gray-500 dark:text-gray-300">
-                    ({course})
+                    - {course}
                   </p>
                 </div>
                 <div className="mt-2 flex">
@@ -93,7 +93,7 @@ export default function DiscordServer({
             </svg>
           </div>
         </div>
-        {apiUrl &&
+        {/* {apiUrl &&
           discordData &&
           // eslint-disable-next-line multiline-ternary
           (discordData.members ? (
@@ -133,7 +133,7 @@ export default function DiscordServer({
           ) : (
             <div className="h-9 w-full bg-indigo-500 dark:bg-indigo-700 animate-pulse hidden md:block rounded-b-md" />
             // eslint-disable-next-line indent
-          ))}
+          ))} */}
       </a>
     </li>
   )
