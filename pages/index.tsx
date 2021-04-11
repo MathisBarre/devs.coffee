@@ -38,7 +38,7 @@ export default function Index() {
         <PublicationCard
           image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
           type="Article"
-          title="JavaScript localeStorage démistifié"
+          title="JavaScript localStorage démistifié"
           description="Nous vous êtes vous jamais demandé comment stocker des données localement et facilement ? C'est que ne nous allons voir ici en apprenant à manipuler l'api localStorage !"
           author={{
             name: 'Mathis Barré',
