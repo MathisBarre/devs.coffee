@@ -4,7 +4,7 @@ body {
 }
 
 .my-wrapper {
-  @apply mx-auto px-2 md:px-4 max-w-7xl;
+  @apply px-2 mx-auto md:px-4 max-w-7xl;
 }
 
 .discordServer:hover .discordMembers {
@@ -41,15 +41,19 @@ body {
 }
 
 .my-grid {
-  @apply grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 max-w-full mt-4;
+  @apply grid max-w-full gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4;
+}
+
+.my-ressource-grid {
+  @apply grid max-w-full gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5;
 }
 
 .my-card {
-  @apply border border-gray-200 dark:border-gray-1000 rounded box-border dark:bg-gray-1000;
+  @apply box-border border border-gray-200 rounded dark:border-gray-1000 dark:bg-gray-1000;
 }
 
 .my-cardLink {
-  @apply border border-gray-200 dark:border-gray-1000 rounded box-border hover:bg-gray-50  dark:bg-gray-1000 dark:hover:bg-gray-1100;
+  @apply box-border border border-gray-200 rounded dark:border-gray-1000 hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100;
 }
 
 /* theme switch */

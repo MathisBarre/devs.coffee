@@ -33,7 +33,7 @@ localStorage.setItem('theme', 'black')
 
 La méthode `setItem()` de l'objet localstorage prend le nom de la valeur en premier argument ("theme") , et la valeur ("black") en deuxième argument.
 
-En gros, l'équivalent avec une variable traditionnelle serait : `const theme = 'dark'`
+En résumé, l'équivalent avec une variable traditionnelle serait : `const theme = 'dark'`
 
 La valeur peut évidemment être une variable qui contiendrai elle même une chaîne de caractère, c'est d'ailleurs le cas la plupart du temps.
 
@@ -43,7 +43,7 @@ La clé sera ensuite utile pour récupérer la chaîne de caractère grâce à l
 var theme = localStorage.getItem('theme')
 ```
 
-La variable `theme` contient donc maintenant la chaine de caractère "_black_"
+La variable `theme` contient donc maintenant la chaîne de caractère "_black_"
 
 Pour supprimer le stockage, il suffit maintenant de faire :
 
@@ -53,7 +53,7 @@ localStorage.removeItem('theme')
 
 ## Stocker des listes, des objets ou du json
 
-En javascript, on peut facilement **transformer du JSON en chaine de caractère** de cette manière :
+En javascript, on peut facilement **transformer un objet Javascript en chaîne de caractère (JSON)** de cette manière :
 
 ```jsx
 var membreConnecteJson = {
@@ -64,9 +64,7 @@ var membreConnecteJson = {
 var membreConnecteString = JSON.stringify(membreConnecteJson)
 ```
 
-`membreConnecteString` est maintenant un chaine de caractère, elle est donc stockable avec localStorage.
-
-De plus le **JSON étant un objet javascript valide** (d'oû le nom, JSON = Javascript Object Notation), `membreConnecte` peut être un objet javascript. Et ça marche même avec une liste ( en javascript, une liste est juste un objet spécial ) !
+`membreConnecteString` est maintenant un chaîne de caractère, elle est donc stockable avec localStorage.
 
 On peut donc stocker le membre connecté de la même manière que précédement mais en passant la variable précédement créée en deuxième argument :
 
@@ -74,7 +72,7 @@ On peut donc stocker le membre connecté de la même manière que précédement 
 localStorage.setItem('membreConnecte', membreConnecteString)
 ```
 
-Ensuite, on peut récupérer le membre connecté ( sur une autre page par exemple ) en chaine de caractère. Et le retransformer en json, objet ou liste avec la méthode `JSON.parse()`
+Ensuite, on peut récupérer le membre connecté ( sur une autre page par exemple ) en chaîne de caractère. Et le retransformer en json, objet ou liste avec la méthode `JSON.parse()`
 
 ```jsx
 var membreConnecteString = localStorage.getItem('membreConnecte')
