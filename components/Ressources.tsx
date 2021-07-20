@@ -1,66 +1,46 @@
-import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Select from 'react-select'
-import { ressourcesToTags } from '../utils/main'
 import Card from 'components/layout/Card'
-import Ressource from 'components/Ressource'
-
 import defaultRessources from '../data/ressources.json'
+import Ressource from './Ressource'
 
 export default function Ressources() {
-  // Construit une liste avec tous les tags présent dans les ressources par défaut
-  const allRessourcesTags = ressourcesToTags(defaultRessources)
-
-  const [selectedTags, setSelectedTags] = useState<string[]>(allRessourcesTags)
-  const [filteredRessources, setFilteredRessources] = useState(defaultRessources)
-
-  // Re-filtre les ressources en fonction des tags sélectionnés
-  useEffect(() => {
-    const newFilteredRessources = defaultRessources.filter((ressource) => {
-      return (
-        selectedTags.includes('Toutes les ressources') ||
-        ressource.tags.some((tag) => selectedTags.includes(tag))
-      )
-    })
-
-    setFilteredRessources(newFilteredRessources)
-  }, [selectedTags])
-
-  const router = useRouter()
-
-  function onBtnClick() {
-    router.push('contact')
-  }
-
-  function onTagSelectedChange(change: any): void {
-    setSelectedTags(change?.value)
-  }
-
   return (
-    <section id="ressources">
-      <Card
-        title="Ressources externes"
-        description="Une liste des ressources complémentaires aux cours OpenClassrooms"
-        withContentPadding={false}
-        button={{
-          text: 'Ajouter une ressource',
-          onClick: onBtnClick
-        }}
-      >
-        <Select
-          className="react-select-container"
-          classNamePrefix="react-select"
-          isSearchable={true}
-          options={allRessourcesTags.map((tag: string) => ({ value: tag, label: tag }))}
-          onChange={onTagSelectedChange}
-          instanceId="a98sd79sd87c"
-        />
-        <div className="my-grid">
-          {filteredRessources.map((ressource, index) => (
-            <Ressource key={index} {...ressource} />
-          ))}
-        </div>
-      </Card>
+    <section id="ressources" className="mt-16 mb-16">
+      <h2 className="mt-16 font-semibold dark:text-white">Style : CSS, SASS, animations</h2>
+      <div className="my-ressource-grid">
+        {defaultRessources.filter((ressource) => {
+          return ressource.tags.includes('CSS')
+        }).map((ressource) => {
+          return <Ressource key={ressource.title} {...ressource} />
+        })}
+      </div>
+
+      <h2 className="mt-16 font-semibold dark:text-white">Qualité : SEO, compatibilité, optimisation</h2>
+      <div className="my-ressource-grid">
+        {defaultRessources.filter((ressource) => {
+          return ressource.tags.includes('quality-and-optimization') || ressource.tags.includes('Compatibilité navigateur')
+        }).map((ressource) => {
+          return <Ressource key={ressource.title} {...ressource} />
+        })}
+      </div>
+
+      <h2 className="mt-16 font-semibold dark:text-white">Javascript</h2>
+      <div className="my-ressource-grid">
+        {defaultRessources.filter((ressource) => {
+          return ressource.tags.includes('Javascript')
+        }).map((ressource) => {
+          return <Ressource key={ressource.title} {...ressource} />
+        })}
+      </div>
+
+      <h2 className="mt-16 font-semibold dark:text-white">Git</h2>
+      <div className="my-ressource-grid">
+        {defaultRessources.filter((ressource) => {
+          return ressource.tags.includes('Versionning')
+        }).map((ressource) => {
+          return <Ressource key={ressource.title} {...ressource} />
+        })}
+      </div>
     </section>
   )
 }

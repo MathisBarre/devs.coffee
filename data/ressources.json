@@ -1,100 +1,100 @@
 [
   {
-    "title":"CSS Diner",
-    "description":"Un jeu très amusant pour apprendre les sélecteurs CSS !",
-    "img":"/images/ressources/css-diner.png",
-    "href":"https://flukeout.github.io/",
+    "title": "CSS Diner",
+    "description": "Un jeu très amusant pour apprendre les sélecteurs CSS !",
+    "img": "/images/ressources/css-diner.png",
+    "href": "https://flukeout.github.io/",
     "tags": ["DevWeb P2", "DevWeb P3", "CSS"]
   },
   {
-    "title":"Flexbox Froggy",
-    "description":"Des couleurs, des grenouilles et des flexbox",
-    "img":"/images/ressources/flexbox-froggy.jpg",
-    "href":"https://flexboxfroggy.com/#fr",
+    "title": "Flexbox Froggy",
+    "description": "Des couleurs, des grenouilles et des flexbox",
+    "img": "/images/ressources/flexbox-froggy.jpg",
+    "href": "https://flexboxfroggy.com/#fr",
     "tags": ["DevWeb P2", "DevWeb P3", "CSS"]
   },
   {
-    "title":"Grid garden",
-    "description":"Gérez votre jardin grâce aux grilles css !",
-    "img":"/images/ressources/grid-garden.png",
-    "href":"https://cssgridgarden.com/#fr",
+    "title": "Grid garden",
+    "description": "Gérez votre jardin grâce aux grilles css !",
+    "img": "/images/ressources/grid-garden.png",
+    "href": "https://cssgridgarden.com/#fr",
     "tags": ["DevWeb P2", "DevWeb P3", "CSS"]
   },
   {
-    "title":"Learn Git Branching",
-    "description":"Une façon interactive de se familiariser avec Git et Github",
-    "img":"/images/ressources/git-branching.png",
-    "href":"https://learngitbranching.js.org/?locale=fr_FR",
+    "title": "Learn Git Branching",
+    "description": "Une façon interactive de se familiariser avec Git et Github",
+    "img": "/images/ressources/git-branching.png",
+    "href": "https://learngitbranching.js.org/?locale=fr_FR",
     "tags": ["DevWeb P2", "DevWeb P3", "Versionning"]
   },
   {
-    "title":"Can I use ?",
-    "description":"Table de support par navigateur pour HTML, CSS Javascript et autre",
-    "img":"/images/ressources/caniuse.png",
-    "href":"https://caniuse.com/",
+    "title": "Can I use ?",
+    "description": "Table de support par navigateur pour HTML, CSS Javascript et autre",
+    "img": "/images/ressources/caniuse.png",
+    "href": "https://caniuse.com/",
     "tags": ["DevWeb P2", "DevWeb P3", "Compatibilité navigateur"]
   },
   {
-    "title":"Animista",
-    "description":"Des animations CSS déjà toutes faites !",
-    "img":"/images/ressources/animista.gif",
-    "href":"https://animista.net",
+    "title": "Animista",
+    "description": "Des animations CSS déjà toutes faites !",
+    "img": "/images/ressources/animista.gif",
+    "href": "https://animista.net",
     "tags": ["DevWeb P3", "CSS"]
   },
   {
-    "title":"La base de Sass",
-    "description":"Tout le fonctionnement de base de Sass, dans une page",
-    "img":"/images/ressources/sass.png",
-    "href":"https://sass-lang.com/guide",
+    "title": "La base de Sass",
+    "description": "Tout le fonctionnement de base de Sass, dans une page",
+    "img": "/images/ressources/sass.png",
+    "href": "https://sass-lang.com/guide",
     "tags": ["DevWeb P3", "CSS"]
   },
   {
-    "title":"La checklist des développeurs web",
-    "description":"Vérifiez que votre site est prêt à être mis en ligne grâce à cette checklist",
-    "img":"/images/ressources/webdev-checklist.png",
-    "href":"https://www.toptal.com/developers/webdevchecklist",
-    "tags": ["DevWeb P4"]
+    "title": "La checklist des développeurs web",
+    "description": "Vérifiez que votre site est prêt à être mis en ligne grâce à cette checklist",
+    "img": "/images/ressources/webdev-checklist.png",
+    "href": "https://www.toptal.com/developers/webdevchecklist",
+    "tags": ["DevWeb P4", "quality-and-optimization"]
   },
   {
-    "title":"GTmetrix propulsé par Google Lighthouse",
-    "description":"Calculez les performances de votre site internet.",
-    "img":"/images/ressources/gtmetrix.png",
-    "href":"https://gtmetrix.com/",
-    "tags": ["DevWeb P4", "Optimisation"]
+    "title": "GTmetrix propulsé par Google Lighthouse",
+    "description": "Calculez les performances de votre site internet.",
+    "img": "/images/ressources/gtmetrix.png",
+    "href": "https://gtmetrix.com/",
+    "tags": ["DevWeb P4", "Optimisation", "quality-and-optimization"]
   },
   {
-    "title":"Squoosh",
-    "description":"Optimisez vos images facilement.",
-    "img":"/images/ressources/squoosh.png",
-    "href":"https://squoosh.app/",
-    "tags": ["DevWeb P4", "Optimisation"]
+    "title": "Squoosh",
+    "description": "Optimisez vos images facilement.",
+    "img": "/images/ressources/squoosh.png",
+    "href": "https://squoosh.app/",
+    "tags": ["DevWeb P4", "Optimisation", "quality-and-optimization"]
   },
   {
-    "title":"Metatag.io",
-    "description":"Visualisez facilement le résultats de vos balises SEO",
-    "img":"/images/ressources/metatags.png",
-    "href":"https://metatags.io/",
-    "tags": ["DevWeb P4", "SEO"]
+    "title": "Metatag.io",
+    "description": "Visualisez facilement le résultats de vos balises SEO",
+    "img": "/images/ressources/metatags.png",
+    "href": "https://metatags.io/",
+    "tags": ["DevWeb P4", "SEO", "quality-and-optimization"]
   },
   {
-    "title":"Javascript.info",
-    "description":"Tutoriels Javascript extrêmement bien expliqués pour les débutants mais très approfondis",
-    "img":"/images/ressources/javascript-info.png",
-    "href":"https://javascript.info/",
+    "title": "Javascript.info",
+    "description": "Tutoriels Javascript extrêmement bien expliqués pour les débutants mais très approfondis",
+    "img": "/images/ressources/javascript-info.png",
+    "href": "https://javascript.info/",
     "tags": ["DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
   },
   {
-    "title":"WarriorJs",
-    "description":"Un jeu passionnant de programmation et d'intelligence artificielle",
-    "img":"/images/ressources/warrior-js.png",
-    "href":"https://warrior.js.org/fr/",
+    "title": "WarriorJs",
+    "description": "Un jeu passionnant de programmation et d'intelligence artificielle",
+    "img": "/images/ressources/warrior-js.png",
+    "href": "https://warrior.js.org/fr/",
     "tags": ["DevWeb P5", "DevWeb P6", "DevWeb P7", "Javascript"]
   },
   {
-    "title":"freeCodeCamp",
-    "description":"Des parcours complets en HTML, CSS, Javascript, MongoDB, express etc...uniquement par l'exemple.",
-    "img":"/images/ressources/freecodecamp.png",
-    "href":"https://www.freecodecamp.org/learn/",
-    "tags": ["Parcours complet"]
+    "title": "freeCodeCamp",
+    "description": "Des parcours complets en HTML, CSS, Javascript, MongoDB, express etc... uniquement par l'exemple.",
+    "img": "/images/ressources/freecodecamp.png",
+    "href": "https://www.freecodecamp.org/learn/",
+    "tags": ["Parcours complet", "Javascript"]
   }
 ]
