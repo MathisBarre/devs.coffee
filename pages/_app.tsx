@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import * as ackeeTracker from 'ackee-tracker'
+import splitbee from '@splitbee/web'
 
 import Header from 'components/layout/Header'
 import Footer from 'components/layout/Footer'
@@ -48,6 +49,13 @@ function App({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+
+  useEffect(() => {
+    splitbee.init({
+      scriptUrl: '/bee.js',
+      apiUrl: '/_hive'
+    })
+  }, [])
 
   // SEO
   const SEO_TITLE = 'devs.coffee'
@@ -108,7 +116,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header toggleTheme={toggleTheme} theme={theme} />
       <TopProgressBar />
-      <div className="pt-16 flex-grow">
+      <div className="flex-grow pt-16">
         <Component {...pageProps} />
       </div>
       <Footer theme={theme} />
