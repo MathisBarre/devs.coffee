@@ -8,6 +8,14 @@
     "api": "https://discord.com/api/guilds/766565028312383498/widget.json"
   },
   {
+    "name": "Sans pris de tech",
+    "course": "Tous les parcours",
+    "description": "Serveur général regroupant toute la communauté OpenClassrooms française.",
+    "href": "https://discord.gg/u7dxx3K",
+    "img": "https://cdn.discordapp.com/icons/595235640044552223/54a7b93bc8202aadb8aa0d1289b59435.webp?size=128",
+    "api": "https://discord.com/api/guilds/595235640044552223/widget.json"
+  },
+  {
     "name": "PrepWeb & Développeur web",
     "course": "Parcours développeur web",
     "description": "Discussions & entraide parcours développeur web, ainsi que des channels de discussion post-formation (emplois, stacks, projets hors formation).",
@@ -24,11 +32,10 @@
     "api": "https://discord.com/api/guilds/569020625776017410/widget.json"
   },
   {
-    "name": "Sans pris de tech",
-    "course": "Tous les parcours",
-    "description": "Serveur général regroupant toute la communauté OpenClassrooms française.",
-    "href": "https://discord.gg/u7dxx3K",
-    "img": "https://cdn.discordapp.com/icons/595235640044552223/54a7b93bc8202aadb8aa0d1289b59435.webp?size=128",
-    "api": "https://discord.com/api/guilds/595235640044552223/widget.json"
+    "name": "training-dev",
+    "course": "Développement",
+    "description": "training-dev est un site de cours/tuto/live/exercices dans le domaine du développement web. Le discord est un lieu d'échange pour les débutants comme les professionnels à tout ce qui touche au développement web ou au métiers du développement. Venez y discuter de vos formations, vos projets, vos difficultés ou réussites et partagez vos expériences.",
+    "href": "https://discord.gg/DweDNNcJfN",
+    "img": "https://cdn.discordapp.com/icons/788399435662622720/e378d416fac65d3fe1fe8aee12de24d6.webp?size=256"
   }
 ]
