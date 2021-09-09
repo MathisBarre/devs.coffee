@@ -8,7 +8,7 @@ interface IdiscordServerProps {
   description: string
   href: string
   img: string
-  api: string
+  api?: string
 }
 
 export default function DiscordServer({
@@ -40,12 +40,12 @@ export default function DiscordServer({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="discordServer block  my-4 hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 rounded-md border-gray-200 dark:border-gray-1100 border"
+        className="block my-4 border border-gray-200 rounded-md discordServer hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 dark:border-gray-1100"
       >
-        <div className="px-4 py-4 sm:px-6 flex items-center justify-between">
-          <div className="flex flex-col justify-start items-start">
+        <div className="flex items-center justify-between px-4 py-4 sm:px-6">
+          <div className="flex flex-col items-start justify-start">
             <div className="flex items-center">
-              <div className="inline-block h-14 w-14 mr-6">
+              <div className="inline-block mr-6 h-14 w-14">
                 <Image
                   className="rounded-full"
                   src={img}
@@ -59,8 +59,8 @@ export default function DiscordServer({
                   loading="eager"
                 />
               </div>
-              <div className="min-w-0 flex-1 flex flex-col items-start">
-                <div className="text-md font-medium">
+              <div className="flex flex-col items-start flex-1 min-w-0">
+                <div className="font-medium text-md">
                   <h3 className="inline font-semibold text-indigo-600 dark:text-indigo-500">
                     {name}
                   </h3>
@@ -68,8 +68,8 @@ export default function DiscordServer({
                     - {course}
                   </p>
                 </div>
-                <div className="mt-2 flex">
-                  <div className="flex items-center text-md text-gray-500 dark:text-gray-300">
+                <div className="flex mt-2">
+                  <div className="flex items-center text-gray-500 text-md dark:text-gray-300">
                     <p>{description}</p>
                   </div>
                 </div>
@@ -77,9 +77,9 @@ export default function DiscordServer({
             </div>
           </div>
 
-          <div className="ml-5 flex-shrink-0">
+          <div className="flex-shrink-0 ml-5">
             <svg
-              className="h-5 w-5 text-gray-400"
+              className="w-5 h-5 text-gray-400"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -97,19 +97,19 @@ export default function DiscordServer({
           discordData &&
           // eslint-disable-next-line multiline-ternary
           (discordData.members ? (
-            <div className="discordMembers bg-indigo-600 dark:bg-indigo-800 min-h-9 flex items-center pl-3 pr-2 text-sm text-white rounded-b-md">
-              <p className="whitespace-nowrap mr-2 inline">
+            <div className="flex items-center pl-3 pr-2 text-sm text-white bg-indigo-600 discordMembers dark:bg-indigo-800 min-h-9 rounded-b-md">
+              <p className="inline mr-2 whitespace-nowrap">
                 <strong>{discordData.presence_count} </strong>
                 {discordData.presence_count > 1
                   ? 'membres actuellements connectés'
                   : 'membre actuellement connecté'}
               </p>
-              <div className="hidden sm:inline-flex items-center -space-x-1 relative z-0 overflow-hidden h-full p-1">
+              <div className="relative z-0 items-center hidden h-full p-1 -space-x-1 overflow-hidden sm:inline-flex">
                 {discordData.members.map((member: any, index) => {
                   if (index < 60) {
                     return (
                       <div
-                        className="relative z-30 inline-block h-5 w-5 min-w-5 rounded-full ring-2 ring-white dark:ring-black"
+                        className="relative z-30 inline-block w-5 h-5 rounded-full min-w-5 ring-2 ring-white dark:ring-black"
                         key={index}
                       >
                         <Image
@@ -131,7 +131,7 @@ export default function DiscordServer({
               </div>
             </div>
           ) : (
-            <div className="h-9 w-full bg-indigo-500 dark:bg-indigo-700 animate-pulse hidden md:block rounded-b-md" />
+            <div className="hidden w-full bg-indigo-500 h-9 dark:bg-indigo-700 animate-pulse md:block rounded-b-md" />
             // eslint-disable-next-line indent
           ))} */}
       </a>
