@@ -9,7 +9,7 @@ export default function Card({
 }: {
   title: string
   description: string
-  button: {
+  button?: {
     text: string
     onClick: any
   }
