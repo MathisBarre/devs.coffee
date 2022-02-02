@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { IdiscordGuildWidgetApi } from 'interfaces/DiscordGuildWidgetApiInterface'
 
 interface IdiscordServerProps {
-  course: string
   name: string
   description: string
   href: string
@@ -12,35 +9,19 @@ interface IdiscordServerProps {
 }
 
 export default function DiscordServer({
-  course,
   name,
   description,
   href,
   img,
   api: apiUrl
 }: IdiscordServerProps) {
-  const [discordData, setDiscordData] = useState<IdiscordGuildWidgetApi>()
-
-  useEffect(() => {
-    if (apiUrl) {
-      fetch(apiUrl)
-        .then((body) => body.json())
-        .then((apiData) => {
-          setDiscordData(apiData)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-    }
-  }, [])
-
   return (
     <li>
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="block my-4 border border-gray-200 rounded-md discordServer hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 dark:border-gray-1100"
+        className="block mb-4 mt-2 border border-gray-200 rounded-md discordServer hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 dark:border-gray-1100"
       >
         <div className="flex items-center justify-between px-4 py-4 sm:px-6">
           <div className="flex flex-col items-start justify-start">
@@ -64,9 +45,6 @@ export default function DiscordServer({
                   <h3 className="inline font-semibold text-indigo-600 dark:text-indigo-500">
                     {name}
                   </h3>
-                  <p className="inline ml-1 font-normaltext-gray-500 dark:text-gray-300">
-                    - {course}
-                  </p>
                 </div>
                 <div className="flex mt-2">
                   <div className="flex items-center text-gray-500 text-md dark:text-gray-300">
@@ -93,47 +71,6 @@ export default function DiscordServer({
             </svg>
           </div>
         </div>
-        {/* {apiUrl &&
-          discordData &&
-          // eslint-disable-next-line multiline-ternary
-          (discordData.members ? (
-            <div className="flex items-center pl-3 pr-2 text-sm text-white bg-indigo-600 discordMembers dark:bg-indigo-800 min-h-9 rounded-b-md">
-              <p className="inline mr-2 whitespace-nowrap">
-                <strong>{discordData.presence_count} </strong>
-                {discordData.presence_count > 1
-                  ? 'membres actuellements connectés'
-                  : 'membre actuellement connecté'}
-              </p>
-              <div className="relative z-0 items-center hidden h-full p-1 -space-x-1 overflow-hidden sm:inline-flex">
-                {discordData.members.map((member: any, index) => {
-                  if (index < 60) {
-                    return (
-                      <div
-                        className="relative z-30 inline-block w-5 h-5 rounded-full min-w-5 ring-2 ring-white dark:ring-black"
-                        key={index}
-                      >
-                        <Image
-                          className="rounded-full"
-                          src={member.avatar_url}
-                          alt=""
-                          layout="fixed"
-                          height="20"
-                          width="20"
-                          sizes="20px"
-                          quality="100"
-                          priority={false}
-                        />
-                      </div>
-                    )
-                  }
-                  return ''
-                })}
-              </div>
-            </div>
-          ) : (
-            <div className="hidden w-full bg-indigo-500 h-9 dark:bg-indigo-700 animate-pulse md:block rounded-b-md" />
-            // eslint-disable-next-line indent
-          ))} */}
       </a>
     </li>
   )
