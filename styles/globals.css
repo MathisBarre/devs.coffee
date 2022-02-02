@@ -7,7 +7,7 @@ body {
   scroll-behavior: smooth;
 }
 
-@layer {
+@layer components {
   .my-wrapper {
     @apply px-2 mx-auto md:px-4 max-w-7xl;
   }
