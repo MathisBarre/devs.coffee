@@ -85,7 +85,7 @@ export default function Contact() {
             Votre message
           </label>
           <textarea
-            className="w-full rounded mb-4 lg:grow lg:flex-shrink dark:bg-gray-1000 border dark:border-gray-1100 text-white"
+            className="w-full rounded mb-4 lg:grow lg:flex-shrink dark:bg-gray-1000 border dark:border-gray-1100 dark:text-white"
             name="message"
             id="message"
             placeholder="C'est ici qu'il faut mettre vos doux mots"
