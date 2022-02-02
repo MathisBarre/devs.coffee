@@ -21,7 +21,7 @@ export default function DiscordServer({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="block my-4 border border-gray-200 rounded-md discordServer hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 dark:border-gray-1100"
+        className="block mb-4 mt-2 border border-gray-200 rounded-md discordServer hover:bg-gray-50 dark:bg-gray-1000 dark:hover:bg-gray-1100 dark:border-gray-1100"
       >
         <div className="flex items-center justify-between px-4 py-4 sm:px-6">
           <div className="flex flex-col items-start justify-start">
