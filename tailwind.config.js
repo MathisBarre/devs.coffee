@@ -1,8 +1,11 @@
 module.exports = {
-  purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
-  darkMode: 'class', // or 'media' or 'class'
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
     extend: {
+
       spacing: {
         144: '36rem'
       },
@@ -83,11 +86,6 @@ module.exports = {
           ]
         }
       })
-    }
-  },
-  variants: {
-    extend: {
-      typography: ['dark']
     }
   },
   plugins: [

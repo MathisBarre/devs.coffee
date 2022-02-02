@@ -9,8 +9,7 @@ import splitbee from '@splitbee/web'
 import Header from 'components/layout/Header'
 import Footer from 'components/layout/Footer'
 
-import 'tailwindcss/tailwind.css'
-import '../style/global.css'
+import '../styles/globals.css'
 
 import 'nprogress/nprogress.css'
 
@@ -116,7 +115,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header toggleTheme={toggleTheme} theme={theme} />
       <TopProgressBar />
-      <div className="flex-grow pt-16">
+      <div className="grow pt-16">
         <Component {...pageProps} />
       </div>
       <Footer theme={theme} />
