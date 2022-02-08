@@ -30,7 +30,7 @@ export default function HomepageCard({
           <h2 className="text-xl font-bold">{title}</h2>
           <p>{description}</p>
           <button
-            className={`inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm rounded-md bg-white ${button.customClassNames} font-extrabold hover:dark:bg-indigo-900 mt-2`}
+            className={`inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm rounded-md bg-white ${button.customClassNames} font-extrabold mt-2`}
           >
             {button.text.content}
           </button>
