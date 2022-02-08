@@ -115,7 +115,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header toggleTheme={toggleTheme} theme={theme} />
       <TopProgressBar />
-      <div className="grow pt-16">
+      <div className="grow pt-16 flex flex-col">
         <Component {...pageProps} />
       </div>
       <Footer theme={theme} />
