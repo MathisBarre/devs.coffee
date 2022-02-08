@@ -36,6 +36,20 @@ export default function Index() {
       </div>
       <div className="grid gap-8 lg:grid-cols-3 lg:max-w-none w-full mt-8">
         <PublicationCard
+          image="https://miro.medium.com/proxy/1*5uS70yK2fRDeveT0WWgEQg.jpeg"
+          type="Article"
+          title="Mon avis sur Openclassrooms"
+          description="Il y a 4 mois, j'ai terminé ma formation développeur web en alternance chez OpenClassrooms. Voici mon retour sur expérience."
+          author={{
+            name: 'Mathis Barré',
+            profilePictureUrl:
+              '/images/profil.jpg'
+          }}
+          href="https://medium.com/@MathisBarre/avis-dun-ancien-%C3%A9tudiant-openclassrooms-ddd5301fc191"
+          date="15 Janvier 2021"
+          readingTime={6}
+        />
+        <PublicationCard
           image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
           type="Article"
           title="JavaScript localStorage démistifié"
@@ -46,9 +60,9 @@ export default function Index() {
               '/images/profil.jpg'
           }}
           href="/blog/javascript-localstorage-demistifie"
-          date="Ven 5 Avril 2021"
+          date="5 Avril 2021"
+          readingTime={5}
         />
-        <PublicationCard fake />
         <PublicationCard fake />
       </div>
     </div>

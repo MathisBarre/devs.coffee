@@ -8,7 +8,8 @@ export default function PublicationCard({
   author,
   href,
   fake,
-  date
+  date,
+  readingTime
 }: {
   image?: string
   type?: string
@@ -21,6 +22,7 @@ export default function PublicationCard({
   href?: string
   fake?: boolean
   date?: string
+  readingTime?: number
 }) {
   if (!fake) {
     return (
@@ -57,7 +59,7 @@ export default function PublicationCard({
                 <div className="flex space-x-1 text-sm text-gray-500 dark:text-gray-400">
                   <time dateTime="2020-03-16">{date}</time>
                   <span aria-hidden="true">·</span>
-                  <span>5 minutes de lecture</span>
+                  <span>{readingTime} minutes de lecture</span>
                 </div>
               </div>
             </div>
