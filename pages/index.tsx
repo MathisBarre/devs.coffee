@@ -7,8 +7,8 @@ export default function Index() {
       <div className="grid lg:grid-cols-2 gap-8 mb-8">
         <HomepageCard
           href="/communaute-openclassrooms"
-          title="Rejoignez la communauté OpenClassrooms"
-          description="Événements - Discords - Carte - Initiatives"
+          title="Rejoignez les groupes d'étudiants OpenClassrooms"
+          description="Communautés officieuses pour tous les parcours !"
           button={{
             text: {
               content: 'Rejoindre',
