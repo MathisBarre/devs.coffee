@@ -31,10 +31,10 @@ export default function PublicationCard({
           <div className="flex-shrink-0">
             <img className="h-48 w-full object-cover" src={image} alt="" />
           </div>
-          <div className="flex-1 bg-white dark:bg-gray-1000 p-6 flex flex-col justify-between">
+          <div className="flex-1 bg-white hover:bg-gray-50 dark:hover:bg-gray-1100 dark:bg-gray-1000 p-6 flex flex-col justify-between">
             <div className="flex-1">
               <p className="text-sm font-medium text-indigo-600 dark:text-indigo-500">
-                <span className="hover:underline">
+                <span>
                   {type}
                 </span>
               </p>
@@ -52,7 +52,7 @@ export default function PublicationCard({
               </div>
               <div className="ml-3">
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                  <span className="hover:underline">
+                  <span>
                     {author?.name}
                   </span>
                 </p>
