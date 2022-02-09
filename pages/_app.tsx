@@ -95,24 +95,6 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Head>
-        <title>devs.coffee</title>
-        <meta name="title" content={SEO_TITLE} />
-        <meta name="description" content={SEO_DESCRIPTION} />
-        <link rel="icon" href="favicon.svg" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://devs.coffee/" />
-        <meta property="og:title" content={SEO_TITLE} />
-        <meta property="og:description" content={SEO_DESCRIPTION} />
-        <meta property="og:image" content="https://devs.coffee/devs-coffee.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://devs.coffee/" />
-        <meta property="twitter:title" content={SEO_TITLE} />
-        <meta property="twitter:description" content={SEO_DESCRIPTION} />
-        <meta property="twitter:image" content="https://devs.coffee/devs-coffee.png" />
-      </Head>
       <Header toggleTheme={toggleTheme} theme={theme} />
       <TopProgressBar />
       <div className="grow pt-16">
