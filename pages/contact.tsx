@@ -11,7 +11,7 @@ export default function Contact() {
           <div className="max-w-lg mx-auto">
             <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Contact</h2>
             <p className="mt-3 text-lg leading-6 text-gray-500">
-              Vous aimeriez mettre à jour du contenu de devs.coffee ou justex me parler ? Pas de soucis, contactez-moi !
+              Pour toute demande d&apos;aide, de mise à jour de contenu, d&apos;idées ou juste de gentils mots, n&apos;hésitez pas à me contacter !
             </p>
             <dl className="mt-8 text-base text-gray-500">
               <div className="mt-6">
