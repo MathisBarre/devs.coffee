@@ -1,9 +1,16 @@
 import HomepageCard from 'components/HomepageCard'
 import PublicationCard from 'components/PublicationCard'
+import Seo from 'components/utils/seo'
 
 export default function Index() {
   return (
     <div className="my-wrapper my-8">
+      <Seo
+        title='devs.coffee - Accueil'
+        description="devs.coffee est un site créé par Mathis Barré principalement destiné aux étudiants Openclassrooms pour les aider dans leur parcours d'apprentissage. Sur cette page vous trouverez des articles de blog et autres tutos."
+        bannerSuffix='/devs-coffee.png'
+        pageSuffix=''
+      />
       <div className="grid lg:grid-cols-2 gap-8 mb-8">
         <HomepageCard
           href="/communaute-openclassrooms"
