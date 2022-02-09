@@ -1,6 +1,9 @@
+import Seo from 'components/utils/seo'
+
 export default function Contact() {
   return (
     <div className="mx-auto max-w-7xl">
+      <Seo title="devs.coffee - Contact" description="Contacter Mathis Barré, le créateur de devs.coffee" bannerSuffix='/devs-coffee.png' pageSuffix='/contact' />
       <div className="container mx-auto py-16 grid lg:grid-cols-12 lg:gap-8 box-border px-4">
         <section className="flex flex-col items-center lg:col-span-4  lg:p-0 mb-16">
           <h2 className="dark:text-white text-2xl font-bold w-full mb-4 lg:mb-0">Qui suis-je ?</h2>
