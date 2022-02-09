@@ -95,6 +95,12 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className="flex flex-col min-h-screen">
+
+      {process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (
+        <Head>
+          <meta name="robots" content="noindex" />
+        </Head>
+      )}
       <Header toggleTheme={toggleTheme} theme={theme} />
       <TopProgressBar />
       <div className="grow pt-16">
