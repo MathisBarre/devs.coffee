@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
 interface SeoComponent {
-  title: string, description: string, pageSuffix: string, bannerSuffix: string
+  title: string, description: string, pageSuffix: string, bannerSuffix?: string
 }
 
-export default function Seo({ title, description, pageSuffix, bannerSuffix }: SeoComponent) {
+export default function Seo({ title, description, pageSuffix, bannerSuffix = '/devs-coffee.png' }: SeoComponent) {
   const BASE_URL = 'https://devs.coffee'
   const pageUrl = BASE_URL + pageSuffix
   const bannerUrl = BASE_URL + bannerSuffix

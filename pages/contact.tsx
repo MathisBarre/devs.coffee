@@ -1,8 +1,10 @@
 import { MailIcon, GlobeAltIcon } from '@heroicons/react/outline'
+import Seo from 'components/utils/seo'
 
 export default function Contact() {
   return (
     <div className="relative bg-white dark:bg-gray-900 h-full grow flex flex-col">
+      <Seo title='devs.coffee - Contact' description='Contacter Mathis Barré, le créateur de devs.coffee.' pageSuffix='/contact' />
       <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5 grow">
         <div className="bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
           <div className="max-w-lg mx-auto">
