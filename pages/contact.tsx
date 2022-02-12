@@ -1,104 +1,77 @@
-import Seo from 'components/utils/seo'
+import { MailIcon, GlobeAltIcon } from '@heroicons/react/outline'
 
 export default function Contact() {
   return (
-    <div className="mx-auto max-w-7xl">
-      <Seo title="devs.coffee - Contact" description="Contacter Mathis Barré, le créateur de devs.coffee" bannerSuffix='/devs-coffee.png' pageSuffix='/contact' />
-      <div className="container mx-auto py-16 grid lg:grid-cols-12 lg:gap-8 box-border px-4">
-        <section className="flex flex-col items-center lg:col-span-4  lg:p-0 mb-16">
-          <h2 className="dark:text-white text-2xl font-bold w-full mb-4 lg:mb-0">Qui suis-je ?</h2>
-          <div className="flex flex-col md:flex-row lg:flex-col">
-            <img
-              className="hidden md:block w-32 h-32 lg:w-full lg:h-auto object-cover lg:my-4 rounded-full lg:rounded mr-4"
-              src="/images/profil.jpg"
-              alt=""
-            />
-            <div>
-              <div className="dark:text-gray-200 text-justify">
-                <p className="break-normal overflow-hidden">
-                  Je suis un étudiant en alternance avec OpenClassrooms portant le doux nom de
-                  Mathis Barré. Profitant de compétences acquise en autodidacte avant la formation,
-                  j'ai pris le temps de créé ce site afin d'aider les étudiants dans leur parcours.
-                </p>
+    <div className="relative bg-white dark:bg-gray-900 h-full grow flex flex-col">
+      <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5 grow">
+        <div className="bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+          <div className="max-w-lg mx-auto">
+            <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl dark:text-gray-100">Contact</h2>
+            <p className="mt-3 text-lg leading-6 text-gray-500 dark:text-gray-400">
+              Pour toute demande d&apos;aide, de mise à jour de contenu, d&apos;idées ou juste de gentils mots, n&apos;hésitez pas à me contacter !
+            </p>
+            <dl className="mt-8 text-base text-gray-500">
+              <div className="mt-6">
+                <dt className="sr-only">Site internet</dt>
+                <a href="https://mathisbarre.com" rel='noopener noreferrer' target="_blank">
+                  <dd className="flex">
+                      <GlobeAltIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                      <span className="ml-3">mathisbarre.com</span>
+                  </dd>
+                </a>
               </div>
-              <div className="mt-4 flex flex-col md:flex-row flex-wrap lg:grid lg:grid-cols-2 gap-2">
-                <a
-                  target="blank_"
-                  rel="noopener noreferrer"
-                  href="https://www.youtube.com/channel/UCl3-1zqMl6YkRx0OQ3KwC_g"
-                  className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2"
-                >
-                  <img className="w-6 mr-2 -mb-0.5" src="/images/youtube_icon.svg" alt="" />
-                  <p className="flex items-center">Mathis Barré</p>
+              <div className="mt-3">
+                <dt className="sr-only">Adresse e-mail</dt>
+                <a href="mailto:contact@mathisbarre.com">
+                  <dd className="flex">
+                    <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                    <span className="ml-3">contact@mathisbarre.com</span>
+                  </dd>
                 </a>
-                <a
-                  target="blank_"
-                  rel="noopener noreferrer"
-                  href="https://twitch.tv/mathisbarre_"
-                  className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2"
-                >
-                  <img className="w-6 mr-1 -mb-0.5 pr-1" src="/images/twitch_glitch.svg" alt="" />
-                  <p className="flex items-center">mathisbarre_</p>
-                </a>
-                <a
-                  target="blank_"
-                  rel="noopener noreferrer"
-                  href="https://www.linkedin.com/in/mathis-barre/"
-                  className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2"
-                >
-                  <img className="w-6 h-6 mr-2" src="/images/linkedin.png" alt="" />
-                  <p className="flex items-center">mathis-barre</p>
-                </a>
-                <a
-                  target="blank_"
-                  rel="noopener noreferrer"
-                  href="https://twitter.com/LeMathisBarre"
-                  className="my-cardLink flex md:inline-flex dark:text-white px-3 py-2"
-                >
-                  <img className="w-6 mr-2 -mb-0.5" src="/images/twitter_bird.svg" alt="" />
-                  <p className="flex items-center">LeMathisBarre</p>
-                </a>
-                <div className="my-card flex md:inline-flex dark:text-white pl-2 pr-3 py-2">
-                  <img className="w-8 mr-2 -mb-1" src="/images/discord.svg" alt="" />
-                  <p className="flex items-center">Mania#6276</p>
-                </div>
               </div>
-            </div>
+            </dl>
           </div>
-        </section>
-
-        <form
-          className="lg:col-span-8 flex flex-col"
-          action="https://formspree.io/f/xnqolblw"
-          method="POST"
-        >
-          <h2 className="dark:text-white text-2xl font-bold mb-4">Envoyer un message</h2>
-          <label className="dark:text-white block mb-1" htmlFor="name">
-            Contact
-          </label>
-          <input
-            className="w-full rounded mb-4 dark:bg-gray-1000 border dark:border-gray-1100 dark:text-white"
-            placeholder="Adresse e-mail, tag discord ou autre !"
-            type="text"
-            name="name"
-            id="name"
-            required
-          />
-          <label className="dark:text-white block mb-1" htmlFor="message">
-            Votre message
-          </label>
-          <textarea
-            className="w-full rounded mb-4 lg:grow lg:flex-shrink dark:bg-gray-1000 border dark:border-gray-1100 dark:text-white"
-            name="message"
-            id="message"
-            placeholder="C'est ici qu'il faut mettre vos doux mots"
-            required
-            rows={10}
-          />
-          <button className="w-full bg-white rounded h-10 dark:bg-gray-1000 border border-gray-500 dark:border-gray-1100 dark:text-white">
-            Envoyer votre message
-          </button>
-        </form>
+        </div>
+        <div className="bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+          <div className="max-w-lg mx-auto lg:max-w-none">
+            <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
+              <div>
+                <label htmlFor="email" className="sr-only">
+                  Adresse e-mail
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  placeholder="Adresse e-mail"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="sr-only">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                  placeholder="Message"
+                  defaultValue={''}
+                />
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Envoyer le message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   )
