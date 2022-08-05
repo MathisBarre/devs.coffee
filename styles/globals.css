@@ -9,7 +9,7 @@ body {
 
 @layer components {
   .my-wrapper {
-    @apply px-2 mx-auto md:px-4 max-w-7xl;
+    @apply px-2 mx-auto md:px-4 max-w-4xl;
   }
   
   .discordServer:hover .discordMembers {
@@ -50,7 +50,7 @@ body {
   }
   
   .my-ressource-grid {
-    @apply grid max-w-full gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5;
+    @apply grid max-w-full gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3;
   }
   
   .my-card {

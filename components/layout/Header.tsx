@@ -1,18 +1,13 @@
-import { ChangeEventHandler, MouseEventHandler, useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import Link from 'next/link'
 import HeaderLink from 'components/layout/HeaderLink'
 
-interface props {
-  toggleTheme: ChangeEventHandler<HTMLInputElement>
-  theme: 'light' | 'dark'
-}
-
-export default function Header({ toggleTheme, theme }: props) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <header className="bg-white shadow dark:bg-gray-1000 fixed w-full inset-x-0 z-50 top-0">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="my-wrapper mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center h-full">
             <Link href="/">
@@ -32,17 +27,6 @@ export default function Header({ toggleTheme, theme }: props) {
                 <HeaderLink isDesktop={true} text="Contact" href="/contact" />
               </div>
             </nav>
-          </div>
-          <div>
-            <label id="switch" className="switch">
-              <input
-                type="checkbox"
-                onChange={toggleTheme}
-                checked={theme === 'light'}
-                id="slider"
-              />
-              <span className="slider round" />
-            </label>
           </div>
           <div className="-mr-2 flex md:hidden">
             <BtnToggleMobileMenu

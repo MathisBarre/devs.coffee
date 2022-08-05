@@ -5,7 +5,7 @@ import Ressource from './Ressource'
 
 export default function Ressources() {
   return (
-    <section id="ressources" className="mt-16 mb-16">
+    <section id="ressources" className="mt-32 mb-16">
       <h2 className="mt-16 font-semibold dark:text-white">Style : CSS, SASS, animations</h2>
       <div className="my-ressource-grid">
         {defaultRessources.filter((ressource) => {

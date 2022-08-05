@@ -1,17 +1,27 @@
 import HomepageCard from 'components/HomepageCard'
-import PublicationCard from 'components/PublicationCard'
 import Seo from 'components/utils/seo'
 
 export default function Index() {
   return (
-    <div className="my-wrapper my-8">
+    <div className="">
       <Seo
-        title='devs.coffee - Accueil'
+        title="devs.coffee - Accueil"
         description="devs.coffee est un site créé par Mathis Barré principalement destiné aux étudiants Openclassrooms pour les aider dans leur parcours d'apprentissage. Sur cette page vous trouverez des articles de blog et autres tutos."
-        bannerSuffix='/devs-coffee.png'
-        pageSuffix=''
+        bannerSuffix="/devs-coffee.png"
+        pageSuffix=""
       />
-      <div className="grid lg:grid-cols-2 gap-8 mb-8">
+
+      <div className="bg-gray-800 py-6 justify-center">
+        <div className="my-wrapper flex justify-center flex-col items-center">
+          <a className="flex-shrink-0 flex items-center bg-gray-800 h-full">
+            <img className="h-16 w-auto mr-3 mt-1" src="/images/logo.svg" alt="devs.coffee logo" />
+            <h1 className="text-white font-bold text-6xl text-center">devs.coffee</h1>
+          </a>
+          <p className="text-white font-semibold text-2xl text-center mt-1">Au service des étudiants</p>
+        </div>
+      </div>
+
+      <div className="grid gap-8 mb-8 my-wrapper my-8">
         <HomepageCard
           href="/communaute-openclassrooms"
           title="Rejoignez les groupes d'étudiants OpenClassrooms"
@@ -40,37 +50,6 @@ export default function Index() {
           watermarkImageUrl="/images/icons/academic-cap.svg"
           customClassNames="bg-mypurple-500 hover:bg-mypurple-600"
         />
-      </div>
-      <div className="grid gap-8 lg:grid-cols-3 lg:max-w-none w-full mt-8">
-        <PublicationCard
-          image="https://miro.medium.com/proxy/1*5uS70yK2fRDeveT0WWgEQg.jpeg"
-          type="Article"
-          title="Mon avis sur Openclassrooms"
-          description="Il y a 4 mois, j'ai terminé ma formation développeur web en alternance chez OpenClassrooms. Voici mon retour sur expérience."
-          author={{
-            name: 'Mathis Barré',
-            profilePictureUrl:
-              '/images/profil.jpg'
-          }}
-          href="https://medium.com/@MathisBarre/avis-dun-ancien-%C3%A9tudiant-openclassrooms-ddd5301fc191"
-          date="15 Janvier 2021"
-          readingTime={6}
-        />
-        <PublicationCard
-          image="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=pLPhGoGaS9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-          type="Article"
-          title="JavaScript localStorage démistifié"
-          description="Nous vous êtes vous jamais demandé comment stocker des données localement et facilement ? C'est que ne nous allons voir ici en apprenant à manipuler l'api localStorage !"
-          author={{
-            name: 'Mathis Barré',
-            profilePictureUrl:
-              '/images/profil.jpg'
-          }}
-          href="/blog/javascript-localstorage-demistifie"
-          date="5 Avril 2021"
-          readingTime={5}
-        />
-        <PublicationCard fake />
       </div>
     </div>
   )

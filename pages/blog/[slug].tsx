@@ -15,7 +15,7 @@ export default function PostPage({ source, frontMatter }: props) {
   const content = hydrate(source)
   return (
     <div className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
-      <div className="relative px-4 sm:px-6 lg:px-8">
+      <div className="relative px-4 sm:px-6">
         <div className="text-lg max-w-prose mx-auto">
           <h1>
             <span className="block text-base text-center text-indigo-600 dark:text-indigo-500 font-semibold tracking-wide uppercase">
